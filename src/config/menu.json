@@ -5,58 +5,20 @@
       "url": "/"
     },
     {
-      "name": "About",
-      "url": "/about"
+      "name": "The Back Pain Doctor Story",
+      "url": "/the-back-pain-doctor-story"
     },
     {
-      "name": "How It Works",
-      "url": "/how-it-works"
+      "name": "Treatments",
+      "url": "/treatments"
     },
     {
-      "name": "Blog",
-      "url": "/blog"
+      "name": "Explaining Pain",
+      "url": "/explaining-pain"
     },
     {
-      "name": "Pages",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Careers",
-          "url": "/careers"
-        },
-
-        {
-          "name": "Case Studies",
-          "url": "/case-studies"
-        },
-
-        {
-          "name": "Pricing",
-          "url": "/pricing"
-        },
-        {
-          "name": "Sign In",
-          "url": "/signin"
-        },
-
-        {
-          "name": "Elements",
-          "url": "/elements"
-        },
-        {
-          "name": "Changelog",
-          "url": "/changelog"
-        },
-        {
-          "name": "Terms And Conditions",
-          "url": "/terms-and-conditions"
-        }
-      ]
-    },
-    {
-      "name": "Contact",
-      "url": "/contact"
+      "name": "Patient Resources",
+      "url": "/patient-resources"
     }
   ],
   "footer": [
@@ -71,10 +33,6 @@
     {
       "name": "Terms And Conditions",
       "url": "/terms-and-conditions"
-    },
-    {
-      "name": "Changelog",
-      "url": "/changelog"
     }
   ]
 }

@@ -1,14 +1,14 @@
 ---
-import { Image } from "astro:assets";
 import ContactSocial from "@/components/Contact-social.astro";
 import PageHeader from "@/components/PageHeader.astro";
 import config from "@/config/config.json";
 import social from "@/config/social.json";
 import Base from "@/layouts/Base.astro";
 import Cta from "@/partials/Cta.astro";
+import { Image } from "astro:assets";
 import { getEntry } from "astro:content";
 
-const entry = await getEntry("contact", "contact");
+const entry = await getEntry("contact", "book-appointment");
 const { contact_form_action } = config.params;
 const { email, phone } = config;
 const { title, description, meta_title, image } = entry.data;

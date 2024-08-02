@@ -342,9 +342,9 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "contact": {
-"contact.md": {
-	id: "contact.md";
-  slug: "contact";
+"book-appointment.md": {
+	id: "book-appointment.md";
+  slug: "book-appointment";
   body: string;
   collection: "contact";
   data: any

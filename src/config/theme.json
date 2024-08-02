@@ -2,23 +2,23 @@
   "colors": {
     "default": {
       "theme_color": {
-        "primary": "#fe6019",
+        "primary": "#0849ad",
         "body": "#ffff",
         "border": "#dee2e6",
         "border_secondary": "#ffece4",
         "theme_light": "#fffaf3",
-        "theme_dark": "#1a202c"
+        "theme_dark": "#242528"
       },
       "text_color": {
-        "default": "#666",
-        "dark": "#222",
+        "default": "#7b7b7b",
+        "dark": "#202020",
         "light": "#ceced0"
       }
     }
   },
   "fonts": {
     "font_family": {
-      "primary": "Poppins:wght@400;500;600;700",
+      "primary": "Poppins:wght@300;500;600;700",
       "primary_type": "sans-serif",
       "secondary": "",
       "secondary_type": ""

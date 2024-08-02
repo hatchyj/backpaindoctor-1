@@ -58,6 +58,9 @@ module.exports = {
         h5: h5 + "rem",
         h6: h6 + "rem",
       },
+      fontWeight: {
+        normal: 300,
+      },
       fontFamily: {
         primary: ["var(--font-primary)", fontPrimaryType],
         secondary: ["var(--font-secondary)", fontSecondaryType],

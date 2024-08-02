@@ -1,11 +1,11 @@
 {
   "site": {
-    "title": "Andromeda Astro",
-    "base_url": "https://andromeda-astro.vercel.app",
+    "title": "The Back Pain Doctor",
+    "base_url": "https://backpaindoctor.com.au/",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
-    "logo": "/images/logo.png",
+    "logo": "/images/the-back-pain-doctor.png",
     "logo_width": "257",
     "logo_height": "36",
     "logo_text": "Andromeda"
@@ -19,22 +19,22 @@
   "params": {
     "contact_form_action": "#",
     "career_form_action": "#",
-    "copyright": "Designed & Developed By [Themefisher](https://themefisher.com)"
+    "copyright": "Built By [Tim Jensen](https://www.timjensen.com.au)"
   },
 
   "footer_data": {
-    "description": "Lorem ipsum dolor sit sed dmi amet, consectetur adipiscing. Cdo tellus, sed condimentum volutpat.",
-    "email": "info@andromeda.io",
-    "location": "2118 Thornridge Cir. Syracuse, Connecticut 35624",
-    "contact": "+704-555-0127"
+    "description": "Get lasting relief from back pain.",
+    "email": "clinic@thebackpaindoctor.com.au",
+    "location": "Level 1, 36 Baroona Rd, Milton, 4064",
+    "contact": "07 3367 0333"
   },
 
   "call_to_action": {
     "enable": false,
-    "title": "Helping Teams In The World With Focus",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas <br/> Werat viverra id et aliquet. vulputate egestas sollicitudin.",
+    "title": "Are you tired of temporary fixes that don't provide lasting relief?",
+    "content": "It’s time to take action and find a solution that works for you.",
     "button": {
-      "label": "Download Now",
+      "label": "Book Appointment",
       "link": "#"
     }
   },
@@ -46,18 +46,18 @@
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "Dr Joshua Hatch",
     "meta_image": "/images/og-image.png",
-    "meta_description": "astro boilerplate"
+    "meta_description": "The Back Pain Doctor"
   },
 
   "email": {
     "title": "Email Address",
-    "contact": ["info@andromeda.io", "jon@anderson.io", "russel@andre.com"]
+    "contact": ["info@thebackpaindoctor.com.au"]
   },
 
   "phone": {
     "title": "Phone",
-    "contact": ["+704-555-0127", "+704-555-0127", "+704-555-0127"]
+    "contact": ["07 3367 0333"]
   }
 }
