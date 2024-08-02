@@ -350,6 +350,15 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".md"] };
 };
+"explaining-pain": {
+"index.md": {
+	id: "index.md";
+  slug: "index";
+  body: string;
+  collection: "explaining-pain";
+  data: any
+} & { render(): Render[".md"] };
+};
 "homepage": {
 "index.md": {
 	id: "index.md";

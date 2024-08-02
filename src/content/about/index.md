@@ -5,10 +5,10 @@ draft: false
 
 ## about us
 about_us:
-  subtitle: WHO WE ARE
-  title: Hello, We’re Andromeda Here For Your Help
-  description: Your online Health & Fitness companion that offers free assistance on its Facebook Group and provides quality paid guided personal training packages by and through website. We are the first ever, online manifesto in Bangladesh to make place you will select when you think of getting fit
-  image: /images/about/01.jpg
+  subtitle: About
+  title: Hello, I'm Dr Joshua Hatch, your local back pain doctor
+  description: Dr Joshua Hatch is a GP and Musculoskeletal Medicine practitioner in Brisbane, Australia. With his wealth of experience, he provides an array of effective techniques to address musculoskeletal pain, enabling you to attain lasting relief.
+  image: /images/about/dr_joshua_hatch_back_pain_doctor.webp
 
 ## our works
 works:

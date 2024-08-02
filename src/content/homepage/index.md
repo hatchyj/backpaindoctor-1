@@ -1,11 +1,11 @@
 ---
 banner:
-  title: "Andromeda is the most intuitive way to prototype Designs"
+  title: "Get lasting relief from back pain"
   image: /images/bannerimage.webp
   meta: "this is meta"
   link:
-    label: Buy This Theme
-    href: "https://themefisher.com/products/andromeda-astro"
+    label: View our Treatments
+    href: "/treatments"
 
 ##brands
 brands:

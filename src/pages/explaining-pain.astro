@@ -1,17 +1,17 @@
 ---
+import VideoSection from "@/components/VideoSection.astro";
 import Base from "@/layouts/Base.astro";
 import PageHeader from "@/layouts/components/PageHeader.astro";
-import PricingData from "@/layouts/jsx-components/Pricing.jsx";
 import Cta from "@/layouts/partials/Cta.astro";
 import { getEntry } from "astro:content";
 
-const pricing = await getEntry("pricing", "index");
-const { title, description } = pricing.data;
-const { data } = pricing;
+const explainingPain = await getEntry("explaining-pain", "index");
+const { title, description } = explainingPain.data;
+const { intro } = explainingPain.data;
 ---
 
 <Base title={title} description={description}>
   <PageHeader title={title} />
-  <PricingData data={data} client:load />
+  <VideoSection intro={intro} />
   <Cta />
 </Base>

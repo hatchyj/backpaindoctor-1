@@ -6,8 +6,8 @@
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
     "logo": "/images/the-back-pain-doctor.png",
-    "logo_width": "257",
-    "logo_height": "36",
+    "logo_width": "177",
+    "logo_height": "108",
     "logo_text": "Andromeda"
   },
 
@@ -30,12 +30,12 @@
   },
 
   "call_to_action": {
-    "enable": false,
+    "enable": true,
     "title": "Are you tired of temporary fixes that don't provide lasting relief?",
     "content": "It’s time to take action and find a solution that works for you.",
     "button": {
       "label": "Book Appointment",
-      "link": "#"
+      "link": "/book-appointment"
     }
   },
 
