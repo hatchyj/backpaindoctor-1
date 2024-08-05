@@ -1,8 +1,8 @@
 ---
 banner:
-  title: "Get lasting relief from back pain"
+  title: "Get lasting relief from back pain."
   image: /images/bannerimage.webp
-  meta: "this is meta"
+  meta: "Get lasting relief from back pain."
   link:
     label: View our Treatments
     href: "/treatments"
@@ -46,22 +46,22 @@ features:
 
 #intro
 intro:
-  title: Built Exclusively For You
-  subtitle: SHORT INTRO VIDEO
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas </br> Werat viverra id et aliquet. vulputate egestas sollicitudin.
-  thumbnail: "/images/videopopup.webp"
-  video_id: dyZcRRWiuuw
+  title: Watch this video on pain
+  subtitle: 5-minute video on Pain
+  description: To gain a better understanding of persistent pain, and how<br/> Musculoskeletal pain can affect nearly every part of our bodies, watch this short 5-minute video.
+  thumbnail: "/images/explaining_pain_video.png"
+  video_id: qEWc2XtaNwg
 
 #service
 service:
-  - title: You Will Not Miss Your All Misunderstandings
-    subtitle: PRIMARY SPECIALITY
-    description: Protect your design vision and leave nothing up to interpretation with interaction recipes. Quickly share and access all your team members interactions by using libraries, ensuring consistency throughout the.
-    image: /images/features-01.webp
+  - title: I can help you achieve lasting pain relief.
+    subtitle: Meet Dr Josh
+    description: I am a GP and Musculoskeletal Medicine practitioner based in Brisbane, Australia. With a wealth of experience, I provide an array of effective techniques to address musculoskeletal pain, enabling you to attain lasting relief.
+    image: /images/dr_joshua_hatch_intro.jpg
 
-  - title: Say Hello To No-Code The Advance Creation
-    subtitle: SECONDARY SPECIALITY
-    description: From the simplest of interactions to those that use Excel-gradeing formulas, ProtoPie can handle them all. Make mind-blowing of New interactions everyday without ever having to write any new code.
+  - title: What we can do for you
+    subtitle: Pain Treatments
+    description: Musculoskeletal treatments are designed to address issues with bones, muscles, and connective tissues. Platelet-Rich Plasma (PRP) therapy involves injecting a concentrated solution of a patient’s own blood platelets to promote healing. Prolotherapy involves injecting a solution of dextrose to stimulate the body’s natural healing processes. Nerve therapy aims to identify and treat areas of nerve dysfunction. Trigger point therapy involves applying needles to specific areas of muscle tissue to relieve pain and tension.
     image: /images/features-02.webp
 
 #Testimonial
