@@ -5,20 +5,40 @@
       "url": "/"
     },
     {
-      "name": "About",
-      "url": "/about"
+      "name": "Treatments",
+      "url": "/treatments",
+      "hasChildren": "true",
+      "active": "true",
+      "children": [
+        {
+          "name": "Platelet Rich Plasma",
+          "url": "/treatments/platelet-rich-plasma-treatment"
+        },
+        {
+          "name": "Prolotherapy",
+          "url": "/treatments/prolotherapy-treatment"
+        },
+        {
+          "name": "Nerve Therapy",
+          "url": "/treatments/nerve-therapy-treatment"
+        },
+        {
+          "name": "Trigger Point Therapy",
+          "url": "/treatments/trigger-point-therapy-treatment"
+        }
+      ]
     },
     {
-      "name": "Treatments",
-      "url": "/treatments"
+      "name": "Patient Journey",
+      "url": "/patient-journey"
     },
     {
       "name": "Explaining Pain",
       "url": "/explaining-pain"
     },
     {
-      "name": "Patient Resources",
-      "url": "/patient-resources"
+      "name": "About",
+      "url": "/about"
     }
   ],
   "footer": [
