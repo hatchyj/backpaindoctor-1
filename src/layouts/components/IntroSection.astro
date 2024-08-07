@@ -1,0 +1,27 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+
+const { intro } = Astro.props;
+---
+
+<section>
+  <div class="container relative text-center max-w-3xl">
+    <div class="row justify-center">
+      <div class="lg:col-12"></div>
+      <div class="relative z-30 py-20">
+        <div class="section-title" data-aos="fade-up">
+          <p
+            set:html={markdownify(intro.subtitle)}
+            class="mb-4 text-[0.9rem] uppercase"
+          />
+          <h2 set:html={markdownify(intro.title)} class="title text-balance" />
+          <p
+            set:html={markdownify(intro.description)}
+            class="text-[.9rem] text-text"
+          />
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

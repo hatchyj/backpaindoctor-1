@@ -5,29 +5,46 @@ draft: false
 
 #intro
 intro:
-  title: Built Exclusively For You
-  subtitle: SHORT INTRO VIDEO
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas </br> Werat viverra id et aliquet. vulputate egestas sollicitudin.
-  thumbnail: "/images/videopopup.webp"
-  video_id: dyZcRRWiuuw
+  title: Treatments to help you experience lasting relief
+  subtitle: Musculoskeletal Pain Treatments
+  description: Are you struggling with chronic pain, injury, or arthritis and want to avoid invasive surgeries and potentially addictive pharmaceuticals? Consider non-surgical musculoskeletal procedures that allow your body to heal naturally and regain mobility quickly. Our approach is unique because we use innovative techniques to identify the root cause of your pain, allowing us to tailor multiple services to optimise your outcomes. Say goodbye to chronic pain and hello to a better quality of life with non-surgical musculoskeletal procedures.
 
 #service
 service:
   - title: Platelet Rich Plasma
     subtitle: Helpful for X
     description: PRP injections use concentrated platelets enriched with bioactive proteins, including growth factors, to stimulate tissue repair and regeneration for chronic joint, ligament, and tendon injuries.
+    hasCTA: true
+    cta:
+      href: /treatments/platelet-rich-plasma-treatment
+      label: Platelet Rich Plasma Treatments
     image: /images/treatment-platelet-rich-plasma.webp
     image_style: rounded-2xl shadow-xl md:m-12
   - title: Prolotherapy Treatment
     subtitle: Helpful for X
     description: Prolotherapy is a medical treatment that involves injecting a solution into damaged or weakened ligaments or tendons to stimulate tissue repair and alleviate pain.
+    hasCTA: true
+    cta:
+      href: /treatments/prolotherapy-treatment
+      label: Prolotherapy Teatments
     image: /images/treatment-prolotherapy.webp
+    image_style: rounded-2xl shadow-xl md:m-12
   - title: Nerve Therapy
     subtitle: Helpful for X
     description: Nerve treatments can alleviate pain and numbness caused by past injuries and scar tissue by reprogramming the nerve's normal function through a simple injection series, leading to significant improvements
+    hasCTA: true
+    cta:
+      href: /treatments/nerve-therapy-treatment
+      label: Nerve Therapy Teatments
     image: /images/treatment-nerve-therapy.webp
+    image_style: rounded-2xl shadow-xl md:m-12
   - title: Trigger Point Therapy
     subtitle: Helpful for X
     description: Trigger point therapy involves injecting low strength glucose to specific points on the body to alleviate pain and tension by releasing trigger points or knots in muscles.
+    hasCTA: true
+    cta:
+      href: /treatments/trigger-point-therapy-treatment
+      label: Trigger point Therapy Teatments
     image: /images/treatment-trigger-point-therapy.webp
+    image_style: rounded-2xl shadow-xl md:m-12
 ---

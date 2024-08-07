@@ -24,6 +24,20 @@ const { service } = Astro.props;
                   set:html={markdownify(el.description)}
                   class="text-[.9rem] text-text"
                 />
+                <>
+                {el.hasCTA ? (
+                        <a
+                      href={el.cta.href}
+                      class="mt-4 btn btn-primary"
+                      href="#"
+                      data-aos="fade"
+                      data-aos-delay="50"
+                    >
+                      {el.cta.label}
+                    </a>
+                ):(
+                  <span></span>
+                )}
               </div>
             </div>
           </div>
