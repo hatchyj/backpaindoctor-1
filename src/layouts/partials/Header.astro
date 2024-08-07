@@ -1,4 +1,6 @@
 ---
+import HotDocIcon from "@/components/HotDocIcon.astro";
+import config from "@/config/config.json";
 import Logo from "@/components/Logo.astro";
 import menu from "@/config/menu.json";
 export interface ChildNavigationLink {
@@ -13,6 +15,10 @@ export interface NavigationLink {
 }
 const { pathname } = Astro.url;
 
+const {
+  button: { label, label_sml, link },
+  enable,
+} = config.call_to_action;
 const { main }: { main: NavigationLink[] } = menu;
 ---
 
@@ -116,13 +122,21 @@ const { main }: { main: NavigationLink[] } = menu;
         ))
       }
       <li class="ml-autoflex order-1 text-center md:ml-0 lg:order-2 lg:hidden">
-        <a class="btn btn-primary" href="/book-appointment">Book Appointment</a>
+        <a class="btn btn-primary" href="/book-appointment">
+          <HotDocIcon />
+          <span class="ml-20">{label}</span>
+        </a>
       </li>
     </ul>
     <div
       class="ml-autoflex order-1 hidden items-center md:ml-0 lg:order-2 lg:flex"
     >
-      <a class="btn btn-primary" href="/book-appointment">Book Appointment</a>
+      <!-- Desktop version of button -->
+      <a class="btn btn-primary" href="/book-appointment">
+         <span class="block lg:max-xl:hidden"><HotDocIcon /></span>
+        <span class="hidden lg:max-xl:block">{label_sml}</span>
+        <span class="block ml-20 lg:max-xl:hidden">{label}</span>
+      </a>
     </div>
   </nav>
 </header>

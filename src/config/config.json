@@ -8,7 +8,7 @@
     "logo": "/images/the-back-pain-doctor.png",
     "logo_width": "177",
     "logo_height": "108",
-    "logo_text": "Andromeda"
+    "logo_text": "The Back Pain Doctor"
   },
 
   "settings": {
@@ -34,7 +34,8 @@
     "title": "Tired of temporary fixes with no lasting relief?",
     "content": "It’s time to take action and find a solution that works for you.",
     "button": {
-      "label": "Book an Appointment today",
+      "label": "Book Appointment now",
+      "label_sml": "Book now",
       "link": "/book-appointment"
     }
   },
