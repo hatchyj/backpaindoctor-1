@@ -1,0 +1,19 @@
+---
+import IntroSection from "@/components/IntroSection.astro";
+import PageHeader from "@/components/PageHeader.astro";
+import Service from "@/components/Service.astro";
+import Base from "@/layouts/Base.astro";
+import Cta from "@/partials/Cta.astro";
+import { getEntry } from "astro:content";
+
+const patientJourney = await getEntry("patient-journey", "index");
+const { title, description, intro, service } = patientJourney.data;
+---
+
+<Base title={title} description={description}>
+  <PageHeader title={title} />
+  <IntroSection intro={intro} />
+  
+  <Service service={service} offset={2} />
+  <Cta />
+</Base>

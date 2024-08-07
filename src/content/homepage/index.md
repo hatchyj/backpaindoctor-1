@@ -57,6 +57,10 @@ service:
   - title: I can help you achieve lasting pain relief.
     subtitle: Meet Dr Josh
     description: I am a GP and Musculoskeletal Medicine practitioner based in Brisbane, Australia. With a wealth of experience, I provide an array of effective techniques to address musculoskeletal pain, enabling you to attain lasting relief.
+    hasCTA: true
+    cta:
+      href: /about
+      label: Read the Back Pain Doctor story
     image: /images/dr_joshua_hatch_intro.jpg
 
   - title: What we can do for you

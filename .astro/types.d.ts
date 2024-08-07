@@ -398,6 +398,15 @@ declare module 'astro:content' {
   data: InferEntrySchema<"pages">
 } & { render(): Render[".md"] };
 };
+"patient-journey": {
+"index.md": {
+	id: "index.md";
+  slug: "index";
+  body: string;
+  collection: "patient-journey";
+  data: any
+} & { render(): Render[".md"] };
+};
 "pricing": {
 "index.md": {
 	id: "index.md";
