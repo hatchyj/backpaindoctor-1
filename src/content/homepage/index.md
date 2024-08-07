@@ -1,7 +1,7 @@
 ---
 banner:
   title: "Get lasting relief from back pain."
-  image: /images/bannerimage.webp
+  image: /images/back_pain_doctor_intro.png
   meta: "Get lasting relief from back pain."
   link:
     label: View our Treatments
