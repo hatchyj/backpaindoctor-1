@@ -403,4 +403,7 @@
   @apply prose-td:px-3 prose-td:py-4;
   @apply marker:text-primary;
   @apply prose-img:rounded-md;
+  p {
+    @apply first-of-type:mt-0;
+  }
 }
