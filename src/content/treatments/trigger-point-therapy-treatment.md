@@ -1,10 +1,10 @@
 ---
 draft: false
-title: "Platelet Rich Plasma Treatment"
-description: "Platelet Rich Plasma Treatment"
+title: "Trigger Point Therapy"
+description: "Trigger Point Therapy"
 image: "/images/treatments/treatment-image.png"
 
-intro: PRP injections use concentrated platelets enriched with bioactive proteins, including growth factors, to stimulate tissue repair and regeneration for chronic joint, ligament, and tendon injuries.
+intro: Trigger point therapy involves injecting low strength glucose to specific points on the body to alleviate pain and tension by releasing trigger points or knots in muscles.
 ---
 
 Platelet Rich Plasma (PRP) injections are an innovative treatment option for patients with chronic degenerative joint, ligament, and tendon injuries. This technology is transforming the way we manage pain, injury, and ageing-related conditions.

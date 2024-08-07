@@ -424,9 +424,30 @@ declare module 'astro:content' {
   collection: "treatments";
   data: any
 } & { render(): Render[".md"] };
+"nerve-therapy-treatment.md": {
+	id: "nerve-therapy-treatment.md";
+  slug: "nerve-therapy-treatment";
+  body: string;
+  collection: "treatments";
+  data: any
+} & { render(): Render[".md"] };
 "platelet-rich-plasma-treatment.md": {
 	id: "platelet-rich-plasma-treatment.md";
   slug: "platelet-rich-plasma-treatment";
+  body: string;
+  collection: "treatments";
+  data: any
+} & { render(): Render[".md"] };
+"prolotherapy-treatment.md": {
+	id: "prolotherapy-treatment.md";
+  slug: "prolotherapy-treatment";
+  body: string;
+  collection: "treatments";
+  data: any
+} & { render(): Render[".md"] };
+"trigger-point-therapy-treatment.md": {
+	id: "trigger-point-therapy-treatment.md";
+  slug: "trigger-point-therapy-treatment";
   body: string;
   collection: "treatments";
   data: any

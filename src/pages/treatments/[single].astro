@@ -22,6 +22,23 @@ const { title, image, description, intro } = post.data;
 
 <Base title={title} description={description}>
   <PageHeader title={title} />
-  <!-- treatment us -->
+  <section class="section">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="md:col-10 lg:col-8">
+          <div class="block md:flex md:items-center md:justify-between">
+            <div class="text-lg pb-12">
+             {intro}
+            </div>
+          </div>
+          <div class="block md:flex md:items-center md:justify-between">
+            <div class="content mt-6 border-t pt-12">
+              <Content />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <Cta />
 </Base>

@@ -14,5 +14,8 @@
 }
 
 .btn-outline-primary {
-  @apply border-primary bg-transparent hover:bg-primary hover:text-white;
+  @apply border-primary text-primary rounded-lg bg-transparent;
+  &::after {
+    @apply bg-primary/5;
+  }
 }

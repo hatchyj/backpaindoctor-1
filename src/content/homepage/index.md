@@ -44,9 +44,8 @@ service:
     hasCTA: true
     cta:
       href: /patient-journey
-      label: Explore the patient journey
+      label: Explore the Patient Journey
     image: /images/features-02.webp
-
 
 #Testimonial
 testimonial:

@@ -1,10 +1,10 @@
 ---
 draft: false
-title: "Platelet Rich Plasma Treatment"
-description: "Platelet Rich Plasma Treatment"
+title: "Nerve Therapy"
+description: "Nerve Therapy"
 image: "/images/treatments/treatment-image.png"
 
-intro: PRP injections use concentrated platelets enriched with bioactive proteins, including growth factors, to stimulate tissue repair and regeneration for chronic joint, ligament, and tendon injuries.
+intro: Nerve treatments can alleviate pain and numbness caused by past injuries and scar tissue by reprogramming the nerve's normal function through a simple injection series, leading to significant improvements.
 ---
 
 Platelet Rich Plasma (PRP) injections are an innovative treatment option for patients with chronic degenerative joint, ligament, and tendon injuries. This technology is transforming the way we manage pain, injury, and ageing-related conditions.

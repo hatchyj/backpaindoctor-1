@@ -1,10 +1,10 @@
 ---
 draft: false
-title: "Platelet Rich Plasma Treatment"
-description: "Platelet Rich Plasma Treatment"
+title: "Prolotherapy"
+description: "Prolotherapy"
 image: "/images/treatments/treatment-image.png"
 
-intro: PRP injections use concentrated platelets enriched with bioactive proteins, including growth factors, to stimulate tissue repair and regeneration for chronic joint, ligament, and tendon injuries.
+intro: Prolotherapy is a medical treatment that involves injecting a solution into damaged or weakened ligaments or tendons to stimulate tissue repair and alleviate pain.
 ---
 
 Platelet Rich Plasma (PRP) injections are an innovative treatment option for patients with chronic degenerative joint, ligament, and tendon injuries. This technology is transforming the way we manage pain, injury, and ageing-related conditions.

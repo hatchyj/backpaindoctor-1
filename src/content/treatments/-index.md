@@ -34,7 +34,7 @@ treatmentsOverview:
   - title: Nerve Therapy
     subtitle: Helpful for X
     icon: "ArrowUpRight"
-    description: Nerve treatments can alleviate pain and numbness caused by past injuries and scar tissue by reprogramming the nerve's normal function through a simple injection series, leading to significant improvements
+    description: Nerve treatments can alleviate pain and numbness caused by past injuries and scar tissue by reprogramming the nerve's normal function through a simple injection series, leading to significant improvements.
     hasCTA: true
     cta:
       href: /treatments/nerve-therapy-treatment

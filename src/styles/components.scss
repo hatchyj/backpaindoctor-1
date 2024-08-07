@@ -165,7 +165,7 @@
 
 .has-bg-animate {
   &::before {
-    @apply absolute left-0 top-0 h-full w-full scale-0 rounded-[1.8rem] bg-primary/5 duration-[1.5s] ease-[cubic-bezier(0.105,.84,.44,1)] content-[""];
+    @apply absolute left-0 top-0 h-full w-full scale-[0.8] rounded-[1.8rem] bg-primary/5 duration-[1.5s] ease-[cubic-bezier(0.105,.84,.44,1)] content-[""];
   }
   &.aos-animate {
     @apply before:scale-[1];
