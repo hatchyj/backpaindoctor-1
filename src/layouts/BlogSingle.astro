@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import SimilarPosts from "@/components/SimilarPosts.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import dateFormat from "@/lib/utils/dateFormat";
@@ -7,6 +6,7 @@ import readingTime from "@/lib/utils/readingTime";
 import similerItems from "@/lib/utils/similarItems";
 import { slugify } from "@/lib/utils/textConverter";
 import Cta from "@/partials/Cta.astro";
+import { Image } from "astro:assets";
 import Disqus from "./jsx-components/Disqus";
 
 const blogs = await getSinglePage("blog");

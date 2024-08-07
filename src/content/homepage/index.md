@@ -19,14 +19,6 @@ brands:
   - /images/brands/05-colored.png
   - /images/brands/06-colored.png
 
-#intro
-intro:
-  title: Watch this video on pain
-  subtitle: 5-minute video on Pain
-  description: To gain a better understanding of persistent pain, and how<br/> Musculoskeletal pain can affect nearly every part of our bodies, watch this short 5-minute video.
-  thumbnail: "/images/explaining_pain_video.png"
-  video_id: qEWc2XtaNwg
-
 #service
 service:
   - title: I can help you achieve lasting pain relief.

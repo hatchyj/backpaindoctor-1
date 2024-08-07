@@ -7,7 +7,6 @@ import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import Cta from "@/partials/Cta.astro";
-import type { CollectionKey } from "astro:content";
 import { getEntry } from "astro:content";
 
 const blogs_index = await getEntry("blog", "-index");
