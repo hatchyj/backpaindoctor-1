@@ -10,7 +10,7 @@ const { features } = Astro.props;
       <div class="col-md-12 text-center" data-aos="fed-up">
         <div class="section-title">
           <p
-            set:html={markdownify(features.sub_title)}
+            set:html={markdownify(features.subtitle)}
             class="mb-4 text-[0.9rem] uppercase"
           />
           <h2 set:html={markdownify(features.title)} class="title" />

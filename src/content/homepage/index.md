@@ -19,31 +19,6 @@ brands:
   - /images/brands/05-colored.png
   - /images/brands/06-colored.png
 
-#features
-features:
-  sub_title: SPECIAL FEATURES
-  title: Elements To </br> Get You Started
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas </br> Werat viverra id et aliquet. vulputate egestas sollicitudin.
-  list:
-    - icon: "lock"
-      title: Updated Security
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus
-    - icon: "wind"
-      title: Magnetic Turning
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus
-    - icon: "shield"
-      title: Secured & up-to-date
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus
-    - icon: "link"
-      title: Instant Link Sharing
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus
-    - icon: "lock"
-      title: Updated Security
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus
-    - icon: "wind"
-      title: Magnetic Turning
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus
-
 #intro
 intro:
   title: Watch this video on pain
@@ -55,7 +30,7 @@ intro:
 #service
 service:
   - title: I can help you achieve lasting pain relief.
-    subtitle: Meet Dr Josh
+    subtitle: Meet Dr. Josh
     description: I am a GP and Musculoskeletal Medicine practitioner based in Brisbane, Australia. With a wealth of experience, I provide an array of effective techniques to address musculoskeletal pain, enabling you to attain lasting relief.
     hasCTA: true
     cta:
@@ -63,10 +38,15 @@ service:
       label: Read the Back Pain Doctor story
     image: /images/dr_joshua_hatch_intro.jpg
 
-  - title: What we can do for you
-    subtitle: Pain Treatments
-    description: Musculoskeletal treatments are designed to address issues with bones, muscles, and connective tissues. Platelet-Rich Plasma (PRP) therapy involves injecting a concentrated solution of a patient’s own blood platelets to promote healing. Prolotherapy involves injecting a solution of dextrose to stimulate the body’s natural healing processes. Nerve therapy aims to identify and treat areas of nerve dysfunction. Trigger point therapy involves applying needles to specific areas of muscle tissue to relieve pain and tension.
+  - title: A customised pain relief plan for our patients
+    subtitle: Explore how we work
+    description: We use a unique and innovative techniques to identify the root cause of your pain, allowing us to tailor multiple services to optimise your outcomes. Say goodbye to chronic pain and hello to a better quality of life with non-surgical musculoskeletal procedures.
+    hasCTA: true
+    cta:
+      href: /patient-journey
+      label: Explore the patient journey
     image: /images/features-02.webp
+
 
 #Testimonial
 testimonial:

@@ -3,13 +3,13 @@ import IntroSection from "@/components/IntroSection.astro";
 import PageHeader from "@/components/PageHeader.astro";
 import Service from "@/components/Service.astro";
 import Base from "@/layouts/Base.astro";
-import { getSinglePage } from "@/lib/contentParser.astro";
 import Cta from "@/partials/Cta.astro";
 import { getEntry } from "astro:content";
 
-const treatments = await getSinglePage("treatments");
+// const treatments = await getSinglePage("treatments");
+// Why do I need this top one?? see case studies that uses it
 const treatments_index = await getEntry("treatments", "-index");
-const { title, description, intro, service } = treatments_index?.data;
+const { title, description, intro, treatmentsOverview } = treatments_index?.data;
 
 ---
 
@@ -17,6 +17,6 @@ const { title, description, intro, service } = treatments_index?.data;
   <PageHeader title={title} />
   <IntroSection intro={intro} />
   
-  <Service service={service} />
+  <Service service={treatmentsOverview} />
   <Cta />
 </Base>
