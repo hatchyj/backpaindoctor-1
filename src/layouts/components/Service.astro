@@ -1,6 +1,6 @@
 ---
-import { Image } from "astro:assets";
 import { markdownify } from "@/lib/utils/textConverter";
+import { Image } from "astro:assets";
 const { service } = Astro.props;
 ---
 
@@ -10,7 +10,7 @@ const { service } = Astro.props;
       service.map((el: any, i: number) => (
         <div class="row mb-6 items-center justify-center">
           <div
-            class={`lg:col-5 ${i % 2 !== 0 ? "order-1" : "order-0"}`}
+            class={`lg:col-5 ${i % 2 !== 0 ? "md:order-1" : "md:order-0"}`}
             data-aos="fade-up"
           >
             <div class="mb-0">
@@ -29,7 +29,7 @@ const { service } = Astro.props;
           </div>
           <div
             class={`mt-4 lg:col-6 lg:mt-0 ${
-              i % 2 !== 0 ? "order-0" : "order-1"
+              i % 2 !== 0 ? "md:order-0" : "md:order-1"
             }`}
             data-aos="fade-up"
             data-aos-delay="100"
@@ -40,7 +40,9 @@ const { service } = Astro.props;
                 height={511}
                 width={575}
                 class="max-w-full"
-                alt="service"
+                class={`max-w-full ${ 
+                  el.image_style ? el.image_style : "" }`}
+                alt={"Photo of " + el.title}
               />
             </div>
           </div>

@@ -1,0 +1,27 @@
+---
+import PageHeader from "@/components/PageHeader.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import Cta from "@/partials/Cta.astro";
+
+export async function getStaticPaths() {
+  const treatments = await getSinglePage("treatments");
+  const paths = treatments.map((post: any) => ({
+    params: {
+      single: post.slug,
+    },
+    props: { post },
+  }));
+  return paths;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const { title, image, description, intro } = post.data;
+---
+
+<Base title={title} description={description}>
+  <PageHeader title={title} />
+  <!-- treatment us -->
+  <Cta />
+</Base>

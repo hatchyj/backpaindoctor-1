@@ -368,15 +368,6 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".md"] };
 };
-"how-it-works": {
-"index.md": {
-	id: "index.md";
-  slug: "index";
-  body: string;
-  collection: "how-it-works";
-  data: any
-} & { render(): Render[".md"] };
-};
 "pages": {
 "404.md": {
 	id: "404.md";
@@ -416,16 +407,27 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".md"] };
 };
+"treatments": {
+"-index.md": {
+	id: "-index.md";
+  slug: "-index";
+  body: string;
+  collection: "treatments";
+  data: any
+} & { render(): Render[".md"] };
+"platelet-rich-plasma-treatment.md": {
+	id: "platelet-rich-plasma-treatment.md";
+  slug: "platelet-rich-plasma-treatment";
+  body: string;
+  collection: "treatments";
+  data: any
+} & { render(): Render[".md"] };
+};
 
 	};
 
 	type DataEntryMap = {
-		"treatments": Record<string, {
-  id: string;
-  collection: "treatments";
-  data: any;
-}>;
-
+		
 	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
