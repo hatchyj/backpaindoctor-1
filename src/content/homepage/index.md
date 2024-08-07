@@ -30,13 +30,21 @@ service:
       label: Read the Back Pain Doctor story
     image: /images/dr_joshua_hatch_intro.jpg
 
-  - title: A customised pain relief plan for our patients
+  - title: Tailored treatments to optimise your outcomes.
     subtitle: Explore how we work
-    description: We use a unique and innovative techniques to identify the root cause of your pain, allowing us to tailor multiple services to optimise your outcomes. Say goodbye to chronic pain and hello to a better quality of life with non-surgical musculoskeletal procedures.
+    description: Nearly all pain and injuries can be treated without surgery, making regenerative treatments a promising option. We create a tailored treatment plan for your individual pain needs.
     hasCTA: true
     cta:
       href: /patient-journey
       label: Explore the Patient Journey
+    image: /images/features-02.webp
+  - title: Innovative non-surgical treatments for pain relief.
+    subtitle: Musculoskeletal Pain Treatments
+    description: We use a unique and innovative techniques to identify the root cause of your pain, allowing us to tailor multiple services to optimise your outcomes. Say goodbye to chronic pain and hello to a better quality of life with non-surgical musculoskeletal procedures.
+    hasCTA: true
+    cta:
+      href: /treatments
+      label: View our Treatments
     image: /images/features-02.webp
 
 #Testimonial

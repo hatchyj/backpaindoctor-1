@@ -1,8 +1,6 @@
 ---
 import Banner from "@/components/Banner.astro";
-import Features from "@/components/Features.astro";
 import Service from "@/components/Service.astro";
-import VideoSection from "@/components/VideoSection.astro";
 import Base from "@/layouts/Base.astro";
 import Cta from "@/partials/Cta.astro";
 import { getEntry } from "astro:content";
@@ -10,12 +8,12 @@ import { getEntry } from "astro:content";
 const homepage = await getEntry("homepage", "index");
 const treatments_index = await getEntry("treatments", "-index");
 const { banner, intro, service } = homepage.data;
-const features = {
-  title : treatments_index?.data.intro.title,
-  subtitle : treatments_index?.data.intro.subtitle,
-  description : treatments_index?.data.intro.description,
-  list: treatments_index?.data.treatmentsOverview,
-}
+// const features = {
+//   title : treatments_index?.data.intro.title,
+//   subtitle : treatments_index?.data.intro.subtitle,
+//   description : treatments_index?.data.intro.description,
+//   list: treatments_index?.data.treatmentsOverview,
+// }
 ---
 
 <!-- <Debug answer={features} /> -->
@@ -25,7 +23,7 @@ const features = {
   <Banner banner={banner} />
   <!-- <Brand brands={brands} /> -->
   <Service service={service} />
-  <Features features={features} />
+  <!-- <Features features={features} /> -->
   <!-- <Testimonial testimonial={testimonial} /> -->
   <Cta />
 </Base>
