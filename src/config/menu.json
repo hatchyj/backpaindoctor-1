@@ -47,12 +47,16 @@
       "url": "/about"
     },
     {
-      "name": "Contact",
-      "url": "/contact"
+      "name": "Treatments",
+      "url": "/treatment"
     },
     {
-      "name": "Terms And Conditions",
-      "url": "/terms-and-conditions"
+      "name": "Patient Journey",
+      "url": "/patient-journey"
+    },
+    {
+      "name": "Book appointment",
+      "url": "/book-appointment"
     }
   ]
 }

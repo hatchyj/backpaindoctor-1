@@ -5,7 +5,7 @@
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
-    "logo": "/images/the-back-pain-doctor.png",
+    "logo": "/images/the-back-pain-doctor-horz.png",
     "logo_width": "177",
     "logo_height": "108",
     "logo_text": "The Back Pain Doctor"
@@ -19,14 +19,14 @@
   "params": {
     "contact_form_action": "#",
     "career_form_action": "#",
-    "copyright": "Built By [Tim Jensen](https://www.timjensen.com.au)"
+    "copyright": "© 2024 The Back Pain Doctor. Built By [Tim Jensen](https://www.timjensen.com.au)"
   },
 
   "footer_data": {
     "description": "Get lasting relief from back pain.",
     "email": "clinic@thebackpaindoctor.com.au",
     "location": "Level 1, 36 Baroona Rd, Milton, 4064",
-    "contact": "07 3367 0333"
+    "phone": "07 3367 0333"
   },
 
   "call_to_action": {
