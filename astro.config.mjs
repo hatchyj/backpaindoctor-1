@@ -40,6 +40,12 @@ export default defineConfig({
     }),
     mdx(),
   ],
+  redirects: {
+    "/the-back-pain-doctor-story": "/about",
+    "/find-lasting-relief/treatment": "/treatments",
+    "/painful-conditions": "/explaining-pain",
+    "/find-lasting-relief/contact": "/book-appointment",
+  },
   markdown: {
     remarkPlugins: [
       remarkToc,
