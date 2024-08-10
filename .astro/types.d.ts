@@ -390,13 +390,6 @@ declare module 'astro:content' {
   collection: "pages";
   data: InferEntrySchema<"pages">
 } & { render(): Render[".mdx"] };
-"terms-and-conditions.md": {
-	id: "terms-and-conditions.md";
-  slug: "terms-and-conditions";
-  body: string;
-  collection: "pages";
-  data: InferEntrySchema<"pages">
-} & { render(): Render[".md"] };
 };
 "patient-journey": {
 "index.md": {
