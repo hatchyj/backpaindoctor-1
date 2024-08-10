@@ -29,7 +29,13 @@ mission:
   subtitle: OUR MISSION
   title: The mission of the Back Pain Doctor
   description: At The Back Pain Doctor, our goal is to help our patients achieve optimal musculoskeletal health and function using advanced regenerative medicine therapies. We use evidence-based treatments and cutting-edge technology to help you manage chronic pain, recover from injury and improve overall quality of life.
-  image: /images/about/02.jpg
+  image: /images/about/mission_active_no_back_pain.jpg
+
+bio:
+  subtitle: The Back Pain Doctor Story
+  title: You're in safe hands
+  description: "Dr. Hatch’s passion for musculoskeletal medicine started before medical school, during his ten-year career as an MRI Radiographer working with distinguished musculoskeletal radiologists. After completing his residency, he spent four years refining his diagnostic and management skills in Orthopaedic Surgery as a hospital registrar. Currently, Dr. Hatch is an assistant surgeon in Orthopaedic Surgery and a Specialist General Practice Fellow recognised by the Royal Australian College of General Practitioners, and is a diplomate fellow of the faculty of sports and exercise medicine (UK) after successfully completing the diploma of musculoskeletal medicine. He currently sits on the board of the Australian Association of Musculoskeletal Medicine, providing strategic advice to further the field of musculoskeletal medicine.<br/><br/>Dr. Hatch has completed multiple courses through the Royal Australasian College of Surgeons, including the General Surgical Sciences Exam, Care of the Critically Ill Surgical Patient, and Emergency Management of Severe Trauma. He also holds a certification in Orthopaedic Surgical Anatomy from QUT."
+  image: /images/about/about-dr-josh-hatch-bio.webp
 
 #intro
 intro:

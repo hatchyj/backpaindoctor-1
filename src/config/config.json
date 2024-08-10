@@ -31,8 +31,9 @@
 
   "call_to_action": {
     "enable": true,
-    "title": "Tired of temporary fixes with no lasting relief?",
-    "content": "It’s time to take action and find a solution that works for you.",
+    "subtitle": "Tired of temporary fixes with no lasting relief?",
+    "title": "Want lasting relief from pain? Take action today.",
+    "content": "We can help you achieve lasting pain relief through a tailored plan that fits your individual needs.",
     "button": {
       "label": "Book Appointment now",
       "label_sml": "Book now",
