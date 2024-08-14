@@ -1,4 +1,5 @@
 ---
+import AboutShortVideo from "@/components/about/AboutShortVideo.astro";
 import PageHeader from "@/components/PageHeader.astro";
 import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
@@ -17,7 +18,7 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await post.render();
-const { title, image, description, intro } = post.data;
+const { title, image, description, intro, video } = post.data;
 ---
 
 <Base title={title} description={description}>
@@ -31,6 +32,14 @@ const { title, image, description, intro } = post.data;
              {intro}
             </div>
           </div>
+        </div>
+          {
+            video && (
+              <AboutShortVideo video={video} />
+            )
+          }
+        
+        <div class="md:col-10 lg:col-8">
           <div class="block md:flex md:items-center md:justify-between">
             <div class="content mt-6 border-t pt-12 columns-2">
               <Content />

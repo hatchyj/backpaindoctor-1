@@ -7,7 +7,6 @@ import similerItems from "@/lib/utils/similarItems";
 import { slugify } from "@/lib/utils/textConverter";
 import Cta from "@/partials/Cta.astro";
 import { Image } from "astro:assets";
-import Disqus from "./jsx-components/Disqus";
 
 const blogs = await getSinglePage("blog");
 const authors = await getSinglePage("authors");
@@ -29,7 +28,7 @@ const singleAuthor = authors.find(
 );
 const similarPosts = similerItems(post, addAuthors, post.slug);
 const { Content } = await post.render();
-const { title, author, image, date } = post.data;
+const { title, author, image, date, references } = post.data;
 ---
 
 <section class="section">
@@ -72,7 +71,21 @@ const { title, author, image, date } = post.data;
         <div class="content">
           <Content />
         </div>
-        <Disqus client:load />
+        <!-- <Disqus client:load /> -->
+
+        <!-- References -->
+        { references && (
+          <div class="py-8 mt-4 border-t border-black/30">
+            <h5 class="text-base">References</h5>
+            <ul class=" my-4 space-y-2 text-sm">
+            {
+              references.map((ref) => (
+                <li>{ref}</li>
+              ))
+            }
+            </ul>
+          </div>
+        ) }
       </div>
     </div>
   </div>

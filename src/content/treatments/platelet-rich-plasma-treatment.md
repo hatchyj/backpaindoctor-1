@@ -5,6 +5,12 @@ description: "Platelet Rich Plasma Treatment"
 image: "/images/treatments/treatment-image.png"
 
 intro: PRP injections use concentrated platelets enriched with bioactive proteins, including growth factors, to stimulate tissue repair and regeneration for chronic joint, ligament, and tendon injuries.
+video:
+  title: Learn about Platelet-Rich Plasma injections
+  subtitle: ACP Max™ Platelet-Rich Plasma System
+  description: The ACP Max™ system provides efficient concentration of platelets and growth factors from platelet-rich plasma (PRP) for use at the patient’s point of care. Expanding on the previous generation of PRP devices, the ACP Max system allows for a larger blood draw and provides increased platelet concentration using a unique double-syringe, double-spin design.
+  thumbnail: "/images/ACP_Max_platelet_rich_plasma_system.jpg"
+  video_id: 9imeLYLAzN8
 ---
 
 Platelet Rich Plasma (PRP) injections are an innovative treatment option for patients with chronic degenerative joint, ligament, and tendon injuries. This technology is transforming the way we manage pain, injury, and ageing-related conditions.
