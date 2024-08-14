@@ -1,7 +1,7 @@
 ---
-title: Abdullah Al Shifat
-email: abdullahalshifat@gmail.com
-image: /images/author/abdullah.jpg
+title: Dr Joshua Hatch
+email: info@backpaindoctor.com.au
+image: /images/author/avatar_dr_josh_hatch.jpg
 description: this is meta description
 social:
   facebook: https://www.facebook.com/

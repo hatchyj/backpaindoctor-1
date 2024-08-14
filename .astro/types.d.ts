@@ -152,16 +152,9 @@ declare module 'astro:content' {
   collection: "authors";
   data: InferEntrySchema<"authors">
 } & { render(): Render[".md"] };
-"abdullah-al-shifat.md": {
-	id: "abdullah-al-shifat.md";
-  slug: "abdullah-al-shifat";
-  body: string;
-  collection: "authors";
-  data: InferEntrySchema<"authors">
-} & { render(): Render[".md"] };
-"derick-barker.md": {
-	id: "derick-barker.md";
-  slug: "derick-barker";
+"dr-joshua-hatch.md": {
+	id: "dr-joshua-hatch.md";
+  slug: "dr-joshua-hatch";
   body: string;
   collection: "authors";
   data: InferEntrySchema<"authors">
@@ -177,7 +170,7 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 "post-1.mdx": {
 	id: "post-1.mdx";
-  slug: "post-1";
+  slug: "the-relationship-between-sleep-and-pain-evidenced-based-strategies";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
