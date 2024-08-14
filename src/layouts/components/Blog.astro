@@ -1,9 +1,9 @@
 ---
-import { Image } from "astro:assets";
 import config from "@/config/config.json";
 import dateFormat from "@/lib/utils/dateFormat";
 import readingTime from "@/lib/utils/readingTime";
 import { plainify, slugify } from "@/lib/utils/textConverter";
+import { Image } from "astro:assets";
 
 const { blog } = Astro.props;
 const { summary_length } = config.settings;

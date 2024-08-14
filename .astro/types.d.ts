@@ -150,14 +150,14 @@ declare module 'astro:content' {
   slug: "-index";
   body: string;
   collection: "authors";
-  data: any
+  data: InferEntrySchema<"authors">
 } & { render(): Render[".md"] };
 "dr-joshua-hatch.md": {
 	id: "dr-joshua-hatch.md";
   slug: "dr-joshua-hatch";
   body: string;
   collection: "authors";
-  data: any
+  data: InferEntrySchema<"authors">
 } & { render(): Render[".md"] };
 };
 "blog": {
@@ -166,63 +166,63 @@ declare module 'astro:content' {
   slug: "-index";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "post-1.mdx": {
 	id: "post-1.mdx";
   slug: "the-relationship-between-sleep-and-pain-evidenced-based-strategies";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 "post-2.mdx": {
 	id: "post-2.mdx";
   slug: "knee-pain-and-arthritis";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 "post-3.mdx": {
 	id: "post-3.mdx";
-  slug: "post-3";
+  slug: "the-complexity-of-the-human-musculoskeletal-system-and-pain-mechanisms";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 "post-4.mdx": {
 	id: "post-4.mdx";
   slug: "post-4";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 "post-5.mdx": {
 	id: "post-5.mdx";
   slug: "post-5";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 "post-6.mdx": {
 	id: "post-6.mdx";
   slug: "post-6";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 "post-7.mdx": {
 	id: "post-7.mdx";
   slug: "post-7";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 "post-8.mdx": {
 	id: "post-8.mdx";
   slug: "post-8";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 };
 "careers": {
@@ -231,56 +231,56 @@ declare module 'astro:content' {
   slug: "-index";
   body: string;
   collection: "careers";
-  data: any
+  data: InferEntrySchema<"careers">
 } & { render(): Render[".mdx"] };
 "job-post-1.md": {
 	id: "job-post-1.md";
   slug: "job-post-1";
   body: string;
   collection: "careers";
-  data: any
+  data: InferEntrySchema<"careers">
 } & { render(): Render[".md"] };
 "job-post-2.md": {
 	id: "job-post-2.md";
   slug: "job-post-2";
   body: string;
   collection: "careers";
-  data: any
+  data: InferEntrySchema<"careers">
 } & { render(): Render[".md"] };
 "job-post-3.md": {
 	id: "job-post-3.md";
   slug: "job-post-3";
   body: string;
   collection: "careers";
-  data: any
+  data: InferEntrySchema<"careers">
 } & { render(): Render[".md"] };
 "job-post-4.md": {
 	id: "job-post-4.md";
   slug: "job-post-4";
   body: string;
   collection: "careers";
-  data: any
+  data: InferEntrySchema<"careers">
 } & { render(): Render[".md"] };
 "job-post-5.md": {
 	id: "job-post-5.md";
   slug: "job-post-5";
   body: string;
   collection: "careers";
-  data: any
+  data: InferEntrySchema<"careers">
 } & { render(): Render[".md"] };
 "job-post-6.md": {
 	id: "job-post-6.md";
   slug: "job-post-6";
   body: string;
   collection: "careers";
-  data: any
+  data: InferEntrySchema<"careers">
 } & { render(): Render[".md"] };
 "job-post-7.md": {
 	id: "job-post-7.md";
   slug: "job-post-7";
   body: string;
   collection: "careers";
-  data: any
+  data: InferEntrySchema<"careers">
 } & { render(): Render[".md"] };
 };
 "case-studies": {
@@ -289,49 +289,49 @@ declare module 'astro:content' {
   slug: "-index";
   body: string;
   collection: "case-studies";
-  data: any
+  data: InferEntrySchema<"case-studies">
 } & { render(): Render[".md"] };
 "case-1.md": {
 	id: "case-1.md";
   slug: "case-1";
   body: string;
   collection: "case-studies";
-  data: any
+  data: InferEntrySchema<"case-studies">
 } & { render(): Render[".md"] };
 "case-2.md": {
 	id: "case-2.md";
   slug: "case-2";
   body: string;
   collection: "case-studies";
-  data: any
+  data: InferEntrySchema<"case-studies">
 } & { render(): Render[".md"] };
 "case-3.md": {
 	id: "case-3.md";
   slug: "case-3";
   body: string;
   collection: "case-studies";
-  data: any
+  data: InferEntrySchema<"case-studies">
 } & { render(): Render[".md"] };
 "case-4.md": {
 	id: "case-4.md";
   slug: "case-4";
   body: string;
   collection: "case-studies";
-  data: any
+  data: InferEntrySchema<"case-studies">
 } & { render(): Render[".md"] };
 "case-5.md": {
 	id: "case-5.md";
   slug: "case-5";
   body: string;
   collection: "case-studies";
-  data: any
+  data: InferEntrySchema<"case-studies">
 } & { render(): Render[".md"] };
 "case-6.md": {
 	id: "case-6.md";
   slug: "case-6";
   body: string;
   collection: "case-studies";
-  data: any
+  data: InferEntrySchema<"case-studies">
 } & { render(): Render[".md"] };
 };
 "contact": {
@@ -367,21 +367,21 @@ declare module 'astro:content' {
   slug: "404";
   body: string;
   collection: "pages";
-  data: any
+  data: InferEntrySchema<"pages">
 } & { render(): Render[".md"] };
 "changelog.mdx": {
 	id: "changelog.mdx";
   slug: "changelog";
   body: string;
   collection: "pages";
-  data: any
+  data: InferEntrySchema<"pages">
 } & { render(): Render[".mdx"] };
 "elements.mdx": {
 	id: "elements.mdx";
   slug: "elements";
   body: string;
   collection: "pages";
-  data: any
+  data: InferEntrySchema<"pages">
 } & { render(): Render[".mdx"] };
 };
 "patient-journey": {
@@ -448,5 +448,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = never;
+	export type ContentConfig = typeof import("../src/content/config.js");
 }
