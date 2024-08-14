@@ -7,6 +7,7 @@ import similerItems from "@/lib/utils/similarItems";
 import { slugify } from "@/lib/utils/textConverter";
 import Cta from "@/partials/Cta.astro";
 import { Image } from "astro:assets";
+import AboutShortVideo from "./components/about/AboutShortVideo.astro";
 
 const blogs = await getSinglePage("blog");
 const authors = await getSinglePage("authors");
@@ -28,7 +29,7 @@ const singleAuthor = authors.find(
 );
 const similarPosts = similerItems(post, addAuthors, post.slug);
 const { Content } = await post.render();
-const { title, author, image, date, references } = post.data;
+const { title, author, image, date, references, video } = post.data;
 ---
 
 <section class="section">
@@ -71,6 +72,11 @@ const { title, author, image, date, references } = post.data;
         <div class="content">
           <Content />
         </div>
+        {
+            video && (
+              <AboutShortVideo video={video} />
+            )
+          }
         <!-- <Disqus client:load /> -->
 
         <!-- References -->

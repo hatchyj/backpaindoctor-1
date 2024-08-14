@@ -175,6 +175,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
+"post-10-explaining-pain.mdx": {
+	id: "post-10-explaining-pain.mdx";
+  slug: "explaining-pain-a-5-minute-animation";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "post-2.mdx": {
 	id: "post-2.mdx";
   slug: "knee-pain-and-arthritis";
@@ -191,35 +198,42 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] };
 "post-4.mdx": {
 	id: "post-4.mdx";
-  slug: "post-4";
+  slug: "biomechanics-causes-and-treatments-of-back-pain";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 "post-5.mdx": {
 	id: "post-5.mdx";
-  slug: "post-5";
+  slug: "understanding-the-causes-symptoms-and-treatments";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 "post-6.mdx": {
 	id: "post-6.mdx";
-  slug: "post-6";
+  slug: "tennis-elbow-causes-symptoms-and-effective-treatment-strategies";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 "post-7.mdx": {
 	id: "post-7.mdx";
-  slug: "post-7";
+  slug: "wrist-pain-exploring-the-causes-symptoms-and-treatment-options";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 "post-8.mdx": {
 	id: "post-8.mdx";
-  slug: "post-8";
+  slug: "hip-pain-causes-symptoms-and-treatment-options";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
+"post-9.mdx": {
+	id: "post-9.mdx";
+  slug: "shoulder-pain-causes-symptoms-and-effective-treatment-strategies";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -343,15 +357,6 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".md"] };
 };
-"explaining-pain": {
-"index.md": {
-	id: "index.md";
-  slug: "index";
-  body: string;
-  collection: "explaining-pain";
-  data: any
-} & { render(): Render[".md"] };
-};
 "homepage": {
 "index.md": {
 	id: "index.md";
@@ -443,7 +448,12 @@ declare module 'astro:content' {
 	};
 
 	type DataEntryMap = {
-		
+		"__explaining-pain": Record<string, {
+  id: string;
+  collection: "__explaining-pain";
+  data: any;
+}>;
+
 	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
