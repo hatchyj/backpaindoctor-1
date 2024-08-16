@@ -8,13 +8,13 @@ intro: PRP injections use concentrated platelets enriched with bioactive protein
 system1:
   title: Concentration of platelets and growth factors from platelet-rich plasma.
   subtitle: ACP Max™ Platelet-Rich Plasma System
-  description: The ACP Max™ system provides efficient concentration of platelets and growth factors from platelet-rich plasma (PRP) for use at the patient’s point of care. Expanding on the previous generation of PRP devices, the ACP Max system allows for a larger blood draw and provides increased platelet concentration using a unique double-syringe, double-spin design.
+  description: <strong>The ACP Max™ system</strong> provides efficient concentration of platelets and growth factors from platelet-rich plasma (PRP) for use at the patient’s point of care. Expanding on the previous generation of PRP devices, the ACP Max system allows for a larger blood draw and provides increased platelet concentration using a unique double-syringe, double-spin design.
   thumbnail: "/images/ACP_Max_platelet_rich_plasma_system.jpg"
   video_id: 9imeLYLAzN8
 system2:
   title: Higher blood volumes, leading to greater platelet concentrations.
   subtitle: The Arthrex Angel PRP System
-  description: "The Arthrex Angel PRP System offers significant advantages for patients through its ability to process higher blood volumes, leading to greater platelet concentrations. This system is designed to deliver more platelets and growth factors than many other PRP devices, enhancing the body's natural healing processes.<br/><br/>One of the standout features is its use of flow photo cytometry, a precise technology that ensures the accurate separation and concentration of platelets from the blood. This results in a more potent PRP formulation tailored to each patient's needs, which can lead to faster recovery times and more effective treatment outcomes. Whether you're recovering from an injury, managing chronic pain, or seeking cosmetic improvements, the Angel PRP System's advanced capabilities can provide a more targeted and powerful approach to healing."
+  description: "<strong>The Arthrex Angel PRP System</strong> offers significant advantages for patients through its ability to process higher blood volumes, leading to greater platelet concentrations. This system is designed to deliver more platelets and growth factors than many other PRP devices, enhancing the body's natural healing processes.<br/><br/>One of the standout features is its use of flow photo cytometry, a precise technology that ensures the accurate separation and concentration of platelets from the blood. This results in a more potent PRP formulation tailored to each patient's needs, which can lead to faster recovery times and more effective treatment outcomes. Whether you're recovering from an injury, managing chronic pain, or seeking cosmetic improvements, the Angel PRP System's advanced capabilities can provide a more targeted and powerful approach to healing."
   image: "/images/the-arthrex-angel-PRP-system.jpg"
 ---
 
