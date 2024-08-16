@@ -2,10 +2,9 @@
 import Base from "@/layouts/Base.astro";
 import BlogSingle from "@/layouts/BlogSingle.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
-import type { CollectionKey } from "astro:content";
 
 export async function getStaticPaths() {
-  const blogs = await getSinglePage("blog");
+  const blogs = await getSinglePage("patient-resources");
 
   const paths = blogs.map((post: any) => ({
     params: {

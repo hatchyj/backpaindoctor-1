@@ -16,7 +16,7 @@ const {
 ---
 
 <article class="mt-7 rounded-2xl border-0 shadow">
-  <a href={`/blog/${slug}`}>
+  <a href={`/patient-resources/${slug}`}>
     <Image
       src={image}
       alt={title}
@@ -27,7 +27,7 @@ const {
   >
   <div class="px-[1.875rem] pb-[0.625rem] pt-[2.1rem]">
     <h3 class="card-title h4 mb-2 font-semibold hover:underline">
-      <a href={`/blog/${slug}`}>{title}</a>
+      <a href={`/patient-resources/${slug}`}>{title}</a>
     </h3>
     <p class="mb-4 text-text">
       {plainify(body?.slice(0, Number(summary_length)))}...

@@ -99,7 +99,7 @@ const pagesCollection = defineCollection({
 
 // Export collections
 export const collections = {
-  blog: blogsCollection,
+  "patient-resources": blogsCollection,
   authors: authorsCollection,
   careers: careersCollection,
   "case-studies": caseStudiesCollection,
