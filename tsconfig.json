@@ -16,7 +16,9 @@
       "@/shortcodes/*": ["./src/layouts/shortcodes/*"],
       "@/helpers/*": ["./src/layouts/helpers/*"],
       "@/partials/*": ["./src/layouts/partials/*"],
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/images/*": ["./src/images/*"],
+      "@/publicImages/*": ["./public/images/*"]
     }
   },
   "include": [

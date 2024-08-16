@@ -2,18 +2,22 @@ import { defineCollection, z } from "astro:content";
 
 // Blog collection schema
 const blogsCollection = defineCollection({
-  schema: z.object({
-    id: z.string().optional(),
-    title: z.string(),
-    meta_title: z.string().optional(),
-    description: z.string().optional(),
-    date: z.date().optional(),
-    image: z.string().optional(),
-    author: z.string().optional(),
-    categories: z.array(z.string()).default(["others"]),
-    references: z.array(z.string()).optional(),
-    draft: z.boolean().optional(),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      id: z.string().optional(),
+      title: z.string(),
+      meta_title: z.string().optional(),
+      description: z.string().optional(),
+      date: z.date().optional(),
+      // image: z.string().optional(),
+      author: z.string().optional(),
+      categories: z.array(z.string()).default(["others"]),
+      references: z.array(z.string()).optional(),
+      draft: z.boolean().optional(),
+      image: image().refine((img) => img.width >= 1080, {
+        message: "Blog image should be at least 1080 pixels wide!",
+      }),
+    }),
 });
 
 // Author collection schema
