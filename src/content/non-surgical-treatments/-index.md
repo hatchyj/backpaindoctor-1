@@ -1,13 +1,13 @@
 ---
 title: "Non-surgical Treatments"
-description: "meta description"
+description: "Explore the range of non-surgical musculoskeletal treatments available from the Back Pain Doctor."
 draft: false
 
 #intro
 intro:
   title: Treatments to help you experience lasting relief
   subtitle: Musculoskeletal Pain Treatments
-  description: Are you struggling with chronic pain, injury, or arthritis and want to avoid invasive surgeries and potentially addictive pharmaceuticals? Consider non-surgical musculoskeletal procedures that allow your body to heal naturally and regain mobility quickly. Our approach is unique because we use innovative techniques to identify the root cause of your pain, allowing us to tailor multiple services to optimise your outcomes. Say goodbye to chronic pain and hello to a better quality of life with non-surgical musculoskeletal procedures.
+  description: Are you struggling with chronic pain, injury, or arthritis and want to avoid invasive surgeries and potentially addictive pharmaceuticals? Consider non-surgical musculoskeletal treatments that allow your body to heal naturally and regain mobility quickly. Our approach is unique because we use innovative techniques to identify the root cause of your pain, allowing us to tailor multiple services to optimise your outcomes. Say goodbye to chronic pain and hello to a better quality of life with non-surgical musculoskeletal treatments.
 
 #treatments
 treatmentsOverview:

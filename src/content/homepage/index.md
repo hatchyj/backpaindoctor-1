@@ -40,7 +40,7 @@ service:
     image: /images/tailored-treatment-plan-min.jpg
   - title: Innovative non-surgical treatments for pain relief.
     subtitle: Musculoskeletal Pain Treatments
-    description: We use a unique and innovative techniques to identify the root cause of your pain, allowing us to tailor multiple services to optimise your outcomes. Say goodbye to chronic pain and hello to a better quality of life with non-surgical musculoskeletal procedures.
+    description: We use a unique and innovative techniques to identify the root cause of your pain, allowing us to tailor multiple services to optimise your outcomes. Say goodbye to chronic pain and hello to a better quality of life with non-surgical musculoskeletal treatments.
     hasCTA: true
     cta:
       href: /non-surgical-treatments
