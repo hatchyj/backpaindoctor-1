@@ -17,6 +17,15 @@ const blogsCollection = defineCollection({
       image: image().refine((img) => img.width >= 1080, {
         message: "Blog image should be at least 1080 pixels wide!",
       }),
+      video: z
+        .object({
+          title: z.string(),
+          subtitle: z.string().optional(),
+          description: z.string().optional(),
+          thumbnail: z.string().optional(),
+          video_id: z.string(),
+        })
+        .optional(),
     }),
 });
 

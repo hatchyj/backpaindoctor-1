@@ -73,8 +73,8 @@ const { title, author, image, date, references, video } = post.data;
           <Content />
         </div>
         {
-            post.video && (
-              <AboutShortVideo video={post.video} />
+            video && (
+              <AboutShortVideo video={video} />
             )
           }
         <!-- <Disqus client:load /> -->
