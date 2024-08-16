@@ -109,6 +109,9 @@ const {
     <title>
       {plainify(meta_title ? meta_title + " | " + config.site.title : title ? title + " | " + config.site.title : config.site.title)}
     </title>
+    
+    <!-- Sitemap -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- canonical url -->
     {canonical && <link rel="canonical" href={canonical} item-prop="url" />}
