@@ -19,7 +19,7 @@ treatmentsOverview:
     cta:
       href: /non-surgical-treatments/platelet-rich-plasma-treatment
       label: Platelet Rich Plasma Treatments
-    image: /images/treatment-platelet-rich-plasma.webp
+    image: /images/non-surgical-treatments/treatment-platelet-rich-plasma.webp
     image_style: rounded-2xl shadow-xl max-w-[80%]
   - title: Prolotherapy Treatment
     subtitle: Helpful for X
@@ -29,7 +29,7 @@ treatmentsOverview:
     cta:
       href: /non-surgical-treatments/prolotherapy-treatment
       label: Prolotherapy Teatments
-    image: /images/treatment-prolotherapy.webp
+    image: /images/non-surgical-treatments/treatment-prolotherapy.webp
     image_style: rounded-2xl shadow-xl max-w-[80%]
   - title: Nerve Therapy
     subtitle: Helpful for X
@@ -39,7 +39,7 @@ treatmentsOverview:
     cta:
       href: /non-surgical-treatments/nerve-therapy-treatment
       label: Nerve Therapy Teatments
-    image: /images/treatment-nerve-therapy.webp
+    image: /images/non-surgical-treatments/treatment-nerve-therapy.webp
     image_style: rounded-2xl shadow-xl max-w-[80%]
   - title: Trigger Point Therapy
     subtitle: Helpful for X
@@ -49,6 +49,6 @@ treatmentsOverview:
     cta:
       href: /non-surgical-treatments/trigger-point-therapy-treatment
       label: Trigger point Therapy Teatments
-    image: /images/treatment-trigger-point-therapy.webp
+    image: /images/non-surgical-treatments/treatment-trigger-point-therapy.webp
     image_style: rounded-2xl shadow-xl max-w-[80%]
 ---

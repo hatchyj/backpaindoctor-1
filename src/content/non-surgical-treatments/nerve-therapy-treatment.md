@@ -2,7 +2,7 @@
 draft: false
 title: "Nerve Therapy"
 description: "Nerve Therapy"
-image: "/images/treatments/treatment-image.png"
+image: "/images/non-surgical-treatments/treatment-image-placeholder.png"
 
 intro: Nerve treatments can alleviate pain and numbness caused by past injuries and scar tissue by reprogramming the nerve's normal function through a simple injection series, leading to significant improvements.
 ---

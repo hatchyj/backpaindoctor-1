@@ -2,7 +2,7 @@
 draft: false
 title: "Trigger Point Therapy"
 description: "Trigger Point Therapy"
-image: "/images/treatments/treatment-image.png"
+image: "/images/non-surgical-treatments/treatment-image-placeholder.png"
 
 intro: Trigger point therapy involves injecting low strength glucose to specific points on the body to alleviate pain and tension by releasing trigger points or knots in muscles.
 ---

@@ -2,7 +2,7 @@
 draft: false
 title: "Prolotherapy"
 description: "Prolotherapy"
-image: "/images/treatments/treatment-image.png"
+image: "/images/non-surgical-treatments/treatment-image-placeholder.png"
 
 intro: Prolotherapy is a medical treatment that involves injecting a solution into damaged or weakened ligaments or tendons to stimulate tissue repair and alleviate pain.
 ---
