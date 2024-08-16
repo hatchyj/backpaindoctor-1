@@ -1,7 +1,7 @@
 ---
 banner:
   title: "Get lasting relief from back pain."
-  image: /images/back_pain_doctor_intro.png
+  image: /images/back_pain_doctor_intro-min.png
   meta: "Get lasting relief from back pain."
   link:
     label: View our Treatments
@@ -45,5 +45,5 @@ service:
     cta:
       href: /non-surgical-treatments
       label: View our Treatments
-    image: /images/non-surgical-pain-relief.jpg
+    image: /images/non-surgical-pain-relief-min.jpg
 ---
