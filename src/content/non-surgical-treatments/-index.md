@@ -1,5 +1,5 @@
 ---
-title: "Treatments"
+title: "Non-surgical Treatments"
 description: "meta description"
 draft: false
 
@@ -17,7 +17,7 @@ treatmentsOverview:
     description: PRP injections use concentrated platelets enriched with bioactive proteins, including growth factors, to stimulate tissue repair and regeneration for chronic joint, ligament, and tendon injuries.
     hasCTA: true
     cta:
-      href: /treatments/platelet-rich-plasma-treatment
+      href: /non-surgical-treatments/platelet-rich-plasma-treatment
       label: Platelet Rich Plasma Treatments
     image: /images/treatment-platelet-rich-plasma.webp
     image_style: rounded-2xl shadow-xl max-w-[80%]
@@ -27,7 +27,7 @@ treatmentsOverview:
     description: Prolotherapy is a medical treatment that involves injecting a solution into damaged or weakened ligaments or tendons to stimulate tissue repair and alleviate pain.
     hasCTA: true
     cta:
-      href: /treatments/prolotherapy-treatment
+      href: /non-surgical-treatments/prolotherapy-treatment
       label: Prolotherapy Teatments
     image: /images/treatment-prolotherapy.webp
     image_style: rounded-2xl shadow-xl max-w-[80%]
@@ -37,7 +37,7 @@ treatmentsOverview:
     description: Nerve treatments can alleviate pain and numbness caused by past injuries and scar tissue by reprogramming the nerve's normal function through a simple injection series, leading to significant improvements.
     hasCTA: true
     cta:
-      href: /treatments/nerve-therapy-treatment
+      href: /non-surgical-treatments/nerve-therapy-treatment
       label: Nerve Therapy Teatments
     image: /images/treatment-nerve-therapy.webp
     image_style: rounded-2xl shadow-xl max-w-[80%]
@@ -47,7 +47,7 @@ treatmentsOverview:
     description: Trigger point therapy involves injecting low strength glucose to specific points on the body to alleviate pain and tension by releasing trigger points or knots in muscles.
     hasCTA: true
     cta:
-      href: /treatments/trigger-point-therapy-treatment
+      href: /non-surgical-treatments/trigger-point-therapy-treatment
       label: Trigger point Therapy Teatments
     image: /images/treatment-trigger-point-therapy.webp
     image_style: rounded-2xl shadow-xl max-w-[80%]

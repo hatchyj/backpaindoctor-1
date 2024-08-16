@@ -6,7 +6,7 @@ import { getSinglePage } from "@/lib/contentParser.astro";
 import Cta from "@/partials/Cta.astro";
 
 export async function getStaticPaths() {
-  const treatments = await getSinglePage("treatments");
+  const treatments = await getSinglePage("non-surgical-treatments");
   const paths = treatments.map((post: any) => ({
     params: {
       single: post.slug,

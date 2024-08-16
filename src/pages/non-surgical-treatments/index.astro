@@ -8,7 +8,7 @@ import { getEntry } from "astro:content";
 
 // const treatments = await getSinglePage("treatments");
 // Why do I need this top one?? see case studies that uses it
-const treatments_index = await getEntry("treatments", "-index");
+const treatments_index = await getEntry("non-surgical-treatments", "-index");
 const { title, description, intro, treatmentsOverview } = treatments_index?.data;
 
 ---

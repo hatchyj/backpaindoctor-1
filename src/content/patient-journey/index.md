@@ -25,7 +25,7 @@ service:
     description: Following a comprehensive initial consultation, your musculoskeletal doctor will initiate a tailored therapy plan. This plan may encompass a variety of therapeutic modalities or may focus on a specific approach.
     hasCTA: true
     cta:
-      href: /treatments
+      href: /non-surgical-treatments
       label: Explore Therapy Teatments
     image: /images/treatment-begins.jpg
   - title: Therapy continues

@@ -366,6 +366,43 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".md"] };
 };
+"non-surgical-treatments": {
+"-index.md": {
+	id: "-index.md";
+  slug: "-index";
+  body: string;
+  collection: "non-surgical-treatments";
+  data: any
+} & { render(): Render[".md"] };
+"nerve-therapy-treatment.md": {
+	id: "nerve-therapy-treatment.md";
+  slug: "nerve-therapy-treatment";
+  body: string;
+  collection: "non-surgical-treatments";
+  data: any
+} & { render(): Render[".md"] };
+"platelet-rich-plasma-treatment.md": {
+	id: "platelet-rich-plasma-treatment.md";
+  slug: "platelet-rich-plasma-treatment";
+  body: string;
+  collection: "non-surgical-treatments";
+  data: any
+} & { render(): Render[".md"] };
+"prolotherapy-treatment.md": {
+	id: "prolotherapy-treatment.md";
+  slug: "prolotherapy-treatment";
+  body: string;
+  collection: "non-surgical-treatments";
+  data: any
+} & { render(): Render[".md"] };
+"trigger-point-therapy-treatment.md": {
+	id: "trigger-point-therapy-treatment.md";
+  slug: "trigger-point-therapy-treatment";
+  body: string;
+  collection: "non-surgical-treatments";
+  data: any
+} & { render(): Render[".md"] };
+};
 "pages": {
 "404.md": {
 	id: "404.md";
@@ -404,43 +441,6 @@ declare module 'astro:content' {
   slug: "index";
   body: string;
   collection: "pricing";
-  data: any
-} & { render(): Render[".md"] };
-};
-"treatments": {
-"-index.md": {
-	id: "-index.md";
-  slug: "-index";
-  body: string;
-  collection: "treatments";
-  data: any
-} & { render(): Render[".md"] };
-"nerve-therapy-treatment.md": {
-	id: "nerve-therapy-treatment.md";
-  slug: "nerve-therapy-treatment";
-  body: string;
-  collection: "treatments";
-  data: any
-} & { render(): Render[".md"] };
-"platelet-rich-plasma-treatment.md": {
-	id: "platelet-rich-plasma-treatment.md";
-  slug: "platelet-rich-plasma-treatment";
-  body: string;
-  collection: "treatments";
-  data: any
-} & { render(): Render[".md"] };
-"prolotherapy-treatment.md": {
-	id: "prolotherapy-treatment.md";
-  slug: "prolotherapy-treatment";
-  body: string;
-  collection: "treatments";
-  data: any
-} & { render(): Render[".md"] };
-"trigger-point-therapy-treatment.md": {
-	id: "trigger-point-therapy-treatment.md";
-  slug: "trigger-point-therapy-treatment";
-  body: string;
-  collection: "treatments";
   data: any
 } & { render(): Render[".md"] };
 };

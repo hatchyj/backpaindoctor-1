@@ -5,7 +5,7 @@ banner:
   meta: "Get lasting relief from back pain."
   link:
     label: View our Treatments
-    href: "/treatments"
+    href: "/non-surgical-treatments"
 
 ##brands
 brands:
@@ -43,7 +43,7 @@ service:
     description: We use a unique and innovative techniques to identify the root cause of your pain, allowing us to tailor multiple services to optimise your outcomes. Say goodbye to chronic pain and hello to a better quality of life with non-surgical musculoskeletal procedures.
     hasCTA: true
     cta:
-      href: /treatments
+      href: /non-surgical-treatments
       label: View our Treatments
     image: /images/non-surgical-pain-relief.jpg
 ---
