@@ -12,7 +12,7 @@ intro:
 #treatments
 treatmentsOverview:
   - title: Platelet Rich Plasma
-    subtitle: "Helpful for X"
+    subtitle: ""
     icon: "ArrowUpRight"
     description: PRP injections use concentrated platelets enriched with bioactive proteins, including growth factors, to stimulate tissue repair and regeneration for chronic joint, ligament, and tendon injuries.
     hasCTA: true
@@ -22,7 +22,7 @@ treatmentsOverview:
     image: /images/non-surgical-treatments/treatment-platelet-rich-plasma.webp
     image_style: rounded-2xl shadow-xl max-w-[80%]
   - title: Prolotherapy Treatment
-    subtitle: "Helpful for X"
+    subtitle: ""
     icon: "ArrowUpRight"
     description: Prolotherapy is a medical treatment that involves injecting a solution into damaged or weakened ligaments or tendons to stimulate tissue repair and alleviate pain.
     hasCTA: true
@@ -32,7 +32,7 @@ treatmentsOverview:
     image: /images/non-surgical-treatments/treatment-prolotherapy.webp
     image_style: rounded-2xl shadow-xl max-w-[80%]
   - title: Nerve Therapy
-    subtitle: "Helpful for X"
+    subtitle: ""
     icon: "ArrowUpRight"
     description: Nerve treatments can alleviate pain and numbness caused by past injuries and scar tissue by reprogramming the nerve's normal function through a simple injection series, leading to significant improvements.
     hasCTA: true
@@ -42,7 +42,7 @@ treatmentsOverview:
     image: /images/non-surgical-treatments/treatment-nerve-therapy.webp
     image_style: rounded-2xl shadow-xl max-w-[80%]
   - title: Trigger Point Therapy
-    subtitle: "Helpful for X"
+    subtitle: ""
     icon: "ArrowUpRight"
     description: Trigger point therapy involves injecting low strength glucose to specific points on the body to alleviate pain and tension by releasing trigger points or knots in muscles.
     hasCTA: true
