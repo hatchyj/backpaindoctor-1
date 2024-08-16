@@ -36,7 +36,7 @@ const currentBlogs = sortedBlogs.slice(0, config.settings.pagination);
       <div class="row justify-center">
         {
           currentBlogs.map((blog, i) => (
-            <div class="col-12 mb-8 md:col-6 lg:col-5">
+            <div class="col-12 mb-8 md:col-6 lg:col-5 2xl:col-4">
               <Blog blog={blog} />
             </div>
           ))
