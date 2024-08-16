@@ -1,18 +1,14 @@
 ---
 draft: false
 title: "Prolotherapy"
-description: "Prolotherapy"
+description: "Discover the benefits of prolotherapy as a regenerative treatment for pain."
 image: "/images/non-surgical-treatments/treatment-image-placeholder.png"
 
 intro: Prolotherapy is a medical treatment that involves injecting a solution into damaged or weakened ligaments or tendons to stimulate tissue repair and alleviate pain.
 ---
 
-Platelet Rich Plasma (PRP) injections are an innovative treatment option for patients with chronic degenerative joint, ligament, and tendon injuries. This technology is transforming the way we manage pain, injury, and ageing-related conditions.
+Prolotherapy represents an efficacious therapeutic strategy for chronic ligament and joint pain. Incomplete healing of connective tissue injuries often leads to persistent pain, significantly impairing patients' quality of life. Developed in the 1930s in the United States, prolotherapy involves the precise administration of a concentrated glucose and local anaesthetic solution into damaged ligaments and joints. This elicits a cascade of physiological responses, including local inflammation and the release of endogenous growth factors, ultimately leading to the proliferation of fibrous tissues and cartilage regeneration. By mitigating local nerve sensitisation, prolotherapy provides a viable alternative to more invasive surgical interventions.
 
-PRP is a form of blood plasma that is rich in concentrated platelets. These platelets contain a vast amount of bioactive proteins, including growth factors that are essential for stimulating and accelerating tissue repair and regeneration. The bioactive proteins help to trigger connective tissue healing by promoting bone, tendon, and ligament regeneration and repair, encouraging the development of new blood vessels, and accelerating the wound healing process, which results in new collagen formation.
+The treatment comprises a series of injections at 2- to 4-week intervals targeting tender areas on joints and ligaments. Patients typically experience temporary alleviation of pain following injection due to the local anaesthetic's numbing effect, soon followed by a short-lived moderate increase in local tenderness, as prolotherapy stimulates healing inflammation.
 
-PRP is often used in conjunction with ultrasound guidance to help direct the injections precisely to the affected tissue or joint. This helps to ensure that the treatment is delivered to the targeted area, maximising the therapeutic benefit of the PRP injection.
-
-PRP injections are effective for a wide range of conditions, including chronic overuse injuries to the ankles, knees, and shoulders, arthritic joints, chronic back and spine arthritis and pain, degenerative disc disease, tennis elbow, carpal tunnel syndrome, knee ligament tears, shin splints, partial thickness rotator cuff tears, plantar fasciitis, Achilles tendonitis, and IT band syndrome.
-
-In summary, PRP therapy harnesses the power of bioactive proteins found in concentrated platelets to promote natural healing processes and accelerate tissue repair and regeneration. This advanced treatment option provides a non-invasive approach to managing chronic pain, injury, and ageing, and has the potential to improve the quality of life for many patients.
+Improvement is cumulative, with steady progress seen after each successive treatment. Prolotherapy's broad therapeutic benefits extend to a variety of conditions, including TMJ pain, neck and back pain, shoulder injuries, and knee pain, making it an indispensable medical modality for restoring strength and integrity to damaged tissues.
