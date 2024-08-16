@@ -239,115 +239,22 @@ declare module 'astro:content' {
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
 };
-"careers": {
-"-index.mdx": {
-	id: "-index.mdx";
-  slug: "-index";
+"careers": Record<string, {
+  id: string;
+  slug: string;
   body: string;
   collection: "careers";
-  data: InferEntrySchema<"careers">
-} & { render(): Render[".mdx"] };
-"job-post-1.md": {
-	id: "job-post-1.md";
-  slug: "job-post-1";
-  body: string;
-  collection: "careers";
-  data: InferEntrySchema<"careers">
-} & { render(): Render[".md"] };
-"job-post-2.md": {
-	id: "job-post-2.md";
-  slug: "job-post-2";
-  body: string;
-  collection: "careers";
-  data: InferEntrySchema<"careers">
-} & { render(): Render[".md"] };
-"job-post-3.md": {
-	id: "job-post-3.md";
-  slug: "job-post-3";
-  body: string;
-  collection: "careers";
-  data: InferEntrySchema<"careers">
-} & { render(): Render[".md"] };
-"job-post-4.md": {
-	id: "job-post-4.md";
-  slug: "job-post-4";
-  body: string;
-  collection: "careers";
-  data: InferEntrySchema<"careers">
-} & { render(): Render[".md"] };
-"job-post-5.md": {
-	id: "job-post-5.md";
-  slug: "job-post-5";
-  body: string;
-  collection: "careers";
-  data: InferEntrySchema<"careers">
-} & { render(): Render[".md"] };
-"job-post-6.md": {
-	id: "job-post-6.md";
-  slug: "job-post-6";
-  body: string;
-  collection: "careers";
-  data: InferEntrySchema<"careers">
-} & { render(): Render[".md"] };
-"job-post-7.md": {
-	id: "job-post-7.md";
-  slug: "job-post-7";
-  body: string;
-  collection: "careers";
-  data: InferEntrySchema<"careers">
-} & { render(): Render[".md"] };
-};
-"case-studies": {
-"-index.md": {
-	id: "-index.md";
-  slug: "-index";
+  data: InferEntrySchema<"careers">;
+  render(): Render[".md"];
+}>;
+"case-studies": Record<string, {
+  id: string;
+  slug: string;
   body: string;
   collection: "case-studies";
-  data: InferEntrySchema<"case-studies">
-} & { render(): Render[".md"] };
-"case-1.md": {
-	id: "case-1.md";
-  slug: "case-1";
-  body: string;
-  collection: "case-studies";
-  data: InferEntrySchema<"case-studies">
-} & { render(): Render[".md"] };
-"case-2.md": {
-	id: "case-2.md";
-  slug: "case-2";
-  body: string;
-  collection: "case-studies";
-  data: InferEntrySchema<"case-studies">
-} & { render(): Render[".md"] };
-"case-3.md": {
-	id: "case-3.md";
-  slug: "case-3";
-  body: string;
-  collection: "case-studies";
-  data: InferEntrySchema<"case-studies">
-} & { render(): Render[".md"] };
-"case-4.md": {
-	id: "case-4.md";
-  slug: "case-4";
-  body: string;
-  collection: "case-studies";
-  data: InferEntrySchema<"case-studies">
-} & { render(): Render[".md"] };
-"case-5.md": {
-	id: "case-5.md";
-  slug: "case-5";
-  body: string;
-  collection: "case-studies";
-  data: InferEntrySchema<"case-studies">
-} & { render(): Render[".md"] };
-"case-6.md": {
-	id: "case-6.md";
-  slug: "case-6";
-  body: string;
-  collection: "case-studies";
-  data: InferEntrySchema<"case-studies">
-} & { render(): Render[".md"] };
-};
+  data: InferEntrySchema<"case-studies">;
+  render(): Render[".md"];
+}>;
 "contact": {
 "book-appointment.md": {
 	id: "book-appointment.md";
@@ -448,7 +355,17 @@ declare module 'astro:content' {
 	};
 
 	type DataEntryMap = {
-		"__explaining-pain": Record<string, {
+		"__careers": Record<string, {
+  id: string;
+  collection: "__careers";
+  data: any;
+}>;
+"__case-studies": Record<string, {
+  id: string;
+  collection: "__case-studies";
+  data: any;
+}>;
+"__explaining-pain": Record<string, {
   id: string;
   collection: "__explaining-pain";
   data: any;
