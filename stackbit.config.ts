@@ -61,7 +61,7 @@ const models: any[] = [
     label: "Homepage",
     singleInstance: true,
     urlPath: "/",
-    filePath: "src/content/homepage/index.md",
+    file: "homepage/index.md",
     hideContent: true,
     fields: [
       {
@@ -95,7 +95,7 @@ const models: any[] = [
     label: "About page",
     singleInstance: true,
     urlPath: "/about",
-    filePath: "src/content/about/index.md",
+    file: "about/index.md",
     hideContent: true,
     fields: [
       { type: "string", name: "title", label: "Title" },
@@ -162,7 +162,7 @@ const models: any[] = [
     label: "Patient Journey page",
     singleInstance: true,
     urlPath: "/patient-journey",
-    filePath: "src/content/patient-journey/index.md",
+    file: "patient-journey/index.md",
     hideContent: true,
     fields: [
       { type: "string", name: "title", label: "Title" },
@@ -182,7 +182,7 @@ const models: any[] = [
     label: "Book Appointment page",
     singleInstance: true,
     urlPath: "/book-appointment",
-    filePath: "src/content/contact/book-appointment.md",
+    file: "contact/book-appointment.md",
     fields: [
       { type: "string", name: "title", label: "Title" },
       { type: "string", name: "description", label: "Meta description" },
@@ -198,7 +198,7 @@ const models: any[] = [
     label: "Treatments — index",
     singleInstance: true,
     urlPath: "/non-surgical-treatments",
-    filePath: "src/content/non-surgical-treatments/-index.md",
+    file: "non-surgical-treatments/-index.md",
     hideContent: true,
     fields: [
       { type: "string", name: "title", label: "Title" },
@@ -217,7 +217,7 @@ const models: any[] = [
     name: "treatment",
     label: "Treatment",
     urlPath: "/non-surgical-treatments/{slug}",
-    filePath: "src/content/non-surgical-treatments/{slug}.md",
+    filePath: "non-surgical-treatments/{slug}.md",
     exclude: "**/-index.md",
     fields: [
       { type: "string", name: "title", label: "Title" },
@@ -261,7 +261,7 @@ const models: any[] = [
     label: "Conditions — index",
     singleInstance: true,
     urlPath: "/conditions",
-    filePath: "src/content/conditions/-index.md",
+    file: "conditions/-index.md",
     hideContent: true,
     fields: [
       { type: "string", name: "title", label: "Title" },
@@ -274,7 +274,7 @@ const models: any[] = [
     name: "condition",
     label: "Condition",
     urlPath: "/conditions/{slug}",
-    filePath: "src/content/conditions/{slug}.md",
+    filePath: "conditions/{slug}.md",
     exclude: "**/-index.md",
     fields: [
       { type: "string", name: "title", label: "Title" },
@@ -315,7 +315,7 @@ const models: any[] = [
     label: "Resources — index",
     singleInstance: true,
     urlPath: "/patient-resources",
-    filePath: "src/content/patient-resources/-index.md",
+    file: "patient-resources/-index.md",
     hideContent: true,
     fields: [
       { type: "string", name: "title", label: "Title" },
@@ -328,7 +328,7 @@ const models: any[] = [
     name: "resource",
     label: "Resource article",
     urlPath: "/patient-resources/{slug}",
-    filePath: "src/content/patient-resources/{slug}.mdx",
+    filePath: "patient-resources/{slug}.mdx",
     fields: [
       { type: "string", name: "title", label: "Title" },
       { type: "string", name: "meta_title", label: "SEO title" },
@@ -358,7 +358,7 @@ const models: any[] = [
     type: "data",
     name: "author",
     label: "Author",
-    filePath: "src/content/authors/{slug}.md",
+    filePath: "authors/{slug}.md",
     exclude: "**/-index.md",
     fields: [
       { type: "string", name: "title", label: "Name" },
@@ -384,7 +384,7 @@ const models: any[] = [
     name: "siteConfig",
     label: "Site config",
     singleInstance: true,
-    filePath: "src/config/config.json",
+    file: "config.json",
     fields: [
       {
         type: "object",
