@@ -4,11 +4,26 @@ title: "Prolotherapy"
 description: "Discover the benefits of prolotherapy as a regenerative treatment for pain."
 image: "/images/non-surgical-treatments/treatment-image-placeholder.png"
 
-intro: Prolotherapy is a medical treatment that involves injecting a solution into damaged or weakened ligaments or tendons to stimulate tissue repair and alleviate pain.
+intro: Prolotherapy is an injection treatment in which a glucose-based solution is injected into or around painful ligaments, tendons and joints, with the aim of stimulating a local healing response and reducing pain.
+whatItTreats:
+  - Knee osteoarthritis
+  - Chronic ligament & tendon pain
+  - Neck & lower back pain
+  - Shoulder pain
+  - Sacroiliac & pelvic pain
+faqs:
+  - question: How many treatments are involved?
+    answer: Prolotherapy is given as a series of injections spaced a few weeks apart. The number varies with the condition and your response, and is discussed at consultation.
+  - question: Will it be sore afterwards?
+    answer: A short period of increased local tenderness after each injection is part of the expected response. This usually settles within a few days.
+  - question: Is it covered by Medicare or private health?
+    answer: Prolotherapy is generally an out-of-pocket cost and not covered by Medicare for these indications. We will confirm current costs before you proceed.
+  - question: How is prolotherapy different from cortisone?
+    answer: They work differently. Cortisone is an anti-inflammatory that can give shorter-term relief, while prolotherapy aims to stimulate a local healing response over a course of treatment. We can discuss which, if either, suits your situation.
 ---
 
-Prolotherapy represents an efficacious therapeutic strategy for chronic ligament and joint pain. Incomplete healing of connective tissue injuries often leads to persistent pain, significantly impairing patients' quality of life. Developed in the 1930s in the United States, prolotherapy involves the precise administration of a concentrated glucose and local anaesthetic solution into damaged ligaments and joints. This elicits a cascade of physiological responses, including local inflammation and the release of endogenous growth factors, ultimately leading to the proliferation of fibrous tissues and cartilage regeneration. By mitigating local nerve sensitisation, prolotherapy provides a viable alternative to more invasive surgical interventions.
+Prolotherapy is an injection treatment used for some chronic ligament, tendon and joint pain. It involves injecting a concentrated glucose (dextrose) solution, often with a local anaesthetic, into or around the affected structures. The proposed mechanism is that the solution triggers a short-lived local inflammatory response, which may promote tissue repair and reduce pain over a course of treatment. The precise way prolotherapy works is not fully established.
 
-The treatment comprises a series of injections at 2- to 4-week intervals targeting tender areas on joints and ligaments. Patients typically experience temporary alleviation of pain following injection due to the local anaesthetic's numbing effect, soon followed by a short-lived moderate increase in local tenderness, as prolotherapy stimulates healing inflammation.
+Treatment is given as a series of injections, typically spaced a few weeks apart, targeting tender areas on joints and ligaments. After an injection it is common to feel temporary numbness from the local anaesthetic, followed by a short period of increased local tenderness as part of the expected response. Any improvement tends to develop gradually over the course of treatment rather than immediately.
 
-Improvement is cumulative, with steady progress seen after each successive treatment. Prolotherapy's broad therapeutic benefits extend to a variety of conditions, including TMJ pain, neck and back pain, shoulder injuries, and knee pain, making it an indispensable medical modality for restoring strength and integrity to damaged tissues.
+The evidence for prolotherapy varies by condition. There is some supportive randomised-trial evidence for dextrose prolotherapy in knee osteoarthritis and in certain tendinopathies, while for other indications the evidence is more limited or mixed. Prolotherapy is not suitable for everyone and is not a guaranteed cure. Whether it is appropriate for you depends on your diagnosis, your previous treatment and your goals, and is discussed with you at consultation along with the expected benefits, the evidence, the costs and the alternatives.

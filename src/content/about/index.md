@@ -7,7 +7,7 @@ draft: false
 about_us:
   subtitle: About
   title: Hello, I'm Dr Joshua Hatch, your local back pain doctor
-  description: Dr Joshua Hatch is a GP and Musculoskeletal Medicine practitioner in Brisbane, Australia. With his wealth of experience, he provides an array of effective techniques to address musculoskeletal pain, enabling you to attain lasting relief.
+  description: Dr Joshua Hatch is a GP and Musculoskeletal Medicine practitioner in Brisbane, Australia. He brings an unusual depth of background — from MRI radiography to orthopaedic surgery to musculoskeletal medicine — to the careful assessment and non-surgical treatment of musculoskeletal pain, with the aim of reducing pain and improving function.
   image: /images/about/dr_joshua_hatch_back_pain_doctor.webp
 
 ## our works
@@ -28,7 +28,7 @@ works:
 mission:
   subtitle: OUR MISSION
   title: The mission of the Back Pain Doctor
-  description: At The Back Pain Doctor, our goal is to help our patients achieve optimal musculoskeletal health and function using advanced regenerative medicine therapies. We use evidence-based treatments and cutting-edge technology to help you manage chronic pain, recover from injury and improve overall quality of life.
+  description: At The Back Pain Doctor, our goal is to help patients improve their musculoskeletal health and function. We focus on careful diagnosis and evidence-based, non-surgical treatments to help you manage persistent pain, recover from injury and improve your quality of life, while being clear about what each treatment can and cannot offer.
   image: /images/about/mission_active_no_back_pain.jpg
 
 bio:

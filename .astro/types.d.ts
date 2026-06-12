@@ -176,6 +176,78 @@ declare module 'astro:content' {
   data: InferEntrySchema<"case-studies">;
   render(): Render[".md"];
 }>;
+"conditions": {
+"-index.md": {
+	id: "-index.md";
+  slug: "-index";
+  body: string;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+"achilles-tendinopathy.md": {
+	id: "achilles-tendinopathy.md";
+  slug: "achilles-tendinopathy";
+  body: string;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+"greater-trochanteric-pain-syndrome.md": {
+	id: "greater-trochanteric-pain-syndrome.md";
+  slug: "greater-trochanteric-pain-syndrome";
+  body: string;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+"hamstring-tendinopathy.md": {
+	id: "hamstring-tendinopathy.md";
+  slug: "hamstring-tendinopathy";
+  body: string;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+"knee-osteoarthritis.md": {
+	id: "knee-osteoarthritis.md";
+  slug: "knee-osteoarthritis";
+  body: string;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+"low-back-pain.md": {
+	id: "low-back-pain.md";
+  slug: "low-back-pain";
+  body: string;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+"plantar-fasciitis.md": {
+	id: "plantar-fasciitis.md";
+  slug: "plantar-fasciitis";
+  body: string;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+"rotator-cuff-shoulder-pain.md": {
+	id: "rotator-cuff-shoulder-pain.md";
+  slug: "rotator-cuff-shoulder-pain";
+  body: string;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+"sciatica.md": {
+	id: "sciatica.md";
+  slug: "sciatica";
+  body: string;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+"tennis-golfers-elbow.md": {
+	id: "tennis-golfers-elbow.md";
+  slug: "tennis-golfers-elbow";
+  body: string;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+};
 "contact": {
 "book-appointment.md": {
 	id: "book-appointment.md";
@@ -202,6 +274,13 @@ declare module 'astro:content' {
   collection: "non-surgical-treatments";
   data: any
 } & { render(): Render[".md"] };
+"emtt-magnetotransduction.md": {
+	id: "emtt-magnetotransduction.md";
+  slug: "emtt-magnetotransduction";
+  body: string;
+  collection: "non-surgical-treatments";
+  data: any
+} & { render(): Render[".md"] };
 "nerve-therapy-treatment.md": {
 	id: "nerve-therapy-treatment.md";
   slug: "nerve-therapy-treatment";
@@ -219,6 +298,13 @@ declare module 'astro:content' {
 "prolotherapy-treatment.md": {
 	id: "prolotherapy-treatment.md";
   slug: "prolotherapy-treatment";
+  body: string;
+  collection: "non-surgical-treatments";
+  data: any
+} & { render(): Render[".md"] };
+"shockwave-therapy-eswt.md": {
+	id: "shockwave-therapy-eswt.md";
+  slug: "shockwave-therapy-eswt";
   body: string;
   collection: "non-surgical-treatments";
   data: any

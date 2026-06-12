@@ -5,9 +5,9 @@ draft: false
 
 #intro
 intro:
-  title: Treatments to help you experience lasting relief
+  title: Non-surgical treatments for musculoskeletal pain
   subtitle: Musculoskeletal Pain Treatments
-  description: Are you struggling with chronic pain, injury, or arthritis and want to avoid invasive surgeries and potentially addictive pharmaceuticals? Consider non-surgical musculoskeletal treatments that allow your body to heal naturally and regain mobility quickly. Our approach is unique because we use innovative techniques to identify the root cause of your pain, allowing us to tailor multiple services to optimise your outcomes. Say goodbye to chronic pain and hello to a better quality of life with non-surgical musculoskeletal treatments.
+  description: If you are living with persistent pain, injury or arthritis and want to explore your options before considering surgery, non-surgical musculoskeletal treatments may help. Our approach is to assess your problem carefully, identify the likely source of your pain, and tailor treatment to your individual needs, with the aim of reducing pain and improving function. The most suitable treatment depends on your diagnosis — not every treatment suits every condition, and this is discussed with you at consultation.
 
 #treatments
 treatmentsOverview:
@@ -31,10 +31,30 @@ treatmentsOverview:
       label: Prolotherapy Teatments
     image: /images/non-surgical-treatments/treatment-prolotherapy.webp
     image_style: rounded-2xl shadow-xl max-w-[80%]
+  - title: Shockwave Therapy (ESWT)
+    subtitle: "Non-invasive Tendon Treatment"
+    icon: "ArrowUpRight"
+    description: Extracorporeal shockwave therapy (ESWT) delivers acoustic pressure waves to injured tendon and soft tissue. It is used for chronic tendinopathies such as plantar fasciitis, rotator cuff and elbow tendinopathy that have not settled with conservative care.
+    hasCTA: true
+    cta:
+      href: /non-surgical-treatments/shockwave-therapy-eswt
+      label: Shockwave Therapy (ESWT)
+    image: /images/non-surgical-treatments/treatment-shockwave-therapy.webp
+    image_style: rounded-2xl shadow-xl max-w-[80%]
+  - title: EMTT (Magnetotransduction Therapy)
+    subtitle: "Emerging Adjunct Therapy"
+    icon: "ArrowUpRight"
+    description: EMTT applies high-intensity magnetic field pulses to musculoskeletal tissue and is often used alongside shockwave therapy. It is an emerging treatment with a developing evidence base, considered as part of a wider plan.
+    hasCTA: true
+    cta:
+      href: /non-surgical-treatments/emtt-magnetotransduction
+      label: EMTT (Magnetotransduction Therapy)
+    image: /images/non-surgical-treatments/treatment-emtt.webp
+    image_style: rounded-2xl shadow-xl max-w-[80%]
   - title: Nerve Therapy
     subtitle: "Pain Relief"
     icon: "ArrowUpRight"
-    description: Nerve treatments can alleviate pain and numbness caused by past injuries and scar tissue by reprogramming the nerve's normal function through a simple injection series, leading to significant improvements.
+    description: Perineural injection therapy uses a series of small injections around irritated superficial nerves, with the aim of settling nerve-related pain and sensitivity.
     hasCTA: true
     cta:
       href: /non-surgical-treatments/nerve-therapy-treatment

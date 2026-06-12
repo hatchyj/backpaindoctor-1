@@ -1,0 +1,41 @@
+---
+import config from "@/config/config.json";
+import JsonLd from "@/components/JsonLd.astro";
+
+// items: array of { label, href } — final item is the current page.
+const { items = [] } = Astro.props;
+const base = (config.site.base_url || "").replace(/\/$/, "");
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: items.map((it: any, i: number) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: it.label,
+    ...(it.href ? { item: `${base}${it.href}` } : {}),
+  })),
+};
+---
+
+<nav aria-label="Breadcrumb" class="container mb-2">
+  <ol class="flex flex-wrap items-center justify-center gap-1 text-[0.8rem] text-text">
+    {
+      items.map((it: any, i: number) => (
+        <li class="flex items-center gap-1">
+          {i > 0 && <span class="text-light">/</span>}
+          {it.href && i < items.length - 1 ? (
+            <a href={it.href} class="hover:text-primary">
+              {it.label}
+            </a>
+          ) : (
+            <span class="text-primary" aria-current="page">
+              {it.label}
+            </span>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</nav>
+<JsonLd schema={schema} />

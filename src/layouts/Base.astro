@@ -5,8 +5,32 @@ import theme from "@/config/theme.json";
 import { plainify } from "@/lib/utils/textConverter";
 import Footer from "@/partials/Footer.astro";
 import Header from "@/partials/Header.astro";
+import JsonLd from "@/components/JsonLd.astro";
 import "@/styles/style.scss";
 import { AstroFont } from "astro-font";
+
+// Site-wide organisation / practitioner schema (local SEO + E-E-A-T)
+const biz = (config as any).business;
+const orgSchema = biz
+  ? {
+      "@context": "https://schema.org",
+      "@type": ["MedicalClinic", "Physician"],
+      name: biz.name,
+      description: biz.description,
+      url: biz.url,
+      telephone: biz.phone,
+      medicalSpecialty: "PhysicalMedicine",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: biz.street,
+        addressLocality: biz.suburb,
+        addressRegion: biz.state,
+        postalCode: biz.postcode,
+        addressCountry: biz.country,
+      },
+      areaServed: "Brisbane, Queensland",
+    }
+  : null;
 
 // font families
 const pf = theme.fonts.font_family.primary;
@@ -193,6 +217,9 @@ const {
       }`}
     />
     <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- organisation / practitioner structured data -->
+    <JsonLd schema={orgSchema} />
   </head>
   <body>
     <TwSizeIndicator />

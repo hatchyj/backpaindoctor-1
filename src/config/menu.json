@@ -19,6 +19,14 @@
           "url": "/non-surgical-treatments/prolotherapy-treatment"
         },
         {
+          "name": "Shockwave Therapy (ESWT)",
+          "url": "/non-surgical-treatments/shockwave-therapy-eswt"
+        },
+        {
+          "name": "EMTT (Magnetotransduction)",
+          "url": "/non-surgical-treatments/emtt-magnetotransduction"
+        },
+        {
           "name": "Nerve Therapy",
           "url": "/non-surgical-treatments/nerve-therapy-treatment"
         },
@@ -27,6 +35,10 @@
           "url": "/non-surgical-treatments/trigger-point-therapy-treatment"
         }
       ]
+    },
+    {
+      "name": "Conditions",
+      "url": "/conditions"
     },
     {
       "name": "Patient Journey",
