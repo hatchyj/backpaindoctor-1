@@ -302,13 +302,6 @@ declare module 'astro:content' {
   collection: "non-surgical-treatments";
   data: any
 } & { render(): Render[".md"] };
-"shockwave-therapy-eswt 2.md": {
-	id: "shockwave-therapy-eswt 2.md";
-  slug: "shockwave-therapy-eswt-2";
-  body: string;
-  collection: "non-surgical-treatments";
-  data: any
-} & { render(): Render[".md"] };
 "shockwave-therapy-eswt.md": {
 	id: "shockwave-therapy-eswt.md";
   slug: "shockwave-therapy-eswt";

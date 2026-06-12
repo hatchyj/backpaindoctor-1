@@ -130,3 +130,6 @@ dist
 .yarn/install-state.gz
 .pnp.*
 backpaindoctor.code-workspace
+
+# Stackbit / Netlify Visual Editor cache
+.stackbit/
