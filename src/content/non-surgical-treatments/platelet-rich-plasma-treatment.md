@@ -1,4 +1,5 @@
 ---
+type: treatment
 draft: false
 title: "Platelet Rich Plasma (PRP) Injections Brisbane"
 meta_title: "PRP Brisbane — Platelet Rich Plasma Injections"

@@ -1,4 +1,5 @@
 ---
+type: bookAppointment
 title: "Book Appointment"
 description: "Book an appointment with Brisbane Musculoskeletal Medicine practitioner pain doctor Joshua Hatch."
 image: "/images/vectors/contact.png"

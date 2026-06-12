@@ -1,4 +1,5 @@
 ---
+type: treatment
 draft: false
 title: "Nerve Therapy"
 description: "Discover how nerve therapy can provide pain relief"

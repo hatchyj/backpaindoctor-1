@@ -1,4 +1,5 @@
 ---
+type: author
 title: Dr Joshua Hatch
 email: info@backpaindoctor.com.au
 image: /images/author/avatar_dr_josh_hatch.jpg

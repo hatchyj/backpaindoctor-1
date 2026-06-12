@@ -1,4 +1,5 @@
 ---
+type: conditionsIndex
 title: "Conditions We Treat"
 description: "Common musculoskeletal conditions assessed and managed by Brisbane musculoskeletal GP Dr Joshua Hatch — from low back pain and sciatica to tendinopathies and osteoarthritis."
 draft: false

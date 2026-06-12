@@ -1,4 +1,5 @@
 ---
+type: homepage
 banner:
   title: "Evidence-based, non-surgical care for back and musculoskeletal pain."
   image: /images/back_pain_doctor_intro-min.png

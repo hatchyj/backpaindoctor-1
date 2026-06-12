@@ -1,4 +1,5 @@
 ---
+type: condition
 draft: false
 order: 6
 title: "Plantar Fasciitis"

@@ -1,4 +1,5 @@
 ---
+type: condition
 draft: false
 order: 3
 title: "Knee Osteoarthritis"

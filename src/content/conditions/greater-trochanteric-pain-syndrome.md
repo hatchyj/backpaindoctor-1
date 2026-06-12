@@ -1,4 +1,5 @@
 ---
+type: condition
 draft: false
 order: 8
 title: "Greater Trochanteric Pain Syndrome (Hip)"

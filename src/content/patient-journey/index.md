@@ -1,4 +1,5 @@
 ---
+type: patientJourney
 title: "Patient Journey"
 description: "Get an understanding of what your patient experience will be at the Back Pain Doctor."
 draft: false

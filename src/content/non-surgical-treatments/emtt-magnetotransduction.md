@@ -1,4 +1,5 @@
 ---
+type: treatment
 draft: false
 title: "EMTT (Magnetotransduction Therapy)"
 description: "Extracorporeal magnetotransduction therapy (EMTT) is an emerging non-invasive treatment for musculoskeletal pain, delivered in Brisbane with the STORZ Medical MAGNETOLITH, often alongside shockwave therapy."

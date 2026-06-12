@@ -1,4 +1,5 @@
 ---
+type: about
 title: "About"
 description: "Read the story behind local Brisbane Musculoskeletal Medicine practitioner Dr Joshua Hatch and how the Back Pain Doctor began."
 draft: false

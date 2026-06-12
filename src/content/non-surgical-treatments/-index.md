@@ -1,4 +1,5 @@
 ---
+type: treatmentsIndex
 title: "Non-surgical Treatments"
 description: "Explore the range of non-surgical musculoskeletal treatments available from the Back Pain Doctor."
 draft: false

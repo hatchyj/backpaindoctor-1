@@ -1,4 +1,5 @@
 ---
+type: treatment
 draft: false
 title: "Focused Shockwave Therapy (ESWT) Brisbane"
 meta_title: "Shockwave Therapy Brisbane — Focused ESWT"

@@ -1,4 +1,5 @@
 ---
+type: treatment
 draft: false
 title: "Trigger Point Therapy"
 description: "How trigger point injections may help relieve muscle-related (myofascial) pain."

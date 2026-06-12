@@ -1,4 +1,5 @@
 ---
+type: condition
 draft: false
 order: 4
 title: "Rotator Cuff & Shoulder Pain"

@@ -1,4 +1,5 @@
 ---
+type: condition
 draft: false
 order: 5
 title: "Tennis & Golfer's Elbow"

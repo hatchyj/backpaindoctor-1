@@ -1,4 +1,5 @@
 ---
+type: condition
 draft: false
 order: 7
 title: "Achilles Tendinopathy"

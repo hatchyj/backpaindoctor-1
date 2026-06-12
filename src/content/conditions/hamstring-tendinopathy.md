@@ -1,4 +1,5 @@
 ---
+type: condition
 draft: false
 order: 9
 title: "Proximal Hamstring Tendinopathy"

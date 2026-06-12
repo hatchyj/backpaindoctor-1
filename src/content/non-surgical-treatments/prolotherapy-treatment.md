@@ -1,4 +1,5 @@
 ---
+type: treatment
 draft: false
 title: "Prolotherapy"
 description: "Discover the benefits of prolotherapy as a regenerative treatment for pain."

@@ -1,4 +1,5 @@
 ---
+type: condition
 draft: false
 order: 1
 title: "Low Back Pain"
