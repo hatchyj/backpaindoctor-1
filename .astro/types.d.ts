@@ -302,6 +302,13 @@ declare module 'astro:content' {
   collection: "non-surgical-treatments";
   data: any
 } & { render(): Render[".md"] };
+"shockwave-therapy-eswt 2.md": {
+	id: "shockwave-therapy-eswt 2.md";
+  slug: "shockwave-therapy-eswt-2";
+  body: string;
+  collection: "non-surgical-treatments";
+  data: any
+} & { render(): Render[".md"] };
 "shockwave-therapy-eswt.md": {
 	id: "shockwave-therapy-eswt.md";
   slug: "shockwave-therapy-eswt";
@@ -357,6 +364,20 @@ declare module 'astro:content' {
   collection: "patient-resources";
   data: InferEntrySchema<"patient-resources">
 } & { render(): Render[".md"] };
+"cortisone-vs-prp-for-knee-osteoarthritis.mdx": {
+	id: "cortisone-vs-prp-for-knee-osteoarthritis.mdx";
+  slug: "cortisone-vs-prp-for-knee-osteoarthritis";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"do-you-need-an-mri-for-back-pain.mdx": {
+	id: "do-you-need-an-mri-for-back-pain.mdx";
+  slug: "do-you-need-an-mri-for-back-pain";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
 "post-1.mdx": {
 	id: "post-1.mdx";
   slug: "the-relationship-between-sleep-and-pain-evidenced-based-strategies";
