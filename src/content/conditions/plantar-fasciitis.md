@@ -10,7 +10,7 @@ symptoms:
   - Pain worse after prolonged standing or activity
   - Tenderness under the heel
 treatmentLinks:
-  - name: Shockwave Therapy (ESWT)
+  - name: Focused Shockwave (ESWT)
     href: /non-surgical-treatments/shockwave-therapy-eswt
   - name: Platelet Rich Plasma (PRP)
     href: /non-surgical-treatments/platelet-rich-plasma-treatment

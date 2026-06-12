@@ -1,7 +1,8 @@
 ---
 draft: false
-title: "Platelet Rich Plasma Treatment"
-description: "Platelet Rich Plasma Treatment"
+title: "Platelet Rich Plasma (PRP) Injections Brisbane"
+meta_title: "PRP Brisbane — Platelet Rich Plasma Injections"
+description: "PRP in Brisbane: ultrasound-guided platelet rich plasma injections for knee osteoarthritis, tendinopathy and joint pain, performed in Milton by musculoskeletal GP Dr Joshua Hatch."
 image: "/images/non-surgical-treatments/treatment-image-placeholder.png"
 
 intro: PRP injections use concentrated platelets enriched with bioactive proteins, including growth factors, to stimulate tissue repair and regeneration for chronic joint, ligament, and tendon injuries.
@@ -34,7 +35,7 @@ system2:
   image: "/images/the-arthrex-angel-PRP-system.jpg"
 ---
 
-Platelet Rich Plasma (PRP) is an injection treatment used for some chronic joint, ligament and tendon conditions. It involves taking a small sample of your own blood, concentrating the platelets, and injecting that preparation into the affected area.
+Platelet Rich Plasma (PRP) is an injection treatment used for some chronic joint, ligament and tendon conditions. At our Brisbane clinic in Milton, PRP involves taking a small sample of your own blood, concentrating the platelets, and injecting that preparation into the affected area under ultrasound guidance.
 
 Platelets contain bioactive proteins, including growth factors, that play a role in the body's normal tissue-repair processes. The rationale for PRP is that delivering a concentrated dose of these factors to an injured area may support healing. PRP is usually performed under ultrasound guidance to direct the injection accurately to the targeted tissue or joint.
 

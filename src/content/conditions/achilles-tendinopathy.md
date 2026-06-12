@@ -10,7 +10,7 @@ symptoms:
   - Tenderness or thickening of the tendon
   - Reduced tolerance for running, jumping or hills
 treatmentLinks:
-  - name: Shockwave Therapy (ESWT)
+  - name: Focused Shockwave (ESWT)
     href: /non-surgical-treatments/shockwave-therapy-eswt
   - name: Platelet Rich Plasma (PRP)
     href: /non-surgical-treatments/platelet-rich-plasma-treatment

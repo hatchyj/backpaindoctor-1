@@ -10,7 +10,7 @@ symptoms:
   - Pain with running, lunging or bending forward
   - Tenderness over the hamstring attachment
 treatmentLinks:
-  - name: Shockwave Therapy (ESWT)
+  - name: Focused Shockwave (ESWT)
     href: /non-surgical-treatments/shockwave-therapy-eswt
   - name: Platelet Rich Plasma (PRP)
     href: /non-surgical-treatments/platelet-rich-plasma-treatment

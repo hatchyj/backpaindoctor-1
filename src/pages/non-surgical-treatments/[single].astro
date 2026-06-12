@@ -26,6 +26,7 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 const {
   title,
+  meta_title,
   image,
   description,
   intro,
@@ -50,7 +51,7 @@ const pageSchema = {
 };
 ---
 
-<Base title={title} description={description} image={image}>
+<Base title={title} meta_title={meta_title} description={description} image={image}>
   <PageHeader title={title} />
   <Breadcrumbs
     items={[

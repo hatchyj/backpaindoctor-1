@@ -31,10 +31,10 @@ treatmentsOverview:
       label: Prolotherapy Teatments
     image: /images/non-surgical-treatments/treatment-prolotherapy.webp
     image_style: rounded-2xl shadow-xl max-w-[80%]
-  - title: Shockwave Therapy (ESWT)
+  - title: Focused Shockwave Therapy (ESWT)
     subtitle: "Non-invasive Tendon Treatment"
     icon: "ArrowUpRight"
-    description: Extracorporeal shockwave therapy (ESWT) delivers acoustic pressure waves to injured tendon and soft tissue. It is used for chronic tendinopathies such as plantar fasciitis, rotator cuff and elbow tendinopathy that have not settled with conservative care.
+    description: Focused shockwave therapy (ESWT) delivers focused acoustic pressure waves to injured tendon and soft tissue. It is used for chronic tendinopathies such as plantar fasciitis, rotator cuff and elbow tendinopathy that have not settled with conservative care.
     hasCTA: true
     cta:
       href: /non-surgical-treatments/shockwave-therapy-eswt

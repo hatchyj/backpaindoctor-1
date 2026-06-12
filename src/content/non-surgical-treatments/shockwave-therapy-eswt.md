@@ -1,10 +1,11 @@
 ---
 draft: false
-title: "Shockwave Therapy (ESWT)"
-description: "Extracorporeal shockwave therapy (ESWT) is a non-invasive treatment for chronic tendon and soft-tissue conditions, delivered in Brisbane with STORZ Medical technology."
+title: "Focused Shockwave Therapy (ESWT) Brisbane"
+meta_title: "Shockwave Therapy Brisbane — Focused ESWT"
+description: "Focused shockwave therapy (ESWT) in Brisbane for chronic tendinopathy — plantar fasciitis, rotator cuff, tennis elbow and Achilles. Non-invasive treatment in Milton with a STORZ Medical focused shockwave system, by musculoskeletal GP Dr Joshua Hatch."
 image: "/images/non-surgical-treatments/treatment-shockwave-therapy.webp"
 
-intro: Extracorporeal shockwave therapy (ESWT) is a non-invasive treatment that delivers acoustic pressure waves to injured tendon and soft tissue, used most often for chronic tendinopathies that have not settled with conservative care.
+intro: Focused shockwave therapy (ESWT) is a non-invasive treatment that delivers focused acoustic pressure waves to injured tendon and soft tissue, used most often for chronic tendinopathies that have not settled with conservative care. We use a STORZ Medical focused shockwave system at our Brisbane clinic in Milton.
 
 whatItTreats:
   - Plantar fasciitis
@@ -21,9 +22,11 @@ evidenceSources:
     url: "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2024.1394268/full"
 
 whatToExpect: >
-  ESWT is delivered as a short course of sessions, usually spaced around a week apart, with the exact number and settings tailored to your condition and response. Each session takes a short time, and most people need no anaesthetic and have no formal downtime, though some short-lived local soreness afterwards is common. We use STORZ Medical shockwave technology. Your treatment plan and the current cost are discussed with you at consultation.
+  Focused shockwave therapy is delivered as a short course of sessions, usually spaced around a week apart, with the exact number and settings tailored to your condition and response. Each session takes a short time, and most people need no anaesthetic and have no formal downtime, though some short-lived local soreness afterwards is common. We use a STORZ Medical focused shockwave system — focused shockwave delivers energy to a defined depth within the tissue, in contrast to radial (pressure-wave) devices that disperse energy more superficially. Your treatment plan and the current cost are discussed with you at consultation.
 
 faqs:
+  - question: What is the difference between focused and radial shockwave?
+    answer: Focused shockwave concentrates acoustic energy at a defined depth in the tissue, whereas radial shockwave spreads a pressure wave more superficially from the skin surface. We use a STORZ Medical focused shockwave system, which allows the energy to be directed to deeper target tissues such as tendon attachments.
   - question: Does shockwave therapy hurt?
     answer: Treatment can be uncomfortable while the pulses are applied, and the intensity is usually adjusted to a level you can tolerate. Mild local soreness for a day or two afterwards is common and settles on its own.
   - question: How many sessions will I need?

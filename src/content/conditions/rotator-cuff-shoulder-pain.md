@@ -10,7 +10,7 @@ symptoms:
   - Weakness or difficulty lifting or reaching
   - A painful arc of movement when raising the arm
 treatmentLinks:
-  - name: Shockwave Therapy (ESWT)
+  - name: Focused Shockwave (ESWT)
     href: /non-surgical-treatments/shockwave-therapy-eswt
   - name: EMTT
     href: /non-surgical-treatments/emtt-magnetotransduction
