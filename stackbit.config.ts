@@ -1,4 +1,4 @@
-import { defineStackbitConfig, type SiteMapEntry } from "@stackbit/types";
+import { defineStackbitConfig } from "@stackbit/types";
 import { GitContentSource } from "@stackbit/cms-git";
 
 /**
@@ -60,6 +60,7 @@ const models: any[] = [
     name: "homepage",
     label: "Homepage",
     singleInstance: true,
+    urlPath: "/",
     filePath: "src/content/homepage/index.md",
     hideContent: true,
     fields: [
@@ -93,6 +94,7 @@ const models: any[] = [
     name: "about",
     label: "About page",
     singleInstance: true,
+    urlPath: "/about",
     filePath: "src/content/about/index.md",
     hideContent: true,
     fields: [
@@ -159,6 +161,7 @@ const models: any[] = [
     name: "patientJourney",
     label: "Patient Journey page",
     singleInstance: true,
+    urlPath: "/patient-journey",
     filePath: "src/content/patient-journey/index.md",
     hideContent: true,
     fields: [
@@ -178,6 +181,7 @@ const models: any[] = [
     name: "bookAppointment",
     label: "Book Appointment page",
     singleInstance: true,
+    urlPath: "/book-appointment",
     filePath: "src/content/contact/book-appointment.md",
     fields: [
       { type: "string", name: "title", label: "Title" },
@@ -193,6 +197,7 @@ const models: any[] = [
     name: "treatmentsIndex",
     label: "Treatments — index",
     singleInstance: true,
+    urlPath: "/non-surgical-treatments",
     filePath: "src/content/non-surgical-treatments/-index.md",
     hideContent: true,
     fields: [
@@ -211,6 +216,7 @@ const models: any[] = [
     type: "page",
     name: "treatment",
     label: "Treatment",
+    urlPath: "/non-surgical-treatments/{slug}",
     filePath: "src/content/non-surgical-treatments/{slug}.md",
     exclude: "**/-index.md",
     fields: [
@@ -254,6 +260,7 @@ const models: any[] = [
     name: "conditionsIndex",
     label: "Conditions — index",
     singleInstance: true,
+    urlPath: "/conditions",
     filePath: "src/content/conditions/-index.md",
     hideContent: true,
     fields: [
@@ -266,6 +273,7 @@ const models: any[] = [
     type: "page",
     name: "condition",
     label: "Condition",
+    urlPath: "/conditions/{slug}",
     filePath: "src/content/conditions/{slug}.md",
     exclude: "**/-index.md",
     fields: [
@@ -306,6 +314,7 @@ const models: any[] = [
     name: "resourcesIndex",
     label: "Resources — index",
     singleInstance: true,
+    urlPath: "/patient-resources",
     filePath: "src/content/patient-resources/-index.md",
     hideContent: true,
     fields: [
@@ -318,6 +327,7 @@ const models: any[] = [
     type: "page",
     name: "resource",
     label: "Resource article",
+    urlPath: "/patient-resources/{slug}",
     filePath: "src/content/patient-resources/{slug}.mdx",
     fields: [
       { type: "string", name: "title", label: "Title" },
@@ -458,29 +468,6 @@ const models: any[] = [
   },
 ];
 
-// ---- Sitemap: map page documents to URLs ------------------------------------
-
-const singletonUrls: Record<string, string> = {
-  homepage: "/",
-  about: "/about",
-  patientJourney: "/patient-journey",
-  bookAppointment: "/book-appointment",
-  treatmentsIndex: "/non-surgical-treatments",
-  conditionsIndex: "/conditions",
-  resourcesIndex: "/patient-resources",
-};
-
-const collectionBase: Record<string, string> = {
-  treatment: "/non-surgical-treatments",
-  condition: "/conditions",
-  resource: "/patient-resources",
-};
-
-function slugFromId(id: string): string {
-  const file = id.split("/").pop() || "";
-  return file.replace(/\.(md|mdx|json)$/i, "");
-}
-
 // ---- Config -----------------------------------------------------------------
 
 export default defineStackbitConfig({
@@ -509,28 +496,4 @@ export default defineStackbitConfig({
       },
     }),
   ],
-  siteMap: ({ documents }): SiteMapEntry[] => {
-    return documents
-      .map((doc: any): SiteMapEntry | null => {
-        const model = doc.modelName as string;
-        if (singletonUrls[model]) {
-          return {
-            stableId: doc.id,
-            urlPath: singletonUrls[model],
-            document: doc,
-            isHomePage: model === "homepage",
-          } as SiteMapEntry;
-        }
-        if (collectionBase[model]) {
-          return {
-            stableId: doc.id,
-            urlPath: `${collectionBase[model]}/${slugFromId(doc.id)}`,
-            document: doc,
-            isHomePage: false,
-          } as SiteMapEntry;
-        }
-        return null;
-      })
-      .filter((e): e is SiteMapEntry => !!e);
-  },
 });
