@@ -1,9 +1,9 @@
 ---
 type: homepage
 banner:
-  title: "Evidence-based, non-surgical care for back and musculoskeletal pain."
+  title: "Non-surgical care for back pain and all musculoskeletal pain."
   image: /images/back_pain_doctor_intro-min.png
-  meta: "Evidence-based, non-surgical care for back and musculoskeletal pain in Brisbane."
+  meta: "Non-surgical care for back pain and all musculoskeletal pain."
   link:
     label: View our Treatments
     href: "/non-surgical-treatments"
