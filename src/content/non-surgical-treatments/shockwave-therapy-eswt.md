@@ -4,7 +4,7 @@ draft: false
 title: "Focused Shockwave Therapy (ESWT) Brisbane"
 meta_title: "Shockwave Therapy Brisbane — Focused ESWT"
 description: "Focused shockwave therapy (ESWT) in Brisbane for chronic tendinopathy — plantar fasciitis, rotator cuff, tennis elbow and Achilles. Non-invasive treatment in Milton with a STORZ Medical focused shockwave system, by musculoskeletal GP Dr Joshua Hatch."
-image: "/images/non-surgical-treatments/treatment-shockwave-therapy.webp"
+image: "/images/non-surgical-treatments/eswt.png"
 
 intro: Focused shockwave therapy (ESWT) is a non-invasive treatment that delivers focused acoustic pressure waves to injured tendon and soft tissue, used most often for chronic tendinopathies that have not settled with conservative care. We use a STORZ Medical focused shockwave system at our Brisbane clinic in Milton.
 

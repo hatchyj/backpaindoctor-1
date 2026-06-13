@@ -40,7 +40,7 @@ treatmentsOverview:
     cta:
       href: /non-surgical-treatments/shockwave-therapy-eswt
       label: Shockwave Therapy (ESWT)
-    image: /images/non-surgical-treatments/treatment-shockwave-therapy.webp
+    image: /images/non-surgical-treatments/eswt.png
     image_style: rounded-2xl shadow-xl max-w-[80%]
   - title: EMTT (Magnetotransduction Therapy)
     subtitle: "Emerging Adjunct Therapy"
@@ -50,7 +50,7 @@ treatmentsOverview:
     cta:
       href: /non-surgical-treatments/emtt-magnetotransduction
       label: EMTT (Magnetotransduction Therapy)
-    image: /images/non-surgical-treatments/treatment-emtt.webp
+    image: /images/non-surgical-treatments/emtt.png
     image_style: rounded-2xl shadow-xl max-w-[80%]
   - title: Nerve Therapy
     subtitle: "Pain Relief"
