@@ -52,7 +52,7 @@ export default defineConfig({
   redirects: {
     "/the-back-pain-doctor-story": "/about",
     "/find-lasting-relief/treatment": "/non-surgical-treatments",
-    "/painful-conditions": "/explaining-pain",
+    "/painful-conditions": "/conditions",
     "/find-lasting-relief/contact": "/book-appointment",
   },
   markdown: {

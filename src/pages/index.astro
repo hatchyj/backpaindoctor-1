@@ -7,17 +7,8 @@ import Cta from "@/partials/Cta.astro";
 import { getEntry } from "astro:content";
 
 const homepage = await getEntry("homepage", "index");
-const { banner, intro, service } = homepage.data;
-// const features = {
-//   title : treatments_index?.data.intro.title,
-//   subtitle : treatments_index?.data.intro.subtitle,
-//   description : treatments_index?.data.intro.description,
-//   list: treatments_index?.data.treatmentsOverview,
-// }
+const { banner, service } = homepage.data;
 ---
-
-<!-- <Debug answer={features} /> -->
-
 
 <Base
   title="Back Pain & Musculoskeletal Medicine — Dr Joshua Hatch"
@@ -25,9 +16,6 @@ const { banner, intro, service } = homepage.data;
 >
   <Banner banner={banner} />
   <CredentialStrip />
-  <!-- <Brand brands={brands} /> -->
   <Service service={service} />
-  <!--  <Features features={features} /> -->
-  <!-- <Testimonial testimonial={testimonial} /> -->
   <Cta />
 </Base>

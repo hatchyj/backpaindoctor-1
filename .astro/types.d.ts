@@ -136,6 +136,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"about": {
+"2026-06-13.md": {
+	id: "2026-06-13.md";
+  slug: "2026-06-13";
+  body: string;
+  collection: "about";
+  data: any
+} & { render(): Render[".md"] };
 "index.md": {
 	id: "index.md";
   slug: "index";
@@ -160,22 +167,6 @@ declare module 'astro:content' {
   data: InferEntrySchema<"authors">
 } & { render(): Render[".md"] };
 };
-"careers": Record<string, {
-  id: string;
-  slug: string;
-  body: string;
-  collection: "careers";
-  data: InferEntrySchema<"careers">;
-  render(): Render[".md"];
-}>;
-"case-studies": Record<string, {
-  id: string;
-  slug: string;
-  body: string;
-  collection: "case-studies";
-  data: InferEntrySchema<"case-studies">;
-  render(): Render[".md"];
-}>;
 "conditions": {
 "-index.md": {
 	id: "-index.md";
@@ -325,20 +316,6 @@ declare module 'astro:content' {
   collection: "pages";
   data: InferEntrySchema<"pages">
 } & { render(): Render[".md"] };
-"changelog.mdx": {
-	id: "changelog.mdx";
-  slug: "changelog";
-  body: string;
-  collection: "pages";
-  data: InferEntrySchema<"pages">
-} & { render(): Render[".mdx"] };
-"elements.mdx": {
-	id: "elements.mdx";
-  slug: "elements";
-  body: string;
-  collection: "pages";
-  data: InferEntrySchema<"pages">
-} & { render(): Render[".mdx"] };
 };
 "patient-journey": {
 "index.md": {
@@ -442,35 +419,11 @@ declare module 'astro:content' {
   data: InferEntrySchema<"patient-resources">
 } & { render(): Render[".mdx"] };
 };
-"pricing": {
-"index.md": {
-	id: "index.md";
-  slug: "index";
-  body: string;
-  collection: "pricing";
-  data: any
-} & { render(): Render[".md"] };
-};
 
 	};
 
 	type DataEntryMap = {
-		"__careers": Record<string, {
-  id: string;
-  collection: "__careers";
-  data: any;
-}>;
-"__case-studies": Record<string, {
-  id: string;
-  collection: "__case-studies";
-  data: any;
-}>;
-"__explaining-pain": Record<string, {
-  id: string;
-  collection: "__explaining-pain";
-  data: any;
-}>;
-
+		
 	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;

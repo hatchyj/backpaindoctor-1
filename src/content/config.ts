@@ -49,41 +49,6 @@ const authorsCollection = defineCollection({
   }),
 });
 
-// careers collection
-const careersCollection = defineCollection({
-  schema: z.object({
-    id: z.string().optional(),
-    title: z.string().optional(),
-    subtitle: z.string().optional(),
-    description: z.string().optional(),
-    image: z.string().optional(),
-    career: z
-      .object({
-        title: z.string().optional(),
-        subtitle: z.string().optional(),
-      })
-      .optional(),
-    date: z.string().optional(),
-    draft: z.boolean().optional(),
-    job_nature: z.string().optional(),
-  }),
-});
-
-// case studies collection schema
-const caseStudiesCollection = defineCollection({
-  schema: z.object({
-    id: z.string().optional(),
-    title: z.string().optional(),
-    description: z.string().optional(),
-    draft: z.boolean().optional(),
-    date: z.string().optional(),
-    image: z.string().optional(),
-    year: z.string().optional(),
-    location: z.string().optional(),
-    company_size: z.string().optional(),
-  }),
-});
-
 // Pages collection schema
 const pagesCollection = defineCollection({
   schema: z.object({
@@ -101,7 +66,5 @@ const pagesCollection = defineCollection({
 export const collections = {
   "patient-resources": blogsCollection,
   authors: authorsCollection,
-  careers: careersCollection,
-  "case-studies": caseStudiesCollection,
   pages: pagesCollection,
 };
