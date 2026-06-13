@@ -20,7 +20,7 @@ service:
   - title: Diagnosis, Discussion and Treatment plan
     subtitle: First consultation
     description: "Using the information obtained from the examination, the doctor will develop a diagnosis and discuss potential treatment options. Treatment options can range from medications, manual therapy, injections, or referral for surgery depending on the severity of the condition.<br/><br/>To achieve an accurate diagnosis and personalised treatment plan, it is important to be open and honest with the doctor during the consultation."
-    image: /images/diagnosis-discussion-treatment-plan-min.jpg
+    image: /images/patient-journey/dr-joshua-hatch-treatment-plan-2026.webp
   - title: Therapy Begins
     subtitle: Second Consultation
     description: Following a comprehensive initial consultation, your musculoskeletal doctor will initiate a tailored therapy plan. This plan may encompass a variety of therapeutic modalities or may focus on a specific approach.

@@ -9,7 +9,7 @@ about_us:
   subtitle: About
   title: Hello, I'm Dr Joshua Hatch, your local back pain doctor
   description: Dr Joshua Hatch is a GP and Musculoskeletal Medicine practitioner in Brisbane, Australia. He brings an unusual depth of background — from MRI radiography to orthopaedic surgery to musculoskeletal medicine — to the careful assessment and non-surgical treatment of musculoskeletal pain, with the aim of reducing pain and improving function.
-  image: /images/about/dr_joshua_hatch_back_pain_doctor.webp
+  image: /images/dr-joshua-hatch-headshot-2026.webp
 
 ## our works
 works:
@@ -36,7 +36,7 @@ bio:
   subtitle: The Back Pain Doctor Story
   title: You're in safe hands
   description: "Dr. Hatch’s passion for musculoskeletal medicine started before medical school, during his ten-year career as an MRI Radiographer working with distinguished musculoskeletal radiologists. After completing his residency, he spent four years refining his diagnostic and management skills in Orthopaedic Surgery as a hospital registrar. Currently, Dr. Hatch is an assistant surgeon in Orthopaedic Surgery and a Specialist General Practice Fellow recognised by the Royal Australian College of General Practitioners, and is a diplomate fellow of the faculty of sports and exercise medicine (UK) after successfully completing the diploma of musculoskeletal medicine.<br/><br/>Dr. Hatch has completed multiple courses through the Royal Australasian College of Surgeons, including the General Surgical Sciences Exam, Care of the Critically Ill Surgical Patient, and Emergency Management of Severe Trauma. He also holds a certification in Orthopaedic Surgical Anatomy from QUT."
-  image: /images/about/about-dr-josh-hatch-bio.webp
+  image: /images/about/dr-joshua-hatch-spine-model-2026.webp
 
 #intro
 intro:

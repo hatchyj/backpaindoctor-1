@@ -1,5 +1,6 @@
 .btn {
   @apply relative inline-block overflow-hidden border px-6 py-3 font-semibold transition;
+  box-shadow: 0 12px 28px rgba(12, 42, 66, 0.08);
   &::after {
     @apply absolute left-0 top-0 -z-[1] h-0 w-full bg-black/10 transition-all duration-300 content-[""];
   }
@@ -10,11 +11,12 @@
 }
 
 .btn-primary {
-  @apply z-0 rounded-lg bg-primary text-white;
+  @apply z-0 rounded-lg border-primary bg-primary text-white;
+  background: linear-gradient(135deg, #0757c7 0%, #0f766e 100%);
 }
 
 .btn-outline-primary {
-  @apply border-primary text-primary rounded-lg bg-transparent;
+  @apply rounded-lg border-primary bg-white/70 text-primary backdrop-blur;
   &::after {
     @apply bg-primary/5;
   }

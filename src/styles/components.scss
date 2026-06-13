@@ -3,6 +3,85 @@
   @apply py-16;
 }
 
+.hero-section {
+  @apply relative isolate overflow-hidden;
+  background:
+    linear-gradient(110deg, rgba(239, 248, 246, 0.9), rgba(255, 255, 255, 0.92) 52%, rgba(246, 249, 252, 0.98)),
+    repeating-linear-gradient(90deg, rgba(15, 118, 110, 0.05) 0 1px, transparent 1px 96px);
+
+  &::after {
+    @apply pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-32 content-[""];
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0), #ffffff);
+  }
+}
+
+.page-header {
+  @apply relative isolate overflow-hidden border-b border-primary/10;
+  background:
+    linear-gradient(110deg, rgba(239, 248, 246, 0.92), rgba(255, 255, 255, 0.96) 58%, rgba(249, 250, 245, 0.96)),
+    repeating-linear-gradient(0deg, rgba(12, 42, 66, 0.04) 0 1px, transparent 1px 88px);
+}
+
+.eyebrow {
+  @apply text-[0.76rem] font-semibold uppercase tracking-[0.16em] text-primary;
+}
+
+.hero-media,
+.service-visual,
+.about-visual {
+  @apply relative overflow-hidden rounded-lg;
+  box-shadow:
+    0 28px 70px rgba(12, 42, 66, 0.14),
+    0 1px 0 rgba(255, 255, 255, 0.85) inset;
+}
+
+.hero-media {
+  @apply aspect-[4/3] bg-white;
+  transform: perspective(1200px) rotateX(1.5deg) rotateY(-2deg);
+
+  &::before {
+    @apply pointer-events-none absolute inset-0 z-10 content-[""];
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0) 40%);
+  }
+}
+
+.service-row {
+  @apply rounded-lg border border-primary/10 bg-white/80 px-0 py-8 backdrop-blur-sm md:px-8;
+  box-shadow: 0 20px 54px rgba(12, 42, 66, 0.06);
+}
+
+.cta-panel {
+  @apply rounded-lg border border-primary/10 bg-white/90 px-5 py-8 backdrop-blur md:px-8;
+  box-shadow:
+    0 30px 80px rgba(12, 42, 66, 0.1),
+    0 1px 0 rgba(255, 255, 255, 0.9) inset;
+}
+
+.service-copy {
+  @apply md:pr-6;
+}
+
+.service-visual,
+.about-visual {
+  @apply bg-white;
+
+  img {
+    @apply aspect-[4/3] transition duration-700 ease-out;
+  }
+
+  &:hover img {
+    transform: scale(1.025);
+  }
+}
+
+.about-visual {
+  @apply p-2;
+
+  img {
+    @apply rounded-md;
+  }
+}
+
 // container
 .container {
   @apply mx-auto box-border px-4;
@@ -131,10 +210,19 @@
     }
   }
   .service-title {
-    @apply relative mb-10 text-left text-h2-sm font-semibold capitalize leading-[1.3];
+    @apply relative mb-10 text-left text-h2-sm font-semibold leading-[1.3];
     &::after {
       @apply absolute -bottom-5 left-0 h-[5px] w-[4.3rem] -translate-x-0 rounded-[1.8rem] bg-primary content-[""];
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-media,
+  .service-visual img,
+  .about-visual img {
+    transform: none;
+    transition: none;
   }
 }
 

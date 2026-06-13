@@ -4,6 +4,9 @@ html {
 
 body {
   @apply bg-body font-primary font-normal leading-[1.7] text-text;
+  background:
+    linear-gradient(180deg, rgba(248, 252, 251, 0.96) 0%, rgba(255, 255, 255, 1) 22rem),
+    #ffffff;
 }
 ::selection {
   @apply bg-primary text-white;
