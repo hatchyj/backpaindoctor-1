@@ -46,7 +46,13 @@ const pageSchema = {
     <div class="container">
       <div class="row justify-center">
         <div class="md:col-10 lg:col-8">
-          {intro && <div class="text-lg pb-8">{intro}</div>}
+          {
+            intro && (
+              <div class="pb-8 text-[1.02rem] leading-relaxed sm:text-lg">
+                {intro}
+              </div>
+            )
+          }
 
           <div class="content">
             <Content />
@@ -54,7 +60,7 @@ const pageSchema = {
 
           {
             symptoms && symptoms.length > 0 && (
-              <div class="mt-10 rounded-2xl border border-border bg-theme-light/50 p-6 md:p-8">
+              <div class="mt-10 rounded-lg border border-border bg-theme-light/50 p-5 md:p-8">
                 <h2 class="mb-4 text-h4-sm font-semibold md:text-h4">
                   Common symptoms
                 </h2>

@@ -21,18 +21,15 @@ const {
           <div class="cta-panel row items-center justify-center gap-y-8">
             <div class="lg:col-5">
               <div class="section-title text-left" data-aos="fade-up">
-                <p
-                  set:html={markdownify(subtitle)}
-                  class="eyebrow mb-4"
-                />
+                <p set:html={markdownify(subtitle)} class="eyebrow mb-4" />
                 <h2 set:html={markdownify(title)} class="service-title" />
                 <p
                   set:html={markdownify(content)}
-                  class="text-[.9rem] text-text"
+                  class="text-[0.95rem] leading-relaxed text-text"
                 />
                 <a
                   href={link}
-                  class="relative mt-4 inline-flex btn btn-primary items-center gap-3 py-4"
+                  class="btn btn-primary relative mt-4 inline-flex items-center gap-3 py-4"
                 >
                   <HotDocIcon />
                   <span>{label}</span>

@@ -1,6 +1,6 @@
 // section style
 .section {
-  @apply py-16;
+  @apply py-12 md:py-16;
 }
 
 .scroll-progress {
@@ -12,10 +12,34 @@
 
 .site-ambient {
   @apply pointer-events-none fixed inset-0 z-0;
-  background:
-    linear-gradient(115deg, rgba(7, 87, 199, 0.045), transparent 34%, rgba(15, 118, 110, 0.04) 68%, transparent),
-    repeating-linear-gradient(90deg, rgba(12, 42, 66, 0.025) 0 1px, transparent 1px 140px);
+  background: linear-gradient(
+      115deg,
+      rgba(7, 87, 199, 0.045),
+      transparent 34%,
+      rgba(15, 118, 110, 0.04) 68%,
+      transparent
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(12, 42, 66, 0.025) 0 1px,
+      transparent 1px 140px
+    );
   opacity: 0.86;
+
+  @media (max-width: 767px) {
+    background: linear-gradient(
+        145deg,
+        rgba(7, 87, 199, 0.05),
+        transparent 42%,
+        rgba(15, 118, 110, 0.045)
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(12, 42, 66, 0.02) 0 1px,
+        transparent 1px 96px
+      );
+    opacity: 0.62;
+  }
 }
 
 main,
@@ -25,9 +49,17 @@ footer {
 
 .hero-section {
   @apply relative isolate overflow-hidden;
-  background:
-    linear-gradient(110deg, rgba(239, 248, 246, 0.96), rgba(255, 255, 255, 0.92) 52%, rgba(246, 249, 252, 0.98)),
-    repeating-linear-gradient(90deg, rgba(15, 118, 110, 0.05) 0 1px, transparent 1px 96px);
+  background: linear-gradient(
+      110deg,
+      rgba(239, 248, 246, 0.96),
+      rgba(255, 255, 255, 0.92) 52%,
+      rgba(246, 249, 252, 0.98)
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(15, 118, 110, 0.05) 0 1px,
+      transparent 1px 96px
+    );
 
   &::before {
     @apply pointer-events-none absolute inset-0 z-0 content-[""];
@@ -49,6 +81,25 @@ footer {
     @apply pointer-events-none absolute inset-x-0 bottom-0 z-0 h-32 content-[""];
     background: linear-gradient(180deg, rgba(255, 255, 255, 0), #ffffff);
   }
+
+  @media (max-width: 767px) {
+    background: linear-gradient(
+        160deg,
+        rgba(239, 248, 246, 0.98),
+        rgba(255, 255, 255, 0.95) 58%,
+        rgba(247, 250, 252, 0.98)
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(15, 118, 110, 0.045) 0 1px,
+        transparent 1px 82px
+      );
+
+    &::before {
+      animation-duration: 18s;
+      opacity: 0.72;
+    }
+  }
 }
 
 .hero-section > .container,
@@ -58,14 +109,28 @@ footer {
 
 .page-header {
   @apply relative isolate overflow-hidden border-b border-primary/10;
-  background:
-    linear-gradient(110deg, rgba(239, 248, 246, 0.92), rgba(255, 255, 255, 0.96) 58%, rgba(249, 250, 245, 0.96)),
-    repeating-linear-gradient(0deg, rgba(12, 42, 66, 0.04) 0 1px, transparent 1px 88px);
+  background: linear-gradient(
+      110deg,
+      rgba(239, 248, 246, 0.92),
+      rgba(255, 255, 255, 0.96) 58%,
+      rgba(249, 250, 245, 0.96)
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(12, 42, 66, 0.04) 0 1px,
+      transparent 1px 88px
+    );
 
   &::before {
     @apply pointer-events-none absolute inset-0 z-0 content-[""];
     animation: premiumSweep 14s ease-in-out infinite reverse;
-    background: linear-gradient(115deg, transparent 18%, rgba(255, 255, 255, 0.72) 48%, rgba(15, 118, 110, 0.1) 54%, transparent 76%);
+    background: linear-gradient(
+      115deg,
+      transparent 18%,
+      rgba(255, 255, 255, 0.72) 48%,
+      rgba(15, 118, 110, 0.1) 54%,
+      transparent 76%
+    );
     background-size: 260% 100%;
   }
 }
@@ -90,7 +155,8 @@ footer {
 
 .hero-media {
   @apply aspect-[4/3] border border-white/80 bg-white;
-  transform: perspective(1400px) rotateX(var(--tilt-x, 1.5deg)) rotateY(var(--tilt-y, -2deg)) translate3d(0, 0, 0);
+  transform: perspective(1400px) rotateX(var(--tilt-x, 1.5deg))
+    rotateY(var(--tilt-y, -2deg)) translate3d(0, 0, 0);
   transition:
     transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 0.7s ease;
@@ -98,14 +164,22 @@ footer {
 
   &::before {
     @apply pointer-events-none absolute inset-0 z-10 content-[""];
-    background:
-      linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 42%),
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0) 42%
+      ),
       linear-gradient(180deg, rgba(7, 87, 199, 0), rgba(7, 87, 199, 0.08));
   }
 
   &::after {
     @apply pointer-events-none absolute -top-1/2 z-20 h-[200%] w-[34%] content-[""];
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.56), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.56),
+      transparent
+    );
     left: calc(var(--shine-x, 42%) - 17%);
     opacity: 0;
     transform: rotate(18deg);
@@ -130,6 +204,43 @@ footer {
   &:hover img {
     transform: scale(1.045);
   }
+
+  @media (max-width: 767px) {
+    @apply rounded-lg;
+    box-shadow:
+      0 22px 58px rgba(12, 42, 66, 0.14),
+      0 1px 0 rgba(255, 255, 255, 0.9) inset;
+    transform: none;
+
+    &::after {
+      opacity: 0.26;
+    }
+  }
+
+  @media (hover: none), (pointer: coarse) {
+    transform: none;
+
+    &:hover {
+      box-shadow:
+        0 22px 58px rgba(12, 42, 66, 0.14),
+        0 1px 0 rgba(255, 255, 255, 0.9) inset;
+    }
+
+    &:hover img {
+      transform: scale(1.015);
+    }
+  }
+}
+
+.hero-media-mobile {
+  @apply aspect-[16/10];
+  background-image: var(--hero-image);
+  background-position: center 34%;
+  background-size: cover;
+
+  img {
+    object-position: center 34%;
+  }
 }
 
 .service-row,
@@ -145,7 +256,12 @@ footer {
 
   &::before {
     @apply pointer-events-none absolute inset-y-0 -left-1/3 z-0 w-1/3 content-[""];
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.62), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.62),
+      transparent
+    );
     opacity: 0;
     transform: skewX(-16deg) translateX(-120%);
     transition:
@@ -176,6 +292,19 @@ footer {
   &:hover::after {
     opacity: 1;
   }
+
+  @media (max-width: 767px) {
+    @apply px-5 py-6;
+    box-shadow:
+      0 18px 48px rgba(12, 42, 66, 0.08),
+      0 1px 0 rgba(255, 255, 255, 0.86) inset;
+  }
+
+  @media (hover: none), (pointer: coarse) {
+    &:hover {
+      transform: none;
+    }
+  }
 }
 
 .cta-panel {
@@ -189,7 +318,12 @@ footer {
 
   &::before {
     @apply pointer-events-none absolute inset-y-0 -left-1/3 z-0 w-1/3 content-[""];
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.7),
+      transparent
+    );
     opacity: 0;
     transform: skewX(-16deg) translateX(-120%);
     transition:
@@ -208,6 +342,19 @@ footer {
     opacity: 1;
     transform: skewX(-16deg) translateX(520%);
   }
+
+  @media (max-width: 767px) {
+    @apply px-5 py-7;
+    box-shadow:
+      0 22px 60px rgba(12, 42, 66, 0.1),
+      0 1px 0 rgba(255, 255, 255, 0.9) inset;
+  }
+
+  @media (hover: none), (pointer: coarse) {
+    &:hover {
+      transform: none;
+    }
+  }
 }
 
 .service-copy {
@@ -220,7 +367,12 @@ footer {
 
   &::before {
     @apply pointer-events-none absolute -inset-y-10 z-20 w-1/3 content-[""];
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    );
     left: calc(var(--surface-x, 50%) - 16%);
     opacity: 0;
     transform: skewX(-16deg);
@@ -237,6 +389,19 @@ footer {
 
   &:hover img {
     transform: scale(1.045);
+  }
+
+  @media (max-width: 767px) {
+    @apply rounded-lg;
+    box-shadow:
+      0 18px 46px rgba(12, 42, 66, 0.1),
+      0 1px 0 rgba(255, 255, 255, 0.9) inset;
+  }
+
+  @media (hover: none), (pointer: coarse) {
+    &:hover img {
+      transform: none;
+    }
   }
 }
 
@@ -368,7 +533,7 @@ footer {
 }
 // feature section
 .section-title {
-  @apply mb-10 text-center;
+  @apply mb-8 text-center md:mb-10;
   .title {
     @apply relative mb-10 text-h2-sm font-semibold capitalize leading-[1.3];
     &::after {
@@ -379,6 +544,15 @@ footer {
     @apply relative mb-10 text-left text-h2-sm font-semibold leading-[1.3];
     &::after {
       @apply absolute -bottom-5 left-0 h-[5px] w-[4.3rem] -translate-x-0 rounded-[1.8rem] bg-primary content-[""];
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .section-title {
+    .title,
+    .service-title {
+      @apply mb-8 text-[1.85rem] leading-[1.16];
     }
   }
 }
@@ -543,6 +717,26 @@ footer {
   }
 }
 
+.resource-card {
+  box-shadow:
+    0 18px 52px rgba(12, 42, 66, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.88) inset;
+  transition:
+    transform 0.38s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.38s ease,
+    box-shadow 0.38s ease;
+
+  @media (hover: hover) {
+    &:hover {
+      border-color: rgba(15, 118, 110, 0.2);
+      box-shadow:
+        0 26px 68px rgba(12, 42, 66, 0.12),
+        0 1px 0 rgba(255, 255, 255, 0.95) inset;
+      transform: translateY(-3px);
+    }
+  }
+}
+
 // about
 .team-image {
   @apply relative z-10 p-8;
@@ -666,7 +860,20 @@ footer {
   @apply prose-td:px-3 prose-td:py-4;
   @apply marker:text-primary;
   @apply prose-img:rounded-md;
+  overflow-wrap: anywhere;
+
   p {
     @apply first-of-type:mt-0;
+  }
+
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  @media (max-width: 767px) {
+    @apply prose-p:leading-relaxed;
   }
 }

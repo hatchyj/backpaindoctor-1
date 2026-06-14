@@ -6,22 +6,40 @@ const { title, meta, link, image } = banner;
 
 <section class="hero-section">
   <div class="container relative">
-    <div class="row min-h-[78vh] items-center gap-y-10 py-16 lg:py-20">
+    <div
+      class="row items-center gap-y-8 py-10 sm:py-14 lg:min-h-[78vh] lg:gap-y-10 lg:py-20"
+    >
       <div class="lg:col-6" data-aos="fade-up">
         <p class="eyebrow">Brisbane musculoskeletal medicine</p>
         <h1
           set:html={markdownify(title)}
-          class="mb-6 text-h2-sm font-semibold leading-tight md:text-h2-md lg:text-h1-md"
+          class="mb-5 text-[2.1rem] font-semibold leading-[1.08] sm:text-h2-sm md:text-h2-md lg:mb-6 lg:text-h1-md"
         />
         {
           meta && (
             <p
               set:html={markdownify(meta)}
-              class="max-w-2xl text-lg leading-relaxed text-text"
+              class="max-w-2xl text-[1.02rem] leading-relaxed text-text sm:text-lg"
             />
           )
         }
-        <div class="mt-8 flex flex-wrap items-center gap-4">
+        <figure
+          class="hero-media hero-media-mobile mt-6 lg:hidden"
+          style={`--hero-image: url(${image});`}
+        >
+          <img
+            src={image}
+            width="1400"
+            height="1050"
+            alt="Dr Joshua Hatch in navy scrubs at The Back Pain Doctor Brisbane"
+            class="h-full w-full object-cover"
+            loading="eager"
+            decoding="async"
+          />
+        </figure>
+        <div
+          class="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 lg:mt-8"
+        >
           <a href={link.href} class="btn btn-primary">
             {link.label}
           </a>
@@ -30,7 +48,11 @@ const { title, meta, link, image } = banner;
           </a>
         </div>
       </div>
-      <div class="lg:col-6" data-aos="fade-up" data-aos-delay="150">
+      <div
+        class="hidden lg:col-6 lg:block"
+        data-aos="fade-up"
+        data-aos-delay="150"
+      >
         <figure class="hero-media">
           <img
             src={image}

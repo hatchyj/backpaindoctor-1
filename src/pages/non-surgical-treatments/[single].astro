@@ -53,7 +53,12 @@ const pageSchema = {
 };
 ---
 
-<Base title={title} meta_title={meta_title} description={description} image={image}>
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}
+>
   <PageHeader title={title} />
   <Breadcrumbs
     items={[
@@ -67,15 +72,21 @@ const pageSchema = {
     <div class="container">
       <div class="row justify-center">
         <div class="md:col-10 lg:col-8">
-          {intro && <div class="text-lg pb-8">{intro}</div>}
+          {
+            intro && (
+              <div class="pb-8 text-[1.02rem] leading-relaxed sm:text-lg">
+                {intro}
+              </div>
+            )
+          }
 
           {
             imageCaption && image && (
-              <figure class="mb-10 overflow-hidden rounded-2xl border border-border bg-white">
+              <figure class="mb-10 overflow-hidden rounded-lg border border-border bg-white shadow-[0_18px_54px_rgba(12,42,66,0.08)]">
                 <img
                   src={image}
                   alt={imageAlt || title}
-                  class="mx-auto max-h-[420px] w-full object-contain p-4"
+                  class="mx-auto max-h-[360px] w-full object-contain p-3 sm:max-h-[420px] sm:p-4"
                   loading="lazy"
                   decoding="async"
                 />
@@ -88,7 +99,7 @@ const pageSchema = {
 
           {
             whatItTreats && whatItTreats.length > 0 && (
-              <div class="mb-10 rounded-2xl border border-border bg-theme-light/50 p-6 md:p-8">
+              <div class="mb-10 rounded-lg border border-border bg-theme-light/50 p-5 md:p-8">
                 <h2 class="mb-4 text-h4-sm font-semibold md:text-h4">
                   What it can help with
                 </h2>
@@ -136,7 +147,7 @@ const pageSchema = {
 
           {
             evidence && (
-              <div class="mt-10 rounded-2xl border-l-4 border-primary bg-theme-light/50 p-6 md:p-8">
+              <div class="mt-10 rounded-lg border-l-4 border-primary bg-theme-light/50 p-5 md:p-8">
                 <h2 class="mb-3 text-h4-sm font-semibold md:text-h4">
                   What the evidence shows
                 </h2>
@@ -168,7 +179,7 @@ const pageSchema = {
 
           {
             whatToExpect && (
-              <div class="mt-8 rounded-2xl border border-border p-6 md:p-8">
+              <div class="mt-8 rounded-lg border border-border p-5 md:p-8">
                 <h2 class="mb-3 text-h4-sm font-semibold md:text-h4">
                   What to expect
                 </h2>

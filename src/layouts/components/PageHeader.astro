@@ -5,16 +5,18 @@ const { title } = Astro.props;
 
 <section class="page-header">
   <div class="container relative">
-    <div class="mx-auto max-w-4xl py-20 text-center md:py-24">
-      <p class="eyebrow mb-4">The Back Pain Doctor</p>
+    <div class="mx-auto max-w-4xl py-12 text-center sm:py-16 md:py-24">
+      <p class="eyebrow mb-3 sm:mb-4">The Back Pain Doctor</p>
       <h1
         set:html={markdownify(title)}
-        class="mb-6 text-h1-sm font-semibold md:text-h1-md lg:text-h1"
+        class="mb-5 text-[2.15rem] font-semibold leading-[1.08] sm:text-h1-sm md:mb-6 md:text-h1-md lg:text-h1"
         data-aos="fade-up"
         data-aos-delay="100"
       />
       <nav aria-label="Breadcrumb" data-aos="fade-up" data-aos-delay="150">
-        <ol class="mb-0 flex justify-center gap-2 bg-transparent p-0 text-sm">
+        <ol
+          class="mb-0 flex flex-wrap justify-center gap-2 bg-transparent p-0 text-sm"
+        >
           <li>
             <a class="text-text hover:text-primary" href="/">Home</a>
           </li>
