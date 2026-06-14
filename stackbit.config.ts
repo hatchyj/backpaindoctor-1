@@ -224,6 +224,8 @@ const models: any[] = [
       { type: "string", name: "meta_title", label: "SEO title" },
       { type: "string", name: "description", label: "Meta description" },
       { type: "string", name: "image", label: "Image path" },
+      { type: "string", name: "imageAlt", label: "Image alt text" },
+      { type: "string", name: "imageCaption", label: "Image caption (shows a device figure on the page)" },
       { type: "markdown", name: "intro", label: "Intro" },
       {
         type: "list",

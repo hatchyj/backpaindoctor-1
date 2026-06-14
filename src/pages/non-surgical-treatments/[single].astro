@@ -28,6 +28,8 @@ const {
   title,
   meta_title,
   image,
+  imageAlt,
+  imageCaption,
   description,
   intro,
   system1,
@@ -66,6 +68,23 @@ const pageSchema = {
       <div class="row justify-center">
         <div class="md:col-10 lg:col-8">
           {intro && <div class="text-lg pb-8">{intro}</div>}
+
+          {
+            imageCaption && image && (
+              <figure class="mb-10 overflow-hidden rounded-2xl border border-border bg-white">
+                <img
+                  src={image}
+                  alt={imageAlt || title}
+                  class="mx-auto max-h-[420px] w-full object-contain p-4"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="border-t border-border px-4 py-2 text-center text-[0.8rem] text-text">
+                  {imageCaption}
+                </figcaption>
+              </figure>
+            )
+          }
 
           {
             whatItTreats && whatItTreats.length > 0 && (
