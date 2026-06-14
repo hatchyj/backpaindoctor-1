@@ -334,6 +334,27 @@ declare module 'astro:content' {
   collection: "patient-resources";
   data: InferEntrySchema<"patient-resources">
 } & { render(): Render[".md"] };
+"achilles-tendinopathy-return-to-activity.mdx": {
+	id: "achilles-tendinopathy-return-to-activity.mdx";
+  slug: "achilles-tendinopathy-return-to-activity";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"back-pain-red-flags-when-to-seek-care.mdx": {
+	id: "back-pain-red-flags-when-to-seek-care.mdx";
+  slug: "back-pain-red-flags-when-to-seek-care";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"cortisone-injections-benefits-and-limits.mdx": {
+	id: "cortisone-injections-benefits-and-limits.mdx";
+  slug: "cortisone-injections-benefits-and-limits";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
 "cortisone-vs-prp-for-knee-osteoarthritis.mdx": {
 	id: "cortisone-vs-prp-for-knee-osteoarthritis.mdx";
   slug: "cortisone-vs-prp-for-knee-osteoarthritis";
@@ -344,6 +365,27 @@ declare module 'astro:content' {
 "do-you-need-an-mri-for-back-pain.mdx": {
 	id: "do-you-need-an-mri-for-back-pain.mdx";
   slug: "do-you-need-an-mri-for-back-pain";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"hip-pain-lying-on-your-side-gtps.mdx": {
+	id: "hip-pain-lying-on-your-side-gtps.mdx";
+  slug: "hip-pain-lying-on-your-side-gtps";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"knee-arthritis-flare-plan.mdx": {
+	id: "knee-arthritis-flare-plan.mdx";
+  slug: "knee-arthritis-flare-plan";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"plantar-fasciitis-first-steps.mdx": {
+	id: "plantar-fasciitis-first-steps.mdx";
+  slug: "plantar-fasciitis-first-steps";
   body: string;
   collection: "patient-resources";
   data: InferEntrySchema<"patient-resources">
@@ -414,6 +456,48 @@ declare module 'astro:content' {
 "post-9.mdx": {
 	id: "post-9.mdx";
   slug: "shoulder-pain-causes-symptoms-and-effective-treatment-strategies";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"prp-injections-before-and-after.mdx": {
+	id: "prp-injections-before-and-after.mdx";
+  slug: "prp-injections-before-and-after";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"rotator-cuff-pain-scan-results.mdx": {
+	id: "rotator-cuff-pain-scan-results.mdx";
+  slug: "rotator-cuff-pain-scan-results";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"sciatica-symptoms-leg-pain-explained.mdx": {
+	id: "sciatica-symptoms-leg-pain-explained.mdx";
+  slug: "sciatica-symptoms-leg-pain-explained";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"shockwave-therapy-what-to-expect.mdx": {
+	id: "shockwave-therapy-what-to-expect.mdx";
+  slug: "shockwave-therapy-what-to-expect";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"ultrasound-guided-injections-why-accuracy-matters.mdx": {
+	id: "ultrasound-guided-injections-why-accuracy-matters.mdx";
+  slug: "ultrasound-guided-injections-why-accuracy-matters";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"why-tendon-pain-needs-loading-not-rest.mdx": {
+	id: "why-tendon-pain-needs-loading-not-rest.mdx";
+  slug: "why-tendon-pain-needs-loading-not-rest";
   body: string;
   collection: "patient-resources";
   data: InferEntrySchema<"patient-resources">
