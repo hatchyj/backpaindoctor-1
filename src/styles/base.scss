@@ -1,5 +1,7 @@
 html {
   @apply text-base;
+  scroll-behavior: smooth;
+  --scroll-progress: 0;
 }
 
 body {
@@ -7,6 +9,7 @@ body {
   background:
     linear-gradient(180deg, rgba(248, 252, 251, 0.96) 0%, rgba(255, 255, 255, 1) 22rem),
     #ffffff;
+  overflow-x: hidden;
 }
 ::selection {
   @apply bg-primary text-white;

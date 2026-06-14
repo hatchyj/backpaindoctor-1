@@ -122,9 +122,9 @@ const { main }: { main: NavigationLink[] } = menu;
         ))
       }
       <li class="ml-autoflex order-1 text-center md:ml-0 lg:order-2 lg:hidden">
-        <a class="btn btn-primary" href="/book-appointment">
+        <a class="btn btn-primary inline-flex items-center gap-3" href="/book-appointment">
           <HotDocIcon />
-          <span class="ml-20">{label}</span>
+          <span>{label}</span>
         </a>
       </li>
     </ul>
@@ -132,10 +132,10 @@ const { main }: { main: NavigationLink[] } = menu;
       class="ml-autoflex order-1 hidden items-center md:ml-0 lg:order-2 lg:flex"
     >
       <!-- Desktop version of button -->
-      <a class="btn btn-primary" href="/book-appointment">
-         <span class="block lg:max-xl:hidden"><HotDocIcon /></span>
+      <a class="btn btn-primary inline-flex items-center gap-3" href="/book-appointment">
+        <span class="block lg:max-xl:hidden"><HotDocIcon /></span>
         <span class="hidden lg:max-xl:block">{label_sml}</span>
-        <span class="block ml-20 lg:max-xl:hidden">{label}</span>
+        <span class="block lg:max-xl:hidden">{label}</span>
       </a>
     </div>
   </nav>
@@ -143,33 +143,27 @@ const { main }: { main: NavigationLink[] } = menu;
 
 <script is:inline>
   const button = document.getElementById("dropdown-button");
-  button.addEventListener("click", () => {
-    const dropdown = document.getElementById("dropdown");
-    dropdown.classList.toggle(dropdown.style === "hidden" ? "block" : "hidden");
+  button?.addEventListener("click", () => {
+    document.getElementById("dropdown")?.classList.toggle("hidden");
   });
 
-  var lastScroll = 0;
-  const changeNavbarBackground = () => {
-    const header = document.getElementById("header");
-    const headerHight = header.clientHeight + 200;
-    const scrollY = window.scrollY;
+  const header = document.getElementById("header");
+  let lastScroll = window.scrollY;
+  const updateHeader = () => {
+    if (!header) return;
 
-    window.onscroll = () => {
-      // header-sticky-top
-      if (scrollY > 0) {
-        header.classList.add("header-sticky-top");
-      } else {
-        header.classList.remove("header-sticky-top");
-      }
-      if (scrollY > headerHight) {
-        if (lastScroll > scrollY) {
-          header.classList.remove("-translate-y-full");
-        } else {
-          header.classList.add("-translate-y-full");
-        }
-        lastScroll = scrollY;
-      }
-    };
+    const scrollY = window.scrollY;
+    header.classList.toggle("header-sticky-top", scrollY > 12);
+
+    if (scrollY > header.clientHeight + 220) {
+      header.classList.toggle("-translate-y-full", scrollY > lastScroll);
+    } else {
+      header.classList.remove("-translate-y-full");
+    }
+
+    lastScroll = scrollY;
   };
-  window.addEventListener("scroll", changeNavbarBackground);
+
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
 </script>
