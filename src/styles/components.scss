@@ -550,20 +550,6 @@ footer {
     @apply absolute left-[2.8rem] top-[2.8rem] -z-10 h-[calc(100%-4.3rem)] w-[calc(100%-4.3rem)] rounded-full bg-primary p-8 opacity-10 content-[""];
   }
 }
-// career
-.benefits-item {
-  @apply mt-8;
-  svg {
-    @apply mb-2 inline h-11 w-11 text-primary;
-  }
-}
-.career {
-  .has-bg-animate {
-    &::after {
-      @apply absolute left-0 top-0 h-full w-full bg-[url('/images/career/download.svg')] bg-cover bg-center bg-no-repeat content-[""];
-    }
-  }
-}
 .form-control {
   @apply block h-14 w-full rounded-md border-2 border-solid border-primary/10 border-l-primary/50 bg-primary/5 p-5 duration-300 focus:border-primary/50 focus:outline-none focus:ring-0;
 }

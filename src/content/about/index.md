@@ -45,19 +45,4 @@ intro:
   description: To gain a better understanding of persistent pain, and how<br/> Musculoskeletal pain can affect nearly every part of our bodies, watch this short 5-minute video.
   thumbnail: "/images/explaining_pain_video.png"
   video_id: qEWc2XtaNwg
-
-## clients
-clients:
-  subtitle: Medical Accreditations
-  title: You are in safe hands
-  brands:
-    - /images/brands/01-colored.png
-    - /images/brands/02-colored.png
-    - /images/brands/03-colored.png
-    - /images/brands/04-colored.png
-    - /images/brands/05-colored.png
-    - /images/brands/06-colored.png
-    - /images/brands/04-colored.png
-    - /images/brands/05-colored.png
-    - /images/brands/06-colored.png
 ---

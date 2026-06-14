@@ -8,18 +8,6 @@ banner:
     label: View our Treatments
     href: "/non-surgical-treatments"
 
-##brands
-brands:
-  - /images/brands/01-colored.png
-  - /images/brands/02-colored.png
-  - /images/brands/03-colored.png
-  - /images/brands/04-colored.png
-  - /images/brands/05-colored.png
-  - /images/brands/06-colored.png
-  - /images/brands/04-colored.png
-  - /images/brands/05-colored.png
-  - /images/brands/06-colored.png
-
 #service
 service:
   - title: Focused, non-surgical care for musculoskeletal pain.
@@ -34,7 +22,7 @@ service:
 
   - title: Tailored treatments to optimise your outcomes.
     subtitle: Explore how we work
-    description: Nearly all pain and injuries can be treated without surgery, making regenerative treatments a promising option. We create a tailored treatment plan for your individual pain needs.
+    description: Many musculoskeletal problems can be managed without surgery. We create a tailored, evidence-based plan for your individual needs, with the aim of reducing pain and restoring function.
     hasCTA: true
     cta:
       href: /patient-journey

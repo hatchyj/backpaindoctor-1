@@ -3,7 +3,7 @@ type: treatment
 draft: false
 title: "Trigger Point Therapy"
 description: "How trigger point injections may help relieve muscle-related (myofascial) pain."
-image: "/images/non-surgical-treatments/treatment-image-placeholder.png"
+image: "/images/non-surgical-treatments/treatment-trigger-point-therapy.webp"
 
 intro: Trigger point therapy involves injecting into specific tender points in muscle, with the aim of easing muscle-related (myofascial) pain and tension.
 whatItTreats:

@@ -15,7 +15,7 @@ export async function getStaticPaths() {
   }));
   return paths;
 }
-const blogs = await getSinglePage("blog");
+const blogs = await getSinglePage("patient-resources");
 const { author } = Astro.props;
 const { title, meta_title, description, image } = author.data;
 const authorsBolg = blogs

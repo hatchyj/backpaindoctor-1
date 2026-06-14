@@ -3,7 +3,7 @@ type: treatment
 draft: false
 title: "Nerve Therapy"
 description: "Discover how nerve therapy can provide pain relief"
-image: "/images/non-surgical-treatments/treatment-image-placeholder.png"
+image: "/images/non-surgical-treatments/treatment-nerve-therapy.webp"
 
 intro: Nerve (perineural) injection therapy uses a series of small injections around irritated superficial nerves, with the aim of settling nerve-related pain and sensitivity.
 whatItTreats:

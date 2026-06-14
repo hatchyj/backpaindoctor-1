@@ -133,3 +133,7 @@ backpaindoctor.code-workspace
 
 # Stackbit / Netlify Visual Editor cache
 .stackbit/
+
+# macOS
+.DS_Store
+**/.DS_Store

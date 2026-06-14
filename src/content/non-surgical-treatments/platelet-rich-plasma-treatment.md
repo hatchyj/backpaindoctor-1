@@ -4,7 +4,7 @@ draft: false
 title: "Platelet Rich Plasma (PRP) Injections Brisbane"
 meta_title: "PRP Brisbane — Platelet Rich Plasma Injections"
 description: "PRP in Brisbane: ultrasound-guided platelet rich plasma injections for knee osteoarthritis, tendinopathy and joint pain, performed in Milton by musculoskeletal GP Dr Joshua Hatch."
-image: "/images/non-surgical-treatments/treatment-image-placeholder.png"
+image: "/images/non-surgical-treatments/treatment-platelet-rich-plasma.webp"
 
 intro: PRP injections use concentrated platelets enriched with bioactive proteins, including growth factors, to stimulate tissue repair and regeneration for chronic joint, ligament, and tendon injuries.
 whatItTreats:

@@ -66,13 +66,13 @@
 
   "credentials": {
     "enable": true,
-    "intro": "Care led by a doctor with an unusually broad musculoskeletal background:",
+    "intro": "A broad clinical background behind your care:",
     "items": [
       { "label": "RACGP Fellow", "detail": "Specialist General Practitioner" },
       { "label": "FSEM (UK)", "detail": "Diploma in Musculoskeletal Medicine" },
       { "label": "Orthopaedic background", "detail": "Former hospital registrar & assistant surgeon" },
       { "label": "10 yrs MRI radiography", "detail": "Musculoskeletal imaging experience" },
-      { "label": "Ultrasound-guided", "detail": "Image-guided injection techniques" }
+      { "label": "Ultrasound-guided injections", "detail": "Real-time imaging for accurate injection placement" }
     ],
     "secondary_cta": {
       "label": "Not sure if we can help? Ask us first",

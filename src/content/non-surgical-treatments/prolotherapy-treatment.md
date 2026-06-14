@@ -3,7 +3,7 @@ type: treatment
 draft: false
 title: "Prolotherapy"
 description: "Discover the benefits of prolotherapy as a regenerative treatment for pain."
-image: "/images/non-surgical-treatments/treatment-image-placeholder.png"
+image: "/images/non-surgical-treatments/treatment-prolotherapy.webp"
 
 intro: Prolotherapy is an injection treatment in which a glucose-based solution is injected into or around painful ligaments, tendons and joints, with the aim of stimulating a local healing response and reducing pain.
 whatItTreats:
