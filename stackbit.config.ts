@@ -37,6 +37,7 @@ const serviceItemFields = [
   { type: "markdown", name: "description", label: "Description" },
   ...ctaFields,
   { type: "image", name: "image", label: "Image" },
+  { type: "string", name: "image_alt", label: "Image alt text" },
   { type: "string", name: "image_style", label: "Image CSS classes" },
 ];
 

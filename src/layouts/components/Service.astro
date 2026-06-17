@@ -48,10 +48,12 @@ const { service } = Astro.props;
                 src={el.image}
                 height={511}
                 width={575}
-                class={`w-full max-w-full object-cover ${
-                  el.image_style ? el.image_style : ""
-                }`}
-                alt={"Photo of " + el.title}
+                class={`w-full max-w-full ${
+                  el.image_style && el.image_style.includes("object-")
+                    ? ""
+                    : "object-cover"
+                } ${el.image_style ? el.image_style : ""}`}
+                alt={el.image_alt ? el.image_alt : el.title}
               />
             </div>
           </div>
