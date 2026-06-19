@@ -40,9 +40,9 @@ treatmentsOverview:
     cta:
       href: /non-surgical-treatments/shockwave-therapy-eswt
       label: Shockwave Therapy (ESWT)
-    image: /images/non-surgical-treatments/eswt.png
-    image_alt: STORZ Medical focused shockwave (ESWT) applicator
-    image_style: rounded-2xl shadow-xl object-contain bg-white p-6
+    image: /images/non-surgical-treatments/eswt.jpg
+    image_alt: STORZ Medical DUOLITH SD1 focused shockwave system
+    image_style: rounded-2xl shadow-xl
   - title: EMTT (Magnetotransduction Therapy)
     subtitle: "Emerging Adjunct Therapy"
     icon: "ArrowUpRight"
@@ -53,7 +53,7 @@ treatmentsOverview:
       label: EMTT (Magnetotransduction Therapy)
     image: /images/non-surgical-treatments/emtt.png
     image_alt: STORZ MAGNETOLITH EMTT device
-    image_style: rounded-2xl shadow-xl object-contain bg-white p-6
+    image_style: rounded-2xl shadow-xl
   - title: Nerve Therapy
     subtitle: "Pain Relief"
     icon: "ArrowUpRight"
