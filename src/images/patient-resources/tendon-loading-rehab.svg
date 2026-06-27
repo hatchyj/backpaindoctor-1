@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Abstract tendon loading rehabilitation clinical illustration">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EAF3FF"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient><linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0553CB"/><stop offset="1" stop-color="#073B8E"/></linearGradient></defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <circle cx="1020" cy="130" r="230" fill="#0553CB" opacity="0.05"/>
+  <path d="M290 435 C400 350 535 350 650 435 C744 504 830 515 925 480" fill="none" stroke="#0C2A42" stroke-width="28" stroke-linecap="round"/>
+  <path d="M352 438 C450 392 548 394 640 450" fill="none" stroke="url(#blue)" stroke-width="14" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="298" cy="435" r="54" fill="#FFFFFF" stroke="#0553CB" stroke-width="15"/>
+  <circle cx="924" cy="480" r="54" fill="#FFFFFF" stroke="#0553CB" stroke-width="15"/>
+  <path d="M505 228 v124" stroke="#0553CB" stroke-width="16" stroke-linecap="round"/>
+  <path d="M456 275 l49 -49 l49 49" fill="none" stroke="#0553CB" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M715 586 v-124" stroke="#073B8E" stroke-width="16" stroke-linecap="round" opacity="0.72"/>
+  <path d="M666 539 l49 49 l49 -49" fill="none" stroke="#073B8E" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" opacity="0.72"/>
+  <g fill="none" stroke="#073B8E" stroke-width="5" opacity="0.22"><path d="M150 235 h210"/><path d="M128 280 h280"/><path d="M170 325 h230"/></g>
+</svg>
