@@ -10,9 +10,11 @@ const index = await getEntry("conditions", "-index");
 const { title, description, intro } = index.data;
 
 const conditions = await getSinglePage("conditions");
-conditions.sort((a: any, b: any) =>
-  (a.data.order ?? 99) - (b.data.order ?? 99),
-);
+conditions.sort((a: any, b: any) => {
+  const orderDiff = (a.data.order ?? 99) - (b.data.order ?? 99);
+  if (orderDiff !== 0) return orderDiff;
+  return String(a.data.title).localeCompare(String(b.data.title));
+});
 ---
 
 <Base title={title} description={description}>
