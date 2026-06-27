@@ -1,8 +1,8 @@
 {
-  "name": "andromeda-astro",
-  "version": "2.0.0",
-  "description": "astro saas theme",
-  "author": "themefisher",
+  "name": "back-pain-doctor",
+  "version": "1.0.0",
+  "description": "The Back Pain Doctor website",
+  "author": "Dr Joshua Hatch",
   "license": "UNLICENSED",
   "packageManager": "yarn@1.22.19",
   "scripts": {
