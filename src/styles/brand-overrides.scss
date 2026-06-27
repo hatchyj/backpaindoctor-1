@@ -1,5 +1,6 @@
 // Back Pain Doctor brand corrections.
-// Removes inherited blue-to-green/gold treatment and tones down template-style motion.
+// Removes inherited blue-to-green/gold treatment, tones down template-style motion,
+// and protects clinical portraits from aggressive cropping.
 
 :root {
   --brand-blue: #0553CB;
@@ -114,9 +115,19 @@
 .hero-media,
 .service-visual,
 .about-visual {
+  background: linear-gradient(180deg, #ffffff 0%, var(--brand-blue-soft) 100%);
   box-shadow:
     0 22px 58px rgba(12, 42, 66, 0.12),
     0 1px 0 rgba(255, 255, 255, 0.9) inset;
+}
+
+.hero-media,
+.hero-media-mobile {
+  aspect-ratio: auto;
+}
+
+.hero-media-mobile {
+  background-image: none !important;
 }
 
 .hero-media {
@@ -128,6 +139,10 @@
   }
 
   img {
+    height: auto;
+    max-height: 76vh;
+    object-fit: contain;
+    object-position: center top;
     transform: none;
     transition: none;
   }
@@ -177,6 +192,10 @@
   }
 
   img {
+    aspect-ratio: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: center top;
     transform: none;
     transition: none;
   }
