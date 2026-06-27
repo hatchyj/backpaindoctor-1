@@ -69,10 +69,10 @@
     "intro": "A broad clinical background behind your care:",
     "items": [
       { "label": "RACGP Fellow", "detail": "Specialist General Practitioner" },
-      { "label": "FSEM (UK)", "detail": "Diploma in Musculoskeletal Medicine" },
-      { "label": "Orthopaedic background", "detail": "Former hospital registrar & assistant surgeon" },
-      { "label": "10 yrs MRI radiography", "detail": "Musculoskeletal imaging experience" },
-      { "label": "Ultrasound-guided injections", "detail": "Real-time imaging for accurate injection placement" }
+      { "label": "Musculoskeletal Medicine", "detail": "FSEM (UK) Diploma" },
+      { "label": "Orthopaedic background", "detail": "Former hospital registrar and surgical assistant" },
+      { "label": "MRI background", "detail": "10 years' musculoskeletal imaging experience" },
+      { "label": "Image-guided procedures", "detail": "Ultrasound guidance where clinically appropriate" }
     ],
     "secondary_cta": {
       "label": "Not sure if we can help? Ask us first",
