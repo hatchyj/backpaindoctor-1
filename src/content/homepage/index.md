@@ -27,7 +27,7 @@ service:
     cta:
       href: /patient-journey
       label: Explore the patient journey
-    image: /images/patient-journey/dr-joshua-hatch-treatment-plan-2026.webp
+    image: /images/patient-journey/treatment-plan-knee-shoulder.svg
     image_style: rounded-lg shadow-xl
   - title: Non-surgical treatment options, where appropriate.
     subtitle: Musculoskeletal pain treatments
