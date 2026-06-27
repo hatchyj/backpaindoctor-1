@@ -1,5 +1,4 @@
 ---
-import TwSizeIndicator from "@/components/TwSizeIndicator.astro";
 import config from "@/config/config.json";
 import theme from "@/config/theme.json";
 import { plainify } from "@/lib/utils/textConverter";
@@ -230,35 +229,22 @@ const orgSchema = biz
   <body>
     <div class="scroll-progress" aria-hidden="true"></div>
     <div class="site-ambient" aria-hidden="true"></div>
-    <TwSizeIndicator />
     {!landingPage && <Header />}
     <main id="main-content">
       <slot />
     </main>
     {!landingPage && <Footer />}
     <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <!-- rellax script -->
-    <script
-      is:inline
-      src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"
-    ></script>
     <script is:inline>
       if (window.AOS) {
         AOS.init({
-          duration: 720,
+          duration: 420,
           easing: "ease-out-cubic",
           once: true,
-          offset: 70,
+          offset: 60,
         });
       }
 
-      if (window.Rellax) {
-        new Rellax(".rellax");
-      }
-
-      const prefersReducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)",
-      ).matches;
       const root = document.documentElement;
       const setScrollProgress = () => {
         const scrollable = document.body.scrollHeight - window.innerHeight;
@@ -269,43 +255,6 @@ const orgSchema = biz
       setScrollProgress();
       window.addEventListener("scroll", setScrollProgress, { passive: true });
       window.addEventListener("resize", setScrollProgress);
-
-      if (!prefersReducedMotion) {
-        document.querySelectorAll(".hero-media").forEach((media) => {
-          media.addEventListener("pointermove", (event) => {
-            const rect = media.getBoundingClientRect();
-            const x = (event.clientX - rect.left) / rect.width - 0.5;
-            const y = (event.clientY - rect.top) / rect.height - 0.5;
-
-            media.style.setProperty("--tilt-x", `${(-y * 4).toFixed(2)}deg`);
-            media.style.setProperty("--tilt-y", `${(x * 5).toFixed(2)}deg`);
-            media.style.setProperty("--shine-x", `${(x * 70 + 50).toFixed(1)}%`);
-            media.style.setProperty("--shine-y", `${(y * 70 + 50).toFixed(1)}%`);
-          });
-
-          media.addEventListener("pointerleave", () => {
-            media.style.removeProperty("--tilt-x");
-            media.style.removeProperty("--tilt-y");
-            media.style.removeProperty("--shine-x");
-            media.style.removeProperty("--shine-y");
-          });
-        });
-
-        const premiumTargets = document.querySelectorAll(
-          ".service-row, .cta-panel, .credential-panel, .service-visual, .about-visual, .btn",
-        );
-
-        premiumTargets.forEach((target) => {
-          target.classList.add("premium-surface");
-          target.addEventListener("pointermove", (event) => {
-            const rect = target.getBoundingClientRect();
-            const x = ((event.clientX - rect.left) / rect.width) * 100;
-            const y = ((event.clientY - rect.top) / rect.height) * 100;
-            target.style.setProperty("--surface-x", `${x.toFixed(1)}%`);
-            target.style.setProperty("--surface-y", `${y.toFixed(1)}%`);
-          });
-        });
-      }
     </script>
   </body>
 </html>
