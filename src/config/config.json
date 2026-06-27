@@ -43,8 +43,8 @@
   },
 
   "disqus": {
-    "enable": true,
-    "shortname": "themefisher-template",
+    "enable": false,
+    "shortname": "",
     "settings": {}
   },
 
