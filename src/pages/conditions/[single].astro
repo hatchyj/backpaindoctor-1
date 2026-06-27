@@ -75,14 +75,18 @@ const pageSchema = {
 
           {
             treatmentLinks && treatmentLinks.length > 0 && (
-              <div class="mt-8">
+              <div class="mt-8 rounded-lg border border-primary/10 bg-white p-5 md:p-7">
                 <h2 class="mb-4 text-h4-sm font-semibold md:text-h4">
-                  Treatments we may consider
+                  Treatment options that may be discussed
                 </h2>
-                <p class="mb-5 text-[0.9rem] text-text">
-                  The right approach depends on your diagnosis, your history and
-                  your goals. Options that may be relevant for this condition
-                  include:
+                <p class="mb-4 text-[0.92rem] leading-relaxed text-text">
+                  Most musculoskeletal conditions are managed first with a clear diagnosis,
+                  education, load modification and a progressive rehabilitation plan. Imaging,
+                  injections and device-based therapies are considered only when they fit the
+                  clinical picture, the person's goals and the available evidence.
+                </p>
+                <p class="mb-5 text-[0.9rem] leading-relaxed text-text">
+                  Depending on the assessment, options that may be relevant include:
                 </p>
                 <div class="flex flex-wrap gap-3">
                   {treatmentLinks.map((t: any) => (
@@ -94,9 +98,10 @@ const pageSchema = {
                     </a>
                   ))}
                 </div>
-                <p class="mt-5 text-[0.8rem] text-text">
-                  Not every treatment suits every person. Suitability and the
-                  supporting evidence are discussed with you at consultation.
+                <p class="mt-5 text-[0.8rem] leading-relaxed text-text">
+                  These links are educational, not a recommendation that a procedure is required.
+                  Suitability, expected benefit, limitations, risks, costs and alternatives are
+                  discussed at consultation.
                 </p>
               </div>
             )
