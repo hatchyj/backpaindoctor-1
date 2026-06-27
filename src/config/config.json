@@ -32,11 +32,11 @@
 
   "call_to_action": {
     "enable": true,
-    "subtitle": "Ready to take the next step with your pain?",
-    "title": "Book an assessment with the Back Pain Doctor.",
-    "content": "We assess your problem carefully and recommend evidence-based, non-surgical options tailored to your diagnosis, with the aim of reducing pain and improving function.",
+    "subtitle": "Ready for a clearer plan for your back or musculoskeletal pain?",
+    "title": "Book an assessment with Dr Joshua Hatch.",
+    "content": "Your assessment focuses on understanding the likely source of your pain and the most appropriate non-surgical options for your diagnosis, with the aim of reducing pain and improving function.",
     "button": {
-      "label": "Book Appointment now",
+      "label": "Book an appointment",
       "label_sml": "Book now",
       "link": "/book-appointment"
     }
