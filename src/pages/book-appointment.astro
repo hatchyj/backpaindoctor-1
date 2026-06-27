@@ -5,9 +5,10 @@ import Base from "@/layouts/Base.astro";
 import { getEntry } from "astro:content";
 
 const entry = await getEntry("contact", "book-appointment");
-const { contact_form_action } = config.params;
-const { email, phone } = config;
+const { phone } = config;
 const { title, description, meta_title, image, intro } = entry.data;
+const phoneNumber = phone.contact?.[0] ?? "07 3367 0333";
+const telNumber = phoneNumber.replace(/\s+/g, "");
 ---
 
 <Base
@@ -19,27 +20,40 @@ const { title, description, meta_title, image, intro } = entry.data;
   <PageHeader title={title} />
   <section class="section">
     <div class="container">
-      
-      <div class="text-center">
-
-        <div class="mx-auto pb-12 mb-12 max-w-prose border-b">
-          { intro }
+      <div class="mx-auto max-w-4xl text-center">
+        <div class="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-text">
+          {intro}
         </div>
 
-        <div class="mx-auto py-6 max-w-prose">
-          <h2 class="text-lg font-bold">Book appointment by phone</h2>
-          <p class="text-xl">Milton Village Medical { phone.title } : { phone.contact }</p>
+        <div class="mb-8 rounded-lg border border-primary/10 bg-white/90 p-5 text-left shadow-[0_18px_52px_rgba(12,42,66,0.08)] backdrop-blur md:p-7">
+          <p class="eyebrow mb-3">Book online</p>
+          <h2 class="mb-3 text-h4 font-semibold leading-tight text-dark">
+            Choose an appointment time through HotDoc.
+          </h2>
+          <p class="mb-0 text-base leading-relaxed text-text">
+            Online booking is usually the simplest way to arrange an assessment with Dr Joshua Hatch at Milton Village Medical.
+          </p>
         </div>
 
+        <div class="mx-auto w-full max-w-screen-lg overflow-hidden rounded-xl border border-primary/10 bg-white shadow-[0_24px_70px_rgba(12,42,66,0.12)]">
+          <iframe
+            id="hotdoc-embed-drjoshhatch"
+            class="h-[80dvh] w-full bg-white lg:h-[900px]"
+            title="Book an appointment with Dr Joshua Hatch"
+            width="100%"
+            height="700"
+            src="https://www.hotdoc.com.au/medical-centres/milton-QLD-4064/milton-village-medical/doctors/dr-joshua-hatch-1"
+          ></iframe>
+        </div>
 
-        <div class=" w-full py-6 max-w-screen-lg mx-auto">
-          <h2 class="text-lg font-bold mb-4">Book online via Hot Doc</h2>
-          <iframe id="hotdoc-embed-drjoshhatch" class="bg-white rounded-xl drop-shadow-md h-[80dvh] lg:h-[900px]" title="Book an Appointment with Dr. Joshua Hatch" width="100%" height="700" src="https://www.hotdoc.com.au/medical-centres/milton-QLD-4064/milton-village-medical/doctors/dr-joshua-hatch-1"></iframe>
+        <div class="mx-auto mt-10 max-w-2xl rounded-lg border border-primary/10 bg-theme-light p-5 text-center md:p-6">
+          <p class="eyebrow mb-2">Prefer to call?</p>
+          <h2 class="mb-2 text-h5 font-semibold text-dark">Book by phone through Milton Village Medical</h2>
+          <p class="mb-0 text-xl font-semibold text-primary">
+            <a href={`tel:${telNumber}`} class="transition hover:text-dark">{phoneNumber}</a>
+          </p>
         </div>
       </div>
-
-    
     </div>
   </section>
-
 </Base>
