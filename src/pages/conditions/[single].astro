@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await post.render();
-const { title, description, intro, symptoms, treatmentLinks, faqs } = post.data;
+const { title, description, intro, symptoms, faqs } = post.data;
 
 const base = (config.site.base_url || "").replace(/\/$/, "");
 const pageSchema = {
@@ -31,64 +31,7 @@ const pageSchema = {
   isPartOf: { "@type": "MedicalClinic", name: (config as any).business?.name },
 };
 
-const evidenceLibrary = [
-  {
-    keywords: ["shockwave", "eswt", "focused shockwave", "radial shockwave"],
-    icon: "wave",
-    tag: "Adjunct",
-    evidence: "Best supported in selected tendon and plantar heel pain presentations.",
-    summary:
-      "Shockwave is usually considered when symptoms are persistent and the diagnosis fits, particularly in selected tendinopathy or plantar heel pain patterns. It works best when paired with sensible load management and rehabilitation rather than used as a stand-alone treatment.",
-  },
-  {
-    keywords: ["platelet", "prp"],
-    icon: "platelet",
-    tag: "Selected cases",
-    evidence: "Evidence varies by condition and tissue type.",
-    summary:
-      "PRP may be discussed for selected tendon or joint presentations after diagnosis, education and rehabilitation options have been considered. Expected benefit, uncertainty, cost and alternatives should be discussed carefully before proceeding.",
-  },
-  {
-    keywords: ["cortisone", "corticosteroid", "steroid", "ultrasound-guided injection", "ultrasound guided injection", "injection"],
-    icon: "injection",
-    tag: "Symptom relief",
-    evidence: "Most useful for short-term relief in specific inflammatory or irritable presentations.",
-    summary:
-      "Image-guided injections may help reduce pain when a specific joint, bursa, tendon sheath or inflamed structure is driving symptoms. They are not a cure for most musculoskeletal conditions and are considered alongside rehabilitation, risks and recurrence prevention.",
-  },
-  {
-    keywords: ["emtt", "magnetotransduction"],
-    icon: "field",
-    tag: "Emerging adjunct",
-    evidence: "Evidence is developing and should be interpreted condition by condition.",
-    summary:
-      "EMTT may be discussed as an adjunct in selected presentations where the clinical pattern fits. It should be framed honestly, including the current limits of evidence, likely cost, alternatives and the role of active rehabilitation.",
-  },
-  {
-    keywords: ["prolotherapy"],
-    icon: "stability",
-    tag: "Selected cases",
-    evidence: "Condition-specific evidence; generally less established than exercise-based care.",
-    summary:
-      "Prolotherapy may be considered for carefully selected chronic ligament, tendon or joint-related pain presentations. It is not a first-line treatment and should only be discussed when the diagnosis and clinical reasoning are clear.",
-  },
-  {
-    keywords: ["trigger point", "myofascial"],
-    icon: "target",
-    tag: "Pain modulator",
-    evidence: "May help when focal myofascial pain is a clear contributor.",
-    summary:
-      "Trigger point treatment may reduce pain from focal muscle spasm or myofascial tenderness. It is most appropriate when paired with movement restoration, strength work, ergonomics and recurrence prevention.",
-  },
-  {
-    keywords: ["nerve", "hydrodissection"],
-    icon: "nerve",
-    tag: "Nerve-focused",
-    evidence: "Relevant only when symptoms and examination support nerve irritation or entrapment.",
-    summary:
-      "Nerve-focused treatment may be discussed when there is a plausible peripheral nerve pain generator. Progressive weakness, significant neurological deficit or concerning features may require imaging, specialist review or urgent escalation instead.",
-  },
-];
+const conditionSlug = post.slug;
 
 const iconPaths: Record<string, string> = {
   core: "M12 3.5 20 8v8l-8 4.5L4 16V8l8-4.5Zm0 2.3L6 9.2v5.6l6 3.4 6-3.4V9.2l-6-3.4Zm0 5.1 4.7-2.7L12 5.5 7.3 8.2 12 10.9Zm0 2.1L6.8 10v4.1l5.2 3 5.2-3V10L12 13Z",
@@ -101,40 +44,246 @@ const iconPaths: Record<string, string> = {
   nerve: "M5 12c2.5 0 2.5-5 5-5s2.5 10 5 10 2.5-5 5-5M4 7h3M4 17h3M17 7h3M17 17h3",
 };
 
-const normalise = (value: string) => value.toLowerCase();
+const statusStyles: Record<string, string> = {
+  foundation: "bg-primary text-white ring-primary/20",
+  supported: "bg-[#E8F4EF] text-[#16633B] ring-[#BFE1CF]",
+  limited: "bg-[#FFF7E6] text-[#8A5A00] ring-[#F5D58B]",
+  unsupported: "bg-[#F7F7F8] text-[#5D6673] ring-border",
+  notRoutine: "bg-[#FDECEC] text-[#8C2D2D] ring-[#F4CACA]",
+};
 
-const treatmentEvidenceCards = (treatmentLinks ?? []).map((t: any) => {
-  const text = normalise(`${t.name ?? ""} ${t.href ?? ""}`);
-  const match = evidenceLibrary.find((item) =>
-    item.keywords.some((keyword) => text.includes(keyword)),
-  );
-
-  return {
-    name: t.name,
-    href: t.href,
-    icon: match?.icon ?? "stability",
-    tag: match?.tag ?? "Discuss if suitable",
-    evidence:
-      match?.evidence ??
-      "Evidence and expected benefit depend on the diagnosis, tissue involved and symptom pattern.",
-    summary:
-      match?.summary ??
-      "This option may be discussed if it is clinically relevant to the diagnosis. Suitability depends on examination findings, imaging where appropriate, patient goals, risks, cost and alternatives.",
-  };
-});
-
-const treatmentSummaryCards = [
+const treatmentMenu = [
   {
+    id: "rehab",
     name: "Diagnosis, education and progressive rehabilitation",
     href: null,
     icon: "core",
-    tag: "Foundation",
-    evidence: "The starting point for most musculoskeletal conditions.",
-    summary:
-      "The priority is to identify the likely pain generator, explain the condition clearly, modify aggravating load and build a realistic plan to restore strength, movement and confidence. Procedures are considered only when they add value to this foundation.",
+    defaultStatus: "foundation",
+    defaultTag: "Foundation",
+    defaultEvidence: "This is the starting point for most musculoskeletal conditions.",
+    defaultSummary:
+      "The priority is to identify the likely pain generator, explain the condition clearly, modify aggravating load and build a realistic plan to restore strength, movement and confidence.",
   },
-  ...treatmentEvidenceCards,
+  {
+    id: "shockwave",
+    name: "Focused / radial shockwave therapy",
+    href: "/non-surgical-treatments/shockwave-therapy-eswt",
+    icon: "wave",
+    defaultStatus: "limited",
+    defaultTag: "Condition-dependent",
+    defaultEvidence: "Evidence is condition-specific; it is not a universal pain treatment.",
+    defaultSummary:
+      "Shockwave is best framed as an adjunct where the diagnosis fits. It is generally more established for selected tendon and plantar heel pain presentations than for many joint or nerve conditions.",
+  },
+  {
+    id: "prp",
+    name: "Platelet-rich plasma (PRP)",
+    href: "/non-surgical-treatments/platelet-rich-plasma-treatment",
+    icon: "platelet",
+    defaultStatus: "limited",
+    defaultTag: "Selected cases",
+    defaultEvidence: "Evidence varies substantially by condition, tissue and preparation method.",
+    defaultSummary:
+      "PRP may be discussed in selected tendon or joint presentations. It should not be presented as a guaranteed regenerative treatment, and uncertainty, cost and alternatives should be discussed.",
+  },
+  {
+    id: "injection",
+    name: "Image-guided corticosteroid / local anaesthetic injection",
+    href: "/patient-resources/cortisone-injections-benefits-and-limits",
+    icon: "injection",
+    defaultStatus: "limited",
+    defaultTag: "Symptom relief",
+    defaultEvidence: "Best used for specific inflammatory or irritable pain generators, usually for short-term relief.",
+    defaultSummary:
+      "An injection may help when a joint, bursa, tendon sheath or other defined structure is driving symptoms. It is not a cure and needs to be weighed against risks, recurrence and the need for rehabilitation.",
+  },
+  {
+    id: "emtt",
+    name: "EMTT / magnetotransduction",
+    href: "/non-surgical-treatments/emtt-magnetotransduction",
+    icon: "field",
+    defaultStatus: "limited",
+    defaultTag: "Emerging adjunct",
+    defaultEvidence: "Clinical evidence is still developing and guideline support is limited.",
+    defaultSummary:
+      "EMTT may be discussed as an adjunct in selected presentations, but should be presented with clear uncertainty and never as a replacement for diagnosis, load management or rehabilitation.",
+  },
+  {
+    id: "prolotherapy",
+    name: "Prolotherapy",
+    href: "/non-surgical-treatments/prolotherapy-treatment",
+    icon: "stability",
+    defaultStatus: "limited",
+    defaultTag: "Selected cases",
+    defaultEvidence: "Evidence is condition-specific and generally less established than exercise-based care.",
+    defaultSummary:
+      "Prolotherapy may be considered in carefully selected chronic ligament, tendon or joint-related pain presentations, but it is not a first-line treatment.",
+  },
+  {
+    id: "triggerPoint",
+    name: "Trigger point / myofascial treatment",
+    href: "/non-surgical-treatments/trigger-point-therapy-treatment",
+    icon: "target",
+    defaultStatus: "limited",
+    defaultTag: "Pain modulator",
+    defaultEvidence: "Most relevant when focal myofascial pain is a clear contributor.",
+    defaultSummary:
+      "Trigger point treatment may reduce pain from focal muscle spasm or myofascial tenderness. It should be paired with movement restoration, strength work and recurrence prevention.",
+  },
+  {
+    id: "nerve",
+    name: "Nerve-focused treatment / hydrodissection",
+    href: "/non-surgical-treatments/nerve-therapy-treatment",
+    icon: "nerve",
+    defaultStatus: "limited",
+    defaultTag: "Nerve-specific",
+    defaultEvidence: "Relevant only when the history and examination support nerve irritation or entrapment.",
+    defaultSummary:
+      "Nerve-focused treatment may be discussed when there is a plausible peripheral nerve pain generator. Progressive weakness, major neurological deficit or red flags require a different pathway.",
+  },
 ];
+
+const conditionEvidenceOverrides: Record<string, Record<string, any>> = {
+  "knee-osteoarthritis": {
+    rehab: {
+      status: "supported",
+      tag: "Core treatment",
+      evidence: "Therapeutic exercise, education and weight management where relevant are core osteoarthritis treatments.",
+      summary:
+        "For knee osteoarthritis, the first-line plan is usually education, activity modification, strength work, aerobic conditioning and weight management where clinically relevant. Treatment is guided by symptoms and function, not imaging alone.",
+    },
+    shockwave: {
+      status: "limited",
+      tag: "Limited evidence",
+      evidence: "AAOS states ESWT may improve pain and function in knee osteoarthritis, but the recommendation is limited and downgraded because of inconsistent evidence.",
+      summary:
+        "Focused shockwave can be discussed for selected knee osteoarthritis patients, particularly when the aim is symptom reduction and function support. It should not be positioned as cartilage regeneration, disease reversal or a replacement for exercise-based care.",
+    },
+    prp: {
+      status: "limited",
+      tag: "Mixed evidence",
+      evidence: "PRP evidence in knee osteoarthritis is inconsistent; AAOS downgraded its PRP recommendation because of inconsistent evidence.",
+      summary:
+        "PRP may be discussed for selected patients after a careful conversation about uncertainty, cost, expected time course, severity of OA, alternatives and the fact that responses are variable.",
+    },
+    injection: {
+      status: "supported",
+      tag: "Short-term relief",
+      evidence: "Guidelines support corticosteroid injections for short-term symptom relief in selected osteoarthritis presentations.",
+      summary:
+        "Corticosteroid injection may help during a painful flare or when pain is preventing rehabilitation. It should be framed as short-term symptom relief, not structural repair.",
+    },
+    emtt: {
+      status: "limited",
+      tag: "Insufficient guideline support",
+      evidence: "Major osteoarthritis guidelines do not establish EMTT as a core knee osteoarthritis treatment.",
+      summary:
+        "EMTT may be discussed only as an adjunct with explicit uncertainty. It should not be presented as a proven disease-modifying treatment for knee osteoarthritis.",
+    },
+    prolotherapy: {
+      status: "notRoutine",
+      tag: "Not routine",
+      evidence: "Not a core guideline-supported knee osteoarthritis treatment.",
+      summary:
+        "Prolotherapy is not usually a first-line knee osteoarthritis treatment. If discussed, it should be after clear diagnosis and careful explanation of limited evidence compared with core OA care.",
+    },
+    triggerPoint: {
+      status: "unsupported",
+      tag: "Only if overlay",
+      evidence: "Trigger point therapy does not treat osteoarthritis itself.",
+      summary:
+        "It may be relevant only if there is a clear secondary myofascial pain component around the hip, thigh or calf. It should not be described as an OA treatment.",
+    },
+    nerve: {
+      status: "unsupported",
+      tag: "Usually not relevant",
+      evidence: "Nerve hydrodissection is not a treatment for knee osteoarthritis.",
+      summary:
+        "Nerve-focused treatment would only be considered if the clinical picture suggests a separate nerve entrapment or neuropathic pain generator.",
+    },
+  },
+};
+
+const supportedShockwave = [
+  "achilles-tendinopathy",
+  "plantar-fasciitis",
+  "greater-trochanteric-pain-syndrome",
+  "shoulder-calcific-tendinopathy",
+  "tennis-golfers-elbow",
+];
+
+const supportedInjection = [
+  "frozen-shoulder",
+  "shoulder-osteoarthritis",
+  "thumb-base-osteoarthritis",
+  "de-quervain-tenosynovitis",
+  "carpal-tunnel-syndrome",
+  "morton-neuroma",
+  "greater-trochanteric-pain-syndrome",
+  "shoulder-calcific-tendinopathy",
+];
+
+const nerveRelevant = [
+  "carpal-tunnel-syndrome",
+  "cervical-radiculopathy",
+  "sciatica",
+  "morton-neuroma",
+];
+
+const getTreatmentCard = (treatment: any) => {
+  const override = conditionEvidenceOverrides[conditionSlug]?.[treatment.id];
+
+  if (override) {
+    return { ...treatment, ...override };
+  }
+
+  if (treatment.id === "rehab") {
+    return { ...treatment, status: "foundation", tag: treatment.defaultTag, evidence: treatment.defaultEvidence, summary: treatment.defaultSummary };
+  }
+
+  if (treatment.id === "shockwave" && supportedShockwave.includes(conditionSlug)) {
+    return {
+      ...treatment,
+      status: "supported",
+      tag: "Often relevant",
+      evidence: "Best supported when the diagnosis is a suitable tendinopathy or plantar heel pain presentation.",
+      summary:
+        "Shockwave may be clinically relevant when symptoms persist despite appropriate load management and rehabilitation. It remains an adjunct, not a substitute for progressive loading and diagnosis-specific care.",
+    };
+  }
+
+  if (treatment.id === "injection" && supportedInjection.includes(conditionSlug)) {
+    return {
+      ...treatment,
+      status: "supported",
+      tag: "May be relevant",
+      evidence: "May provide symptom relief when the pain generator is a joint, bursa, tendon sheath or other defined irritable structure.",
+      summary:
+        "Injection treatment may be discussed when pain is limiting sleep, function or rehabilitation. The expected benefit is usually symptom control, not tissue regeneration.",
+    };
+  }
+
+  if (treatment.id === "nerve" && nerveRelevant.includes(conditionSlug)) {
+    return {
+      ...treatment,
+      status: "limited",
+      tag: "Only if nerve-driven",
+      evidence: "Relevant only if symptoms, examination and imaging where appropriate support a nerve pain generator.",
+      summary:
+        "Nerve-focused treatment may be discussed when the clinical picture supports nerve irritation or entrapment. Progressive deficit or red flags require escalation.",
+    };
+  }
+
+  return {
+    ...treatment,
+    status: treatment.defaultStatus,
+    tag: treatment.defaultTag,
+    evidence: treatment.defaultEvidence,
+    summary: treatment.defaultSummary,
+  };
+};
+
+const treatmentSummaryCards = treatmentMenu.map(getTreatmentCard);
 ---
 
 <Base title={title} description={description}>
@@ -181,13 +330,13 @@ const treatmentSummaryCards = [
           <section class="mt-10 overflow-hidden rounded-[1.75rem] border border-primary/10 bg-white shadow-[0_24px_70px_rgba(5,83,203,0.08)]">
             <div class="border-b border-border/70 bg-gradient-to-br from-[#F4F8FC] via-white to-[#EAF3FF] p-5 md:p-8">
               <div class="mb-3 inline-flex items-center rounded-full border border-primary/20 bg-white/80 px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-primary">
-                Evidence-informed options
+                Evidence-informed treatment summary
               </div>
               <h2 class="mb-3 text-h4-sm font-semibold leading-tight text-dark md:text-h4">
-                How treatment may fit for {title}
+                How our treatment options may fit for {title}
               </h2>
               <p class="max-w-3xl text-[0.95rem] leading-relaxed text-text">
-                Most musculoskeletal care starts with a clear diagnosis, education, load modification and a progressive rehabilitation plan. The options below summarise treatments that may be discussed at consultation. They are not a recommendation that a procedure is required.
+                The options below include the treatments offered at The Back Pain Doctor. Listing a treatment does not mean it is recommended for this condition. The evidence, likely benefit and role of each option are considered against the diagnosis, examination findings, imaging where appropriate, patient goals, risks, cost and alternatives.
               </p>
             </div>
 
@@ -202,7 +351,7 @@ const treatmentSummaryCards = [
                     </div>
                     <div class="min-w-0 flex-1">
                       <div class="mb-2 flex flex-wrap items-center gap-2">
-                        <span class="rounded-full bg-theme-light px-2.5 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.08em] text-primary">
+                        <span class={`rounded-full px-2.5 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.08em] ring-1 ${statusStyles[card.status] ?? statusStyles.limited}`}>
                           {card.tag}
                         </span>
                       </div>
@@ -237,7 +386,7 @@ const treatmentSummaryCards = [
 
             <div class="border-t border-border/70 bg-theme-light/45 px-5 py-4 md:px-8">
               <p class="text-[0.78rem] leading-relaxed text-text">
-                Suitability depends on the diagnosis, examination findings, imaging where appropriate, goals, risks, costs and alternatives. Red flags, progressive neurological symptoms or suspected serious pathology require a different pathway.
+                This is general information only. Suitability is assessed individually. Treatments with limited or condition-dependent evidence may still be discussed, but only with clear explanation of uncertainty, expected benefit, risks, cost and alternatives. Red flags, progressive neurological symptoms or suspected serious pathology require a different pathway.
               </p>
             </div>
           </section>
