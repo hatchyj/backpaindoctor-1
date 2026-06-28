@@ -8,35 +8,30 @@ const { service } = Astro.props;
   <div class="container">
     {
       service.map((el: any, i: number) => (
-        <div class="row mb-6 items-center justify-center">
+        <div class="service-row row mb-8 items-center justify-center gap-y-7 md:mb-10 md:gap-y-8">
           <div
             class={`lg:col-5 ${i % 2 !== 0 ? "md:order-1" : "md:order-0"}`}
             data-aos="fade-up"
           >
-            <div class="mb-0">
+            <div class="service-copy mb-0">
               <div class="section-title text-left">
-                <p
-                  set:html={markdownify(el.subtitle)}
-                  class="mb-4 text-[0.9rem] uppercase"
-                />
+                <p set:html={markdownify(el.subtitle)} class="eyebrow mb-4" />
                 <h2 set:html={markdownify(el.title)} class="service-title" />
                 <p
                   set:html={markdownify(el.description)}
-                  class="text-[.9rem] text-text"
+                  class="text-[0.95rem] leading-relaxed text-text"
                 />
-                <>
                 {el.hasCTA ? (
-                        <a
-                      href={el.cta.href}
-                      class="mt-4 btn btn-outline-primary"
-                      href="#"
-                      data-aos="fade"
-                      data-aos-delay="50"
-                    >
-                      {el.cta.label}
-                    </a>
-                ):(
-                  <span></span>
+                  <a
+                    href={el.cta.href}
+                    class="mt-4 btn btn-outline-primary"
+                    data-aos="fade"
+                    data-aos-delay="50"
+                  >
+                    {el.cta.label}
+                  </a>
+                ) : (
+                  <span />
                 )}
               </div>
             </div>
@@ -48,15 +43,17 @@ const { service } = Astro.props;
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div class="pl-0 lg:pl-4">
+            <div class="service-visual pl-0 lg:pl-4">
               <Image
                 src={el.image}
                 height={511}
                 width={575}
-                class="max-w-full"
-                class={`max-w-full ${ 
-                  el.image_style ? el.image_style : "" }`}
-                alt={"Photo of " + el.title}
+                class={`w-full max-w-full ${
+                  el.image_style && el.image_style.includes("object-")
+                    ? ""
+                    : "object-cover"
+                } ${el.image_style ? el.image_style : ""}`}
+                alt={el.image_alt ? el.image_alt : el.title}
               />
             </div>
           </div>

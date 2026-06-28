@@ -1,49 +1,40 @@
 ---
+type: homepage
 banner:
-  title: "Get lasting relief from back pain."
-  image: /images/back_pain_doctor_intro-min.png
-  meta: "Get lasting relief from back pain."
+  title: "Evidence-based care for back pain, tendon pain and joint pain."
+  image: /images/dr-joshua-hatch-consultation-portrait-2026.webp
+  meta: "Non-surgical musculoskeletal assessment and treatment in Milton, Brisbane with Dr Joshua Hatch."
   link:
-    label: View our Treatments
-    href: "/non-surgical-treatments"
-
-##brands
-brands:
-  - /images/brands/01-colored.png
-  - /images/brands/02-colored.png
-  - /images/brands/03-colored.png
-  - /images/brands/04-colored.png
-  - /images/brands/05-colored.png
-  - /images/brands/06-colored.png
-  - /images/brands/04-colored.png
-  - /images/brands/05-colored.png
-  - /images/brands/06-colored.png
+    label: Book an assessment
+    href: "/book-appointment"
 
 #service
 service:
-  - title: I can help you achieve lasting pain relief.
-    subtitle: Meet Dr. Josh
-    description: I am a GP and Musculoskeletal Medicine practitioner based in Brisbane, Australia. With a wealth of experience, I provide an array of effective techniques to address musculoskeletal pain, enabling you to attain lasting relief.
+  - title: Focused, non-surgical care for musculoskeletal pain.
+    subtitle: Meet Dr Joshua Hatch
+    description: I am a GP and Musculoskeletal Medicine practitioner based in Brisbane, Australia. I draw on a background spanning MRI radiography, orthopaedic surgery and musculoskeletal medicine to assess your problem carefully and recommend evidence-based treatments that aim to reduce pain and improve function.
     hasCTA: true
     cta:
       href: /about
       label: Read the Back Pain Doctor story
-    image: /images/dr_joshua_hatch_intro.jpg
+    image: /images/dr-joshua-hatch-headshot-2026.webp
+    image_style: rounded-lg shadow-xl
 
-  - title: Tailored treatments to optimise your outcomes.
+  - title: Tailored treatment plans for better function.
     subtitle: Explore how we work
-    description: Nearly all pain and injuries can be treated without surgery, making regenerative treatments a promising option. We create a tailored treatment plan for your individual pain needs.
+    description: Many musculoskeletal problems can be managed without surgery. We create a tailored, evidence-based plan for your individual needs, with the aim of reducing pain, improving function and helping you understand the next sensible step.
     hasCTA: true
     cta:
       href: /patient-journey
-      label: Explore the Patient Journey
-    image: /images/tailored-treatment-plan-min.jpg
-  - title: Innovative non-surgical treatments for pain relief.
-    subtitle: Musculoskeletal Pain Treatments
-    description: We use a unique and innovative techniques to identify the root cause of your pain, allowing us to tailor multiple services to optimise your outcomes. Say goodbye to chronic pain and hello to a better quality of life with non-surgical musculoskeletal treatments.
+      label: Explore the patient journey
+    image: /images/diagnosis-discussion-treatment-plan.PNG
+    image_style: rounded-lg shadow-xl
+  - title: Non-surgical treatment options, where appropriate.
+    subtitle: Musculoskeletal pain treatments
+    description: We use careful assessment to identify the likely source of your pain, allowing treatment to be matched to your diagnosis and goals. The aim is to reduce pain and improve function using non-surgical musculoskeletal treatments where these are clinically appropriate.
     hasCTA: true
     cta:
       href: /non-surgical-treatments
-      label: View our Treatments
+      label: View treatment options
     image: /images/non-surgical-pain-relief-min.jpg
 ---

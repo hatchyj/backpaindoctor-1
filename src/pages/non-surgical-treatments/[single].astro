@@ -1,9 +1,14 @@
 ---
 import AboutIntro from "@/components/about/AboutIntro.astro";
 import AboutShortVideo from "@/components/about/AboutShortVideo.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import Faq from "@/components/Faq.astro";
+import JsonLd from "@/components/JsonLd.astro";
 import PageHeader from "@/components/PageHeader.astro";
+import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
+import { markdownify } from "@/lib/utils/textConverter";
 import Cta from "@/partials/Cta.astro";
 
 export async function getStaticPaths() {
@@ -19,45 +24,179 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await post.render();
-const { title, image, description, intro, system1, system2 } = post.data;
+const {
+  title,
+  meta_title,
+  image,
+  imageAlt,
+  imageCaption,
+  description,
+  intro,
+  system1,
+  system2,
+  whatItTreats,
+  evidence,
+  evidenceSources,
+  whatToExpect,
+  faqs,
+} = post.data;
+
+const base = (config.site.base_url || "").replace(/\/$/, "");
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  name: title,
+  description,
+  url: `${base}/non-surgical-treatments/${post.slug}`,
+  about: { "@type": "MedicalTherapy", name: title },
+  isPartOf: { "@type": "MedicalClinic", name: (config as any).business?.name },
+};
 ---
 
-<Base title={title} description={description}>
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}
+>
   <PageHeader title={title} />
-  <section class="section">
+  <Breadcrumbs
+    items={[
+      { label: "Home", href: "/" },
+      { label: "Treatments", href: "/non-surgical-treatments" },
+      { label: title },
+    ]}
+  />
+
+  <section class="section pt-8">
     <div class="container">
       <div class="row justify-center">
         <div class="md:col-10 lg:col-8">
-          <div class="block md:flex md:items-center md:justify-between">
-            <div class="text-lg pb-12">
-             {intro}
-            </div>
-          </div>
-          { system1 && system2 &&(
-            <h3 class="py-4 mb-12 font-semibold">We provide two leading PRP treatment systems.</h3>
-          )}
-        </div>
           {
-            system1 && (
-              <AboutShortVideo video={system1} />
+            intro && (
+              <div class="pb-8 text-[1.02rem] leading-relaxed sm:text-lg">
+                {intro}
+              </div>
             )
           }
-            {
-            system2 && (
-              <div class="mt-8"></div>
-              <AboutIntro data={system2} order="right" />
+
+          {
+            imageCaption && image && (
+              <figure class="mb-10 overflow-hidden rounded-lg border border-border bg-white shadow-[0_18px_54px_rgba(12,42,66,0.08)]">
+                <img
+                  src={image}
+                  alt={imageAlt || title}
+                  class="mx-auto max-h-[360px] w-full object-contain p-3 sm:max-h-[420px] sm:p-4"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="border-t border-border px-4 py-2 text-center text-[0.8rem] text-text">
+                  {imageCaption}
+                </figcaption>
+              </figure>
             )
           }
-        
-        <div class="md:col-10 lg:col-8">
-          <div class="block md:flex md:items-center md:justify-between">
-            <div class="content mt-6 border-t pt-12 columns-2">
-              <Content />
+
+          {
+            whatItTreats && whatItTreats.length > 0 && (
+              <div class="mb-10 rounded-lg border border-border bg-theme-light/50 p-5 md:p-8">
+                <h2 class="mb-4 text-h4-sm font-semibold md:text-h4">
+                  What it can help with
+                </h2>
+                <ul class="flex flex-wrap gap-2">
+                  {whatItTreats.map((c: string) => (
+                    <li class="rounded-full border border-primary/20 bg-white px-3 py-1 text-[0.85rem] text-dark">
+                      {c}
+                    </li>
+                  ))}
+                </ul>
+                <p class="mt-4 text-[0.8rem] text-text">
+                  Suitability depends on your individual diagnosis and is
+                  assessed at consultation.
+                </p>
+              </div>
+            )
+          }
+        </div>
+
+        {
+          system1 && system2 && (
+            <div class="md:col-10 lg:col-8">
+              <h3 class="py-4 mb-8 font-semibold">
+                We provide two leading PRP treatment systems.
+              </h3>
             </div>
+          )
+        }
+      </div>
+
+      {system1 && <AboutShortVideo video={system1} />}
+      {
+        system2 && (
+          <div class="mt-8">
+            <AboutIntro data={system2} order="right" />
           </div>
+        )
+      }
+
+      <div class="row justify-center">
+        <div class="md:col-10 lg:col-8">
+          <div class="content mt-6 border-t pt-10">
+            <Content />
+          </div>
+
+          {
+            evidence && (
+              <div class="mt-10 rounded-lg border-l-4 border-primary bg-theme-light/50 p-5 md:p-8">
+                <h2 class="mb-3 text-h4-sm font-semibold md:text-h4">
+                  What the evidence shows
+                </h2>
+                <div
+                  class="text-[0.95rem] text-text"
+                  set:html={markdownify(evidence)}
+                />
+                {evidenceSources && evidenceSources.length > 0 && (
+                  <p class="mt-4 text-[0.8rem] text-text">
+                    Sources:{" "}
+                    {evidenceSources.map((s: any, i: number) => (
+                      <>
+                        {i > 0 && <span>, </span>}
+                        <a
+                          href={s.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="text-primary underline"
+                        >
+                          {s.label}
+                        </a>
+                      </>
+                    ))}
+                  </p>
+                )}
+              </div>
+            )
+          }
+
+          {
+            whatToExpect && (
+              <div class="mt-8 rounded-lg border border-border p-5 md:p-8">
+                <h2 class="mb-3 text-h4-sm font-semibold md:text-h4">
+                  What to expect
+                </h2>
+                <div
+                  class="text-[0.95rem] text-text"
+                  set:html={markdownify(whatToExpect)}
+                />
+              </div>
+            )
+          }
         </div>
       </div>
     </div>
   </section>
+
+  <Faq faqs={faqs ?? []} />
+
+  <JsonLd schema={pageSchema} />
   <Cta />
 </Base>

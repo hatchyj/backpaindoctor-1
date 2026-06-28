@@ -18,6 +18,7 @@ const {
 ---
 
 <a href="/" class="navbar-brand block">
+  <span class="mobile-wordmark md:hidden">{logo_text}</span>
   {
     src || logo ? (
       <Image
@@ -25,7 +26,7 @@ const {
         height={logo_height.replace("px", "") * 2}
         src={src ? src : logo}
         alt={title}
-        class="h-7 w-auto md:h-[36px] md:w-[177px]"
+        class="hidden h-7 w-auto md:block md:h-[36px] md:w-[177px]"
       />
     ) : logo_text ? (
       logo_text

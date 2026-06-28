@@ -1,0 +1,8 @@
+---
+// Generic JSON-LD emitter. Pass any schema.org object (or array) as `schema`.
+const { schema } = Astro.props;
+---
+
+{schema && (
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+)}

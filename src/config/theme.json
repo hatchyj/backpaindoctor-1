@@ -5,8 +5,8 @@
         "primary": "#0553CB",
         "body": "#ffff",
         "border": "#dee2e6",
-        "border_secondary": "#ffece4",
-        "theme_light": "#fffaf3",
+        "border_secondary": "#D8E7F7",
+        "theme_light": "#F4F8FC",
         "theme_dark": "#242528"
       },
       "text_color": {

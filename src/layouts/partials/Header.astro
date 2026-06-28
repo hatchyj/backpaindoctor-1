@@ -33,7 +33,8 @@ const { main }: { main: NavigationLink[] } = menu;
     <label
       id="show-button"
       for="nav-toggle"
-      class="order-2 flex cursor-pointer items-center lg:order-1 lg:hidden"
+      aria-label="Open navigation"
+      class="nav-toggle-button order-2 flex cursor-pointer items-center justify-center lg:order-1 lg:hidden"
     >
       <svg class="h-6 fill-current" viewBox="0 0 20 20">
         <title>Menu Open</title>
@@ -43,7 +44,8 @@ const { main }: { main: NavigationLink[] } = menu;
     <label
       id="hide-button"
       for="nav-toggle"
-      class="order-2 hidden cursor-pointer items-center lg:order-1"
+      aria-label="Close navigation"
+      class="nav-toggle-button order-2 hidden cursor-pointer items-center justify-center lg:order-1"
     >
       <svg class="h-6 fill-current" viewBox="0 0 20 20">
         <title>Menu Close</title>
@@ -56,18 +58,15 @@ const { main }: { main: NavigationLink[] } = menu;
 
     <ul
       id="nav-menu"
-      class="navbar-nav order-3 hidden w-full flex-col pt-10 text-center lg:order-1 lg:flex lg:w-auto lg:flex-row lg:space-x-2 lg:pt-0 lg:text-left"
+      class="navbar-nav order-3 hidden w-full flex-col text-left lg:order-1 lg:flex lg:w-auto lg:flex-row lg:space-x-2 lg:text-left"
     >
       {
         main.map((menu) => (
           <>
             {menu.hasChildren ? (
-              <li
-                class="nav-item nav-dropdown group relative cursor-pointer "
-                id="dropdown-button"
-              >
+              <li class="nav-item nav-dropdown group relative cursor-pointer">
                 <span
-                  class={`nav-link inline-flex items-center lg:px-[0.625rem] lg:py-[0.9rem] xl:px-[1.06rem] ${
+                  class={`nav-link nav-dropdown-toggle inline-flex items-center lg:px-[0.625rem] lg:py-[0.9rem] xl:px-[1.06rem] ${
                     menu.children?.map(({ url }) => url).includes(pathname) ||
                     menu.children
                       ?.map(({ url }) => `${url}/`)
@@ -76,17 +75,12 @@ const { main }: { main: NavigationLink[] } = menu;
                       : ""
                   }`}
                 >
-                  <a href={menu.url}>
-                  {menu.name}
-                  </a>
+                  <a href={menu.url}>{menu.name}</a>
                   <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
                     <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                   </svg>
                 </span>
-                <ul
-                  id="dropdown"
-                  class="nav-dropdown-list hidden duration-300 lg:invisible lg:absolute lg:block lg:h-auto lg:w-[13.5rem] lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100"
-                >
+                <ul class="nav-dropdown-list hidden duration-300 lg:invisible lg:absolute lg:block lg:h-auto lg:w-[13.5rem] lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100">
                   {menu.children?.map((child) => (
                     <li
                       class={`nav-dropdown-item rounded-md hover:bg-primary/10`}
@@ -121,55 +115,69 @@ const { main }: { main: NavigationLink[] } = menu;
           </>
         ))
       }
-      <li class="ml-autoflex order-1 text-center md:ml-0 lg:order-2 lg:hidden">
-        <a class="btn btn-primary" href="/book-appointment">
+      <li class="order-last mt-3 text-center lg:hidden">
+        <a
+          class="btn btn-primary inline-flex items-center gap-3"
+          href="/book-appointment"
+        >
           <HotDocIcon />
-          <span class="ml-20">{label}</span>
+          <span>{label}</span>
         </a>
       </li>
     </ul>
-    <div
-      class="ml-autoflex order-1 hidden items-center md:ml-0 lg:order-2 lg:flex"
-    >
+    <div class="order-1 ml-auto hidden items-center lg:order-2 lg:flex">
       <!-- Desktop version of button -->
-      <a class="btn btn-primary" href="/book-appointment">
-         <span class="block lg:max-xl:hidden"><HotDocIcon /></span>
+      <a
+        class="btn btn-primary inline-flex items-center gap-3"
+        href="/book-appointment"
+      >
+        <span class="block lg:max-xl:hidden"><HotDocIcon /></span>
         <span class="hidden lg:max-xl:block">{label_sml}</span>
-        <span class="block ml-20 lg:max-xl:hidden">{label}</span>
+        <span class="block lg:max-xl:hidden">{label}</span>
       </a>
     </div>
   </nav>
 </header>
 
 <script is:inline>
-  const button = document.getElementById("dropdown-button");
-  button.addEventListener("click", () => {
-    const dropdown = document.getElementById("dropdown");
-    dropdown.classList.toggle(dropdown.style === "hidden" ? "block" : "hidden");
+  document.querySelectorAll(".nav-dropdown-toggle").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      if (window.matchMedia("(min-width: 992px)").matches) return;
+      event.preventDefault();
+      const dropdown = button
+        .closest(".nav-dropdown")
+        ?.querySelector(".nav-dropdown-list");
+      dropdown?.classList.toggle("hidden");
+      button.classList.toggle(
+        "is-open",
+        !dropdown?.classList.contains("hidden"),
+      );
+    });
   });
 
-  var lastScroll = 0;
-  const changeNavbarBackground = () => {
-    const header = document.getElementById("header");
-    const headerHight = header.clientHeight + 200;
-    const scrollY = window.scrollY;
+  const header = document.getElementById("header");
+  let lastScroll = window.scrollY;
+  const updateHeader = () => {
+    if (!header) return;
 
-    window.onscroll = () => {
-      // header-sticky-top
-      if (scrollY > 0) {
-        header.classList.add("header-sticky-top");
-      } else {
-        header.classList.remove("header-sticky-top");
-      }
-      if (scrollY > headerHight) {
-        if (lastScroll > scrollY) {
-          header.classList.remove("-translate-y-full");
-        } else {
-          header.classList.add("-translate-y-full");
-        }
-        lastScroll = scrollY;
-      }
-    };
+    const scrollY = window.scrollY;
+    header.classList.toggle("header-sticky-top", scrollY > 12);
+
+    if (document.getElementById("nav-toggle")?.checked) {
+      header.classList.remove("-translate-y-full");
+      lastScroll = scrollY;
+      return;
+    }
+
+    if (scrollY > header.clientHeight + 220) {
+      header.classList.toggle("-translate-y-full", scrollY > lastScroll);
+    } else {
+      header.classList.remove("-translate-y-full");
+    }
+
+    lastScroll = scrollY;
   };
-  window.addEventListener("scroll", changeNavbarBackground);
+
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
 </script>

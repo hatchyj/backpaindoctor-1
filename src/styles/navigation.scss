@@ -12,10 +12,17 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .header {
-  @apply sticky top-0 z-50 bg-white py-7 transition-all duration-150 ease-out;
+  @apply sticky top-0 z-50 border-b border-transparent py-4 transition-all duration-300 ease-out lg:py-7;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(18px) saturate(145%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset;
 }
 .header-sticky-top {
-  @apply py-6 shadow-sm;
+  @apply border-primary/10 py-3 lg:py-5;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 18px 48px rgba(12, 42, 66, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.85) inset;
 }
 
 // navbar items
@@ -26,19 +33,76 @@ input#nav-toggle:checked ~ #nav-menu {
 .navbar-brand {
   @apply text-xl font-semibold text-dark;
   img {
-    @apply h-[3rem] max-h-full max-w-full md:h-auto;
+    @apply h-[2.55rem] max-h-full max-w-full md:h-[3rem] lg:h-auto;
   }
+}
+
+.mobile-wordmark {
+  @apply max-w-[13rem] text-[0.98rem] font-semibold leading-[1.08] text-dark;
 }
 
 .navbar-nav {
   @apply text-center lg:text-left;
+
+  @media (max-width: 991px) {
+    @apply mt-4 rounded-lg border border-white/80 px-3 py-4 text-left;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.98),
+        rgba(245, 251, 250, 0.94)
+      ),
+      radial-gradient(circle at 10% 0%, rgba(7, 87, 199, 0.09), transparent 35%);
+    box-shadow:
+      0 24px 70px rgba(12, 42, 66, 0.14),
+      0 1px 0 rgba(255, 255, 255, 0.9) inset;
+    max-height: calc(100svh - 6.5rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}
+
+.nav-toggle-button {
+  @apply h-11 w-11 rounded-lg border border-primary/10 bg-white/80 text-dark shadow-sm transition;
+  backdrop-filter: blur(12px) saturate(140%);
+
+  &:active {
+    @apply scale-95;
+  }
 }
 
 .nav-link {
-  @apply text-base font-medium text-dark transition hover:text-primary;
+  @apply relative text-base font-medium text-dark transition hover:text-primary;
+
+  @media (max-width: 991px) {
+    @apply flex w-full items-center justify-between rounded-md px-3 py-3 text-[0.98rem];
+
+    &:active {
+      @apply bg-primary/5;
+    }
+  }
+
+  &::after {
+    @apply absolute bottom-1 left-1/2 h-[2px] w-[calc(100%-1.25rem)] -translate-x-1/2 scale-x-0 rounded-full bg-primary content-[""];
+    transform-origin: center;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
   &.active {
     @apply text-primary;
   }
+
+  &:hover::after,
+  &.active::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+}
+
+.nav-dropdown-toggle svg {
+  @apply transition-transform duration-300;
+}
+
+.nav-dropdown-toggle.is-open svg {
+  transform: rotate(180deg);
 }
 
 .nav-dropdown {
@@ -46,7 +110,8 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .nav-dropdown-list {
-  @apply z-10 mx-auto mt-4  max-w-[300px] rounded-lg border-0 border-solid  border-primary/25 bg-primary/5  px-[10px] py-3  shadow-sm duration-300  lg:mt-0 lg:border lg:bg-white lg:shadow-[0_0.9rem_1.56rem_rgb(0,0,0,0.1)];
+  @apply z-10 mx-auto mt-2 max-w-none rounded-lg border border-solid border-primary/10 bg-primary/5 px-[10px] py-3 shadow-sm duration-300 lg:mt-0 lg:max-w-[300px] lg:border-primary/25 lg:bg-white/90 lg:shadow-[0_0.9rem_1.56rem_rgb(0,0,0,0.1)];
+  backdrop-filter: blur(18px) saturate(140%);
 }
 
 .nav-dropdown-item {
@@ -54,7 +119,7 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .nav-dropdown-link {
-  @apply min-w-[150px] py-1 text-sm font-medium text-dark transition hover:text-primary;
+  @apply min-w-[150px] rounded-md py-2 text-sm font-medium text-dark transition hover:text-primary lg:py-1;
   &.active {
     @apply text-primary;
   }

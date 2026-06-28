@@ -1,0 +1,61 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+import JsonLd from "@/components/JsonLd.astro";
+
+// faqs: array of { question, answer } (answer may contain inline HTML/markdown)
+const { faqs = [], title = "Frequently asked questions" } = Astro.props;
+
+const faqSchema =
+  faqs.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map((f: any) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: f.answer,
+          },
+        })),
+      }
+    : null;
+---
+
+{
+  faqs.length > 0 && (
+    <section class="section pt-0">
+      <div class="container">
+        <div class="row justify-center">
+          <div class="md:col-10 lg:col-8">
+            {title && (
+              <h2 class="mb-8 text-h3-sm font-semibold md:text-h3">{title}</h2>
+            )}
+            <div class="space-y-3">
+              {faqs.map((f: any) => (
+                <details class="group rounded-lg border border-border bg-white">
+                  <summary class="flex cursor-pointer list-none items-center justify-between px-5 py-4 text-[0.98rem] font-medium text-dark">
+                    <span set:html={markdownify(f.question)} />
+                    <svg
+                      class="ml-4 h-4 w-4 flex-shrink-0 transition-transform group-open:rotate-180"
+                      viewBox="0 0 512 512"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667c4.16 4.16 9.621 6.251 15.083 6.251s10.923-2.091 15.083-6.251l234.667-234.667c8.341-7.83 8.341-21.824 0-30.165z" />
+                    </svg>
+                  </summary>
+                  <div
+                    class="border-t border-border px-5 py-4 text-[0.92rem] text-text"
+                    set:html={markdownify(f.answer)}
+                  />
+                </details>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      <JsonLd schema={faqSchema} />
+    </section>
+  )
+}

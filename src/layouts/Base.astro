@@ -1,10 +1,10 @@
 ---
-import TwSizeIndicator from "@/components/TwSizeIndicator.astro";
 import config from "@/config/config.json";
 import theme from "@/config/theme.json";
 import { plainify } from "@/lib/utils/textConverter";
 import Footer from "@/partials/Footer.astro";
 import Header from "@/partials/Header.astro";
+import JsonLd from "@/components/JsonLd.astro";
 import "@/styles/style.scss";
 import { AstroFont } from "astro-font";
 
@@ -45,6 +45,63 @@ const {
   canonical,
   landingPage,
 } = Astro.props;
+
+const siteBaseUrl = config.site.base_url.endsWith("/")
+  ? config.site.base_url
+  : `${config.site.base_url}/`;
+const pageTitle = plainify(
+  meta_title
+    ? `${meta_title} | ${config.site.title}`
+    : title
+      ? `${title} | ${config.site.title}`
+      : config.site.title,
+);
+const pageDescription = plainify(
+  description ? description : config.metadata.meta_description,
+);
+const canonicalUrl =
+  canonical || new URL(Astro.url.pathname, siteBaseUrl).toString();
+const imagePath = image ? image : config.metadata.meta_image;
+const socialImageUrl = new URL(imagePath, siteBaseUrl).toString();
+
+// Site-wide organisation / practitioner schema (local SEO + E-E-A-T)
+const biz = (config as any).business;
+const orgSchema = biz
+  ? {
+      "@context": "https://schema.org",
+      "@type": ["MedicalClinic", "Physician"],
+      "@id": new URL("#clinic", siteBaseUrl).toString(),
+      name: biz.name,
+      description: biz.description,
+      url: biz.url,
+      telephone: biz.phone,
+      image: socialImageUrl,
+      logo: new URL(config.site.logo, siteBaseUrl).toString(),
+      medicalSpecialty: "PhysicalMedicine",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: biz.street,
+        addressLocality: biz.suburb,
+        addressRegion: biz.state,
+        postalCode: biz.postcode,
+        addressCountry: biz.country,
+      },
+      areaServed: "Brisbane, Queensland",
+      founder: {
+        "@type": "Physician",
+        name: "Dr Joshua Hatch",
+        image: new URL(
+          "/images/dr-joshua-hatch-headshot-2026.webp",
+          siteBaseUrl,
+        ).toString(),
+        medicalSpecialty: "Musculoskeletal Medicine",
+      },
+      sameAs: [
+        "https://www.facebook.com/thebackpaindoctorau/",
+        "https://www.instagram.com/back_pain_doctor/",
+      ],
+    }
+  : null;
 ---
 
 <!doctype html>
@@ -62,8 +119,6 @@ const {
 
     <!-- favicon -->
     <link rel="shortcut icon" href={config.site.favicon} />
-    <!-- theme meta -->
-    <meta name="theme-name" content="andromeda-astro" />
     <meta name="msapplication-TileColor" content="#000000" />
     <meta
       name="theme-color"
@@ -116,100 +171,90 @@ const {
     />
 
     <!-- title -->
-    <title>
-      {plainify(meta_title ? meta_title + " | " + config.site.title : title ? title + " | " + config.site.title : config.site.title)}
-    </title>
+    <title>{pageTitle}</title>
     
     <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- canonical url -->
-    {canonical && <link rel="canonical" href={canonical} item-prop="url" />}
+    <link rel="canonical" href={canonicalUrl} item-prop="url" />
 
     <!-- noindex robots -->
-    {noindex && <meta name="robots" content="noindex,nofollow" />}
+    {
+      noindex ? (
+        <meta name="robots" content="noindex,nofollow" />
+      ) : (
+        <meta name="robots" content="index,follow,max-image-preview:large" />
+      )
+    }
 
     <!-- meta-description -->
-    <meta
-      name="description"
-      content={plainify(
-        description ? description : config.metadata.meta_description,
-      )}
-    />
+    <meta name="description" content={pageDescription} />
 
     <!-- author from config.json -->
     <meta name="author" content={config.metadata.meta_author} />
 
     <!-- og-title -->
-    <meta
-      property="og:title"
-      content={plainify(
-        meta_title ? meta_title : title ? title : config.site.title,
-      )}
-    />
+    <meta property="og:title" content={pageTitle} />
 
     <!-- og-description -->
-    <meta
-      property="og:description"
-      content={plainify(
-        description ? description : config.metadata.meta_description,
-      )}
-    />
+    <meta property="og:description" content={pageDescription} />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content={`${config.site.base_url}/${Astro.url.pathname.replace("/", "")}`}
-    />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content={config.site.title} />
+    <meta property="og:locale" content="en_AU" />
 
     <!-- twitter-title -->
-    <meta
-      name="twitter:title"
-      content={plainify(
-        meta_title ? meta_title : title ? title : config.site.title,
-      )}
-    />
+    <meta name="twitter:title" content={pageTitle} />
 
     <!-- twitter-description -->
-    <meta
-      name="twitter:description"
-      content={plainify(
-        description ? description : config.metadata.meta_description,
-      )}
-    />
+    <meta name="twitter:description" content={pageDescription} />
 
     <!-- og-image -->
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta
-      property="og:image"
-      content={`${config.site.base_url}${
-        image ? image : config.metadata.meta_image
-      }`}
+      property="og:image:alt"
+      content="Dr Joshua Hatch at The Back Pain Doctor Brisbane"
     />
 
     <!-- twitter-image -->
-    <meta
-      name="twitter:image"
-      content={`${config.site.base_url}${
-        image ? image : config.metadata.meta_image
-      }`}
-    />
+    <meta name="twitter:image" content={socialImageUrl} />
     <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- organisation / practitioner structured data -->
+    <JsonLd schema={orgSchema} />
   </head>
   <body>
-    <TwSizeIndicator />
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="site-ambient" aria-hidden="true"></div>
     {!landingPage && <Header />}
     <main id="main-content">
       <slot />
     </main>
     {!landingPage && <Footer />}
     <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <!-- rellax script -->
-    <script
-      is:inline
-      src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"
-    ></script>
     <script is:inline>
-      AOS.init();
-      const rellax = new Rellax(".rellax");
+      if (window.AOS) {
+        AOS.init({
+          duration: 420,
+          easing: "ease-out-cubic",
+          once: true,
+          offset: 60,
+        });
+      }
+
+      const root = document.documentElement;
+      const setScrollProgress = () => {
+        const scrollable = document.body.scrollHeight - window.innerHeight;
+        const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
+        root.style.setProperty("--scroll-progress", progress.toFixed(4));
+      };
+
+      setScrollProgress();
+      window.addEventListener("scroll", setScrollProgress, { passive: true });
+      window.addEventListener("resize", setScrollProgress);
     </script>
   </body>
 </html>

@@ -136,6 +136,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"about": {
+"2026-06-13.md": {
+	id: "2026-06-13.md";
+  slug: "2026-06-13";
+  body: string;
+  collection: "about";
+  data: any
+} & { render(): Render[".md"] };
 "index.md": {
 	id: "index.md";
   slug: "index";
@@ -160,22 +167,78 @@ declare module 'astro:content' {
   data: InferEntrySchema<"authors">
 } & { render(): Render[".md"] };
 };
-"careers": Record<string, {
-  id: string;
-  slug: string;
+"conditions": {
+"-index.md": {
+	id: "-index.md";
+  slug: "-index";
   body: string;
-  collection: "careers";
-  data: InferEntrySchema<"careers">;
-  render(): Render[".md"];
-}>;
-"case-studies": Record<string, {
-  id: string;
-  slug: string;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+"achilles-tendinopathy.md": {
+	id: "achilles-tendinopathy.md";
+  slug: "achilles-tendinopathy";
   body: string;
-  collection: "case-studies";
-  data: InferEntrySchema<"case-studies">;
-  render(): Render[".md"];
-}>;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+"greater-trochanteric-pain-syndrome.md": {
+	id: "greater-trochanteric-pain-syndrome.md";
+  slug: "greater-trochanteric-pain-syndrome";
+  body: string;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+"hamstring-tendinopathy.md": {
+	id: "hamstring-tendinopathy.md";
+  slug: "hamstring-tendinopathy";
+  body: string;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+"knee-osteoarthritis.md": {
+	id: "knee-osteoarthritis.md";
+  slug: "knee-osteoarthritis";
+  body: string;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+"low-back-pain.md": {
+	id: "low-back-pain.md";
+  slug: "low-back-pain";
+  body: string;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+"plantar-fasciitis.md": {
+	id: "plantar-fasciitis.md";
+  slug: "plantar-fasciitis";
+  body: string;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+"rotator-cuff-shoulder-pain.md": {
+	id: "rotator-cuff-shoulder-pain.md";
+  slug: "rotator-cuff-shoulder-pain";
+  body: string;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+"sciatica.md": {
+	id: "sciatica.md";
+  slug: "sciatica";
+  body: string;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+"tennis-golfers-elbow.md": {
+	id: "tennis-golfers-elbow.md";
+  slug: "tennis-golfers-elbow";
+  body: string;
+  collection: "conditions";
+  data: any
+} & { render(): Render[".md"] };
+};
 "contact": {
 "book-appointment.md": {
 	id: "book-appointment.md";
@@ -202,6 +265,13 @@ declare module 'astro:content' {
   collection: "non-surgical-treatments";
   data: any
 } & { render(): Render[".md"] };
+"emtt-magnetotransduction.md": {
+	id: "emtt-magnetotransduction.md";
+  slug: "emtt-magnetotransduction";
+  body: string;
+  collection: "non-surgical-treatments";
+  data: any
+} & { render(): Render[".md"] };
 "nerve-therapy-treatment.md": {
 	id: "nerve-therapy-treatment.md";
   slug: "nerve-therapy-treatment";
@@ -223,6 +293,13 @@ declare module 'astro:content' {
   collection: "non-surgical-treatments";
   data: any
 } & { render(): Render[".md"] };
+"shockwave-therapy-eswt.md": {
+	id: "shockwave-therapy-eswt.md";
+  slug: "shockwave-therapy-eswt";
+  body: string;
+  collection: "non-surgical-treatments";
+  data: any
+} & { render(): Render[".md"] };
 "trigger-point-therapy-treatment.md": {
 	id: "trigger-point-therapy-treatment.md";
   slug: "trigger-point-therapy-treatment";
@@ -239,20 +316,6 @@ declare module 'astro:content' {
   collection: "pages";
   data: InferEntrySchema<"pages">
 } & { render(): Render[".md"] };
-"changelog.mdx": {
-	id: "changelog.mdx";
-  slug: "changelog";
-  body: string;
-  collection: "pages";
-  data: InferEntrySchema<"pages">
-} & { render(): Render[".mdx"] };
-"elements.mdx": {
-	id: "elements.mdx";
-  slug: "elements";
-  body: string;
-  collection: "pages";
-  data: InferEntrySchema<"pages">
-} & { render(): Render[".mdx"] };
 };
 "patient-journey": {
 "index.md": {
@@ -271,6 +334,62 @@ declare module 'astro:content' {
   collection: "patient-resources";
   data: InferEntrySchema<"patient-resources">
 } & { render(): Render[".md"] };
+"achilles-tendinopathy-return-to-activity.mdx": {
+	id: "achilles-tendinopathy-return-to-activity.mdx";
+  slug: "achilles-tendinopathy-return-to-activity";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"back-pain-red-flags-when-to-seek-care.mdx": {
+	id: "back-pain-red-flags-when-to-seek-care.mdx";
+  slug: "back-pain-red-flags-when-to-seek-care";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"cortisone-injections-benefits-and-limits.mdx": {
+	id: "cortisone-injections-benefits-and-limits.mdx";
+  slug: "cortisone-injections-benefits-and-limits";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"cortisone-vs-prp-for-knee-osteoarthritis.mdx": {
+	id: "cortisone-vs-prp-for-knee-osteoarthritis.mdx";
+  slug: "cortisone-vs-prp-for-knee-osteoarthritis";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"do-you-need-an-mri-for-back-pain.mdx": {
+	id: "do-you-need-an-mri-for-back-pain.mdx";
+  slug: "do-you-need-an-mri-for-back-pain";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"hip-pain-lying-on-your-side-gtps.mdx": {
+	id: "hip-pain-lying-on-your-side-gtps.mdx";
+  slug: "hip-pain-lying-on-your-side-gtps";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"knee-arthritis-flare-plan.mdx": {
+	id: "knee-arthritis-flare-plan.mdx";
+  slug: "knee-arthritis-flare-plan";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"plantar-fasciitis-first-steps.mdx": {
+	id: "plantar-fasciitis-first-steps.mdx";
+  slug: "plantar-fasciitis-first-steps";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
 "post-1.mdx": {
 	id: "post-1.mdx";
   slug: "the-relationship-between-sleep-and-pain-evidenced-based-strategies";
@@ -341,36 +460,54 @@ declare module 'astro:content' {
   collection: "patient-resources";
   data: InferEntrySchema<"patient-resources">
 } & { render(): Render[".mdx"] };
-};
-"pricing": {
-"index.md": {
-	id: "index.md";
-  slug: "index";
+"prp-injections-before-and-after.mdx": {
+	id: "prp-injections-before-and-after.mdx";
+  slug: "prp-injections-before-and-after";
   body: string;
-  collection: "pricing";
-  data: any
-} & { render(): Render[".md"] };
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"rotator-cuff-pain-scan-results.mdx": {
+	id: "rotator-cuff-pain-scan-results.mdx";
+  slug: "rotator-cuff-pain-scan-results";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"sciatica-symptoms-leg-pain-explained.mdx": {
+	id: "sciatica-symptoms-leg-pain-explained.mdx";
+  slug: "sciatica-symptoms-leg-pain-explained";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"shockwave-therapy-what-to-expect.mdx": {
+	id: "shockwave-therapy-what-to-expect.mdx";
+  slug: "shockwave-therapy-what-to-expect";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"ultrasound-guided-injections-why-accuracy-matters.mdx": {
+	id: "ultrasound-guided-injections-why-accuracy-matters.mdx";
+  slug: "ultrasound-guided-injections-why-accuracy-matters";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
+"why-tendon-pain-needs-loading-not-rest.mdx": {
+	id: "why-tendon-pain-needs-loading-not-rest.mdx";
+  slug: "why-tendon-pain-needs-loading-not-rest";
+  body: string;
+  collection: "patient-resources";
+  data: InferEntrySchema<"patient-resources">
+} & { render(): Render[".mdx"] };
 };
 
 	};
 
 	type DataEntryMap = {
-		"__careers": Record<string, {
-  id: string;
-  collection: "__careers";
-  data: any;
-}>;
-"__case-studies": Record<string, {
-  id: string;
-  collection: "__case-studies";
-  data: any;
-}>;
-"__explaining-pain": Record<string, {
-  id: string;
-  collection: "__explaining-pain";
-  data: any;
-}>;
-
+		
 	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;

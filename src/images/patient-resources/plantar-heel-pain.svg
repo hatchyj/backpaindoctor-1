@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Abstract plantar heel pain clinical illustration">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4F8FC"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient><linearGradient id="blue" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0553CB"/><stop offset="1" stop-color="#073B8E"/></linearGradient></defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <circle cx="1020" cy="150" r="230" fill="#0553CB" opacity="0.055"/>
+  <path d="M245 455 C365 390 485 370 625 395 C740 416 815 455 914 462 C960 465 992 490 999 530 C1005 565 984 591 938 600 C780 632 575 630 378 588 C288 568 224 534 205 504 C192 483 205 468 245 455Z" fill="#FFFFFF" stroke="#0C2A42" stroke-width="24" stroke-linejoin="round"/>
+  <path d="M365 548 C485 575 650 582 824 560" fill="none" stroke="url(#blue)" stroke-width="18" stroke-linecap="round"/>
+  <path d="M360 510 C435 487 530 486 620 508" fill="none" stroke="#0553CB" stroke-width="10" stroke-linecap="round" opacity="0.45"/>
+  <circle cx="360" cy="548" r="48" fill="#0553CB" opacity="0.16"/>
+  <circle cx="360" cy="548" r="22" fill="#0553CB" opacity="0.38"/>
+  <g fill="none" stroke="#073B8E" stroke-width="5" opacity="0.24"><path d="M178 220 h220"/><path d="M150 265 h310"/><path d="M205 310 h240"/></g>
+</svg>

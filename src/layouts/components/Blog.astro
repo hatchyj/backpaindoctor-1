@@ -15,25 +15,31 @@ const {
 } = blog;
 ---
 
-<article class="mt-7 rounded-2xl border-0 shadow">
+<article
+  class="resource-card mt-6 overflow-hidden rounded-lg border border-primary/10 bg-white/90 shadow-sm"
+>
   <a href={`/patient-resources/${slug}`}>
     <Image
       src={image}
       alt={title}
-      class="h-auto max-w-full rounded-t-[18px]"
+      class="aspect-[16/10] h-auto w-full bg-theme-light object-contain object-center"
       width={570}
       height={335}
     /></a
   >
-  <div class="px-[1.875rem] pb-[0.625rem] pt-[2.1rem]">
-    <h3 class="card-title h4 mb-2 font-semibold hover:underline">
+  <div class="px-5 pb-2 pt-5 sm:px-[1.875rem] sm:pt-[2.1rem]">
+    <h3
+      class="card-title mb-2 text-[1.32rem] font-semibold leading-tight hover:underline sm:text-h4"
+    >
       <a href={`/patient-resources/${slug}`}>{title}</a>
     </h3>
-    <p class="mb-4 text-text">
+    <p class="mb-4 text-[0.95rem] leading-relaxed text-text">
       {plainify(body?.slice(0, Number(summary_length)))}...
     </p>
   </div>
-  <div class="card-footer border-t-0 bg-transparent px-[1.875rem] pb-[2.1rem]">
+  <div
+    class="card-footer border-t-0 bg-transparent px-5 pb-5 sm:px-[1.875rem] sm:pb-[2.1rem]"
+  >
     <div class="card-author">
       <div class="flex items-center">
         <div class="user-image mr-4">

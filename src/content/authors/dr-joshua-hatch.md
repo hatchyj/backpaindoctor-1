@@ -1,7 +1,8 @@
 ---
+type: author
 title: Dr Joshua Hatch
 email: info@backpaindoctor.com.au
-image: /images/author/avatar_dr_josh_hatch.jpg
+image: /images/author/avatar_dr_josh_hatch_2026.webp
 description: Patient resources from Dr Joshua Hatch, Brisbane Musculoskeletal Medicine practitioner
 social:
   facebook: https://www.facebook.com/thebackpaindoctorau/

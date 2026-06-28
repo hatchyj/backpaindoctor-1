@@ -1,13 +1,14 @@
 ---
+type: patientJourney
 title: "Patient Journey"
 description: "Get an understanding of what your patient experience will be at the Back Pain Doctor."
 draft: false
 
 #intro
 intro:
-  title: A tailored approach to get you free from pain.
+  title: A tailored approach to your pain.
   subtitle: The patient journey
-  description: Nearly all pain and injuries can be treated without surgery, making regenerative treatments a promising option. If you’ve tried physiotherapy or other injections therapies like cortisone, and still haven’t seen the desired results, regenerative treatments may provide the relief you need. Even if you’ve been advised to undergo surgery, there’s a good chance that non-surgical options can help you avoid it. While surgery is sometimes necessary, it should not be the first option.
+  description: Many musculoskeletal problems can be managed without surgery. If you have tried physiotherapy or injections such as cortisone and not had the result you hoped for, other non-surgical options may be worth considering. Surgery is sometimes necessary, but for many conditions it is reasonable to explore non-surgical management first. We will assess your problem and give you an honest view of the options that suit your diagnosis.
 
 #service
 service:
@@ -19,7 +20,7 @@ service:
   - title: Diagnosis, Discussion and Treatment plan
     subtitle: First consultation
     description: "Using the information obtained from the examination, the doctor will develop a diagnosis and discuss potential treatment options. Treatment options can range from medications, manual therapy, injections, or referral for surgery depending on the severity of the condition.<br/><br/>To achieve an accurate diagnosis and personalised treatment plan, it is important to be open and honest with the doctor during the consultation."
-    image: /images/diagnosis-discussion-treatment-plan-min.jpg
+    image: /images/diagnosis-discussion-treatment-plan.PNG
   - title: Therapy Begins
     subtitle: Second Consultation
     description: Following a comprehensive initial consultation, your musculoskeletal doctor will initiate a tailored therapy plan. This plan may encompass a variety of therapeutic modalities or may focus on a specific approach.

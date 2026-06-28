@@ -1,6 +1,7 @@
 {
+  "type": "siteConfig",
   "site": {
-    "title": "Back Pain Doctor - Brisbane Musculoskeletal Medicine practitioner, Dr Joshua Hatch",
+    "title": "The Back Pain Doctor Brisbane",
     "base_url": "https://backpaindoctor.com.au/",
     "base_path": "/",
     "trailing_slash": false,
@@ -23,7 +24,7 @@
   },
 
   "footer_data": {
-    "description": "Get lasting relief from back pain.",
+    "description": "Evidence-based, non-surgical care for back and musculoskeletal pain in Brisbane.",
     "email": "clinic@thebackpaindoctor.com.au",
     "location": "Level 1, 36 Baroona Rd, Milton, 4064",
     "phone": "07 3367 0333"
@@ -31,26 +32,26 @@
 
   "call_to_action": {
     "enable": true,
-    "subtitle": "Tired of temporary fixes with no lasting relief?",
-    "title": "Want lasting relief from pain? Take action today.",
-    "content": "We can help you achieve lasting pain relief through a tailored plan that fits your individual needs.",
+    "subtitle": "Ready for a clearer plan for your back or musculoskeletal pain?",
+    "title": "Book an assessment with Dr Joshua Hatch.",
+    "content": "Your assessment focuses on understanding the likely source of your pain and the most appropriate non-surgical options for your diagnosis, with the aim of reducing pain and improving function.",
     "button": {
-      "label": "Book Appointment now",
+      "label": "Book an appointment",
       "label_sml": "Book now",
       "link": "/book-appointment"
     }
   },
 
   "disqus": {
-    "enable": true,
-    "shortname": "themefisher-template",
+    "enable": false,
+    "shortname": "",
     "settings": {}
   },
 
   "metadata": {
     "meta_author": "Dr Joshua Hatch",
     "meta_image": "/images/og-image.png",
-    "meta_description": "The Back Pain Doctor"
+    "meta_description": "The Back Pain Doctor provides evidence-based, non-surgical care for back pain, tendinopathy and joint pain in Milton, Brisbane."
   },
 
   "email": {
@@ -61,5 +62,33 @@
   "phone": {
     "title": "Phone",
     "contact": ["07 3367 0333"]
+  },
+
+  "credentials": {
+    "enable": true,
+    "intro": "A broad clinical background behind your care:",
+    "items": [
+      { "label": "RACGP Fellow", "detail": "Specialist General Practitioner" },
+      { "label": "Musculoskeletal Medicine", "detail": "FSEM (UK) Diploma" },
+      { "label": "Orthopaedic background", "detail": "Former hospital registrar and surgical assistant" },
+      { "label": "MRI background", "detail": "10 years' musculoskeletal imaging experience" },
+      { "label": "Image-guided procedures", "detail": "Ultrasound guidance where clinically appropriate" }
+    ],
+    "secondary_cta": {
+      "label": "Not sure if we can help? Ask us first",
+      "link": "/book-appointment"
+    }
+  },
+
+  "business": {
+    "name": "The Back Pain Doctor — Dr Joshua Hatch",
+    "description": "Brisbane musculoskeletal medicine practitioner providing evidence-based, non-surgical care for back and musculoskeletal pain.",
+    "street": "Level 1, 36 Baroona Rd",
+    "suburb": "Milton",
+    "state": "QLD",
+    "postcode": "4064",
+    "country": "AU",
+    "phone": "07 3367 0333",
+    "url": "https://backpaindoctor.com.au"
   }
 }

@@ -1,0 +1,233 @@
+// Back Pain Doctor brand corrections.
+// Removes inherited blue-to-green/gold treatment, tones down template-style motion,
+// and protects clinical portraits from aggressive cropping.
+
+:root {
+  --brand-blue: #0553CB;
+  --brand-blue-dark: #073B8E;
+  --brand-blue-soft: #EAF3FF;
+  --brand-blue-muted: #D8E7F7;
+  --clinical-navy: #0C2A42;
+}
+
+.scroll-progress {
+  background: var(--brand-blue);
+  box-shadow: none;
+}
+
+.site-ambient {
+  background: linear-gradient(
+      115deg,
+      rgba(5, 83, 203, 0.035),
+      transparent 40%,
+      rgba(7, 59, 142, 0.025) 72%,
+      transparent
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(12, 42, 66, 0.018) 0 1px,
+      transparent 1px 150px
+    );
+  opacity: 0.58;
+
+  @media (max-width: 767px) {
+    background: linear-gradient(
+        145deg,
+        rgba(5, 83, 203, 0.035),
+        transparent 48%,
+        rgba(7, 59, 142, 0.028)
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(12, 42, 66, 0.014) 0 1px,
+        transparent 1px 110px
+      );
+    opacity: 0.42;
+  }
+}
+
+.hero-section {
+  background: linear-gradient(
+      110deg,
+      rgba(234, 243, 255, 0.82),
+      rgba(255, 255, 255, 0.96) 50%,
+      rgba(246, 249, 252, 0.98)
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(5, 83, 203, 0.032) 0 1px,
+      transparent 1px 112px
+    );
+
+  &::before {
+    animation: none;
+    opacity: 0.36;
+    background: linear-gradient(
+      112deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.54) 48%,
+      rgba(5, 83, 203, 0.06) 56%,
+      transparent 76%
+    );
+  }
+
+  @media (max-width: 767px) {
+    background: linear-gradient(
+        160deg,
+        rgba(234, 243, 255, 0.86),
+        rgba(255, 255, 255, 0.97) 58%,
+        rgba(247, 250, 252, 0.98)
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(5, 83, 203, 0.028) 0 1px,
+        transparent 1px 96px
+      );
+  }
+}
+
+.page-header {
+  background: linear-gradient(
+      110deg,
+      rgba(234, 243, 255, 0.78),
+      rgba(255, 255, 255, 0.96) 58%,
+      rgba(244, 248, 252, 0.96)
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(12, 42, 66, 0.03) 0 1px,
+      transparent 1px 96px
+    );
+
+  &::before {
+    animation: none;
+    opacity: 0.28;
+    background: linear-gradient(
+      115deg,
+      transparent 18%,
+      rgba(255, 255, 255, 0.68) 48%,
+      rgba(5, 83, 203, 0.052) 54%,
+      transparent 76%
+    );
+  }
+}
+
+.hero-media,
+.service-visual,
+.about-visual {
+  background: linear-gradient(180deg, #ffffff 0%, var(--brand-blue-soft) 100%);
+  box-shadow:
+    0 22px 58px rgba(12, 42, 66, 0.12),
+    0 1px 0 rgba(255, 255, 255, 0.9) inset;
+}
+
+.hero-media,
+.hero-media-mobile {
+  aspect-ratio: auto;
+}
+
+.hero-media-mobile {
+  background-image: none !important;
+}
+
+.hero-media {
+  transform: none;
+  transition: box-shadow 0.28s ease;
+
+  &::after {
+    display: none;
+  }
+
+  img {
+    height: auto;
+    max-height: 76vh;
+    object-fit: contain;
+    object-position: center top;
+    transform: none;
+    transition: none;
+  }
+
+  &:hover {
+    box-shadow:
+      0 26px 66px rgba(12, 42, 66, 0.15),
+      0 1px 0 rgba(255, 255, 255, 0.9) inset;
+  }
+
+  &:hover img {
+    transform: none;
+  }
+}
+
+.service-row,
+.credential-panel,
+.cta-panel {
+  box-shadow:
+    0 18px 48px rgba(12, 42, 66, 0.075),
+    0 1px 0 rgba(255, 255, 255, 0.88) inset;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    border-color: rgba(5, 83, 203, 0.16);
+  }
+
+  &:hover {
+    border-color: rgba(5, 83, 203, 0.2);
+    box-shadow:
+      0 22px 56px rgba(12, 42, 66, 0.1),
+      0 1px 0 rgba(255, 255, 255, 0.9) inset;
+    transform: none;
+  }
+}
+
+.service-visual,
+.about-visual {
+  &::before {
+    display: none;
+  }
+
+  img {
+    aspect-ratio: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: center top;
+    transform: none;
+    transition: none;
+  }
+
+  &:hover img {
+    transform: none;
+  }
+}
+
+.btn {
+  transition:
+    background-color 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    transform 0.22s ease;
+
+  &::before {
+    display: none;
+  }
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+.navbar-nav {
+  @media (max-width: 991px) {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.98),
+        rgba(244, 248, 252, 0.94)
+      ),
+      radial-gradient(circle at 10% 0%, rgba(5, 83, 203, 0.07), transparent 35%);
+  }
+}

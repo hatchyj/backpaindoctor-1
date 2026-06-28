@@ -16,6 +16,15 @@ export default defineConfig({
   image: {
     service: squooshImageService(),
   },
+  // Dev-only: route Vite's HMR websocket through a dedicated path so the
+  // Netlify Visual Editor container can proxy it. No effect on production build.
+  vite: {
+    server: {
+      hmr: {
+        path: "/vite-hmr/",
+      },
+    },
+  },
   integrations: [
     react(),
     sitemap(),
@@ -43,7 +52,7 @@ export default defineConfig({
   redirects: {
     "/the-back-pain-doctor-story": "/about",
     "/find-lasting-relief/treatment": "/non-surgical-treatments",
-    "/painful-conditions": "/explaining-pain",
+    "/painful-conditions": "/conditions",
     "/find-lasting-relief/contact": "/book-appointment",
   },
   markdown: {

@@ -1,56 +1,85 @@
 ---
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import JsonLd from "@/components/JsonLd.astro";
 import SimilarPosts from "@/components/SimilarPosts.astro";
+import config from "@/config/config.json";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import dateFormat from "@/lib/utils/dateFormat";
 import readingTime from "@/lib/utils/readingTime";
 import similerItems from "@/lib/utils/similarItems";
-import { slugify } from "@/lib/utils/textConverter";
+import { plainify, slugify } from "@/lib/utils/textConverter";
 import Cta from "@/partials/Cta.astro";
 import { Image } from "astro:assets";
 import AboutShortVideo from "./components/about/AboutShortVideo.astro";
 
-const blogs = await getSinglePage("blog");
+const blogs = await getSinglePage("patient-resources");
 const authors = await getSinglePage("authors");
 const addAuthors = blogs.map((blog) => {
   const author = authors.find(
-    (author) => author.data.title === blog.data.author
+    (author) => author.data.title === blog.data.author,
   );
   return {
     ...blog,
     data: {
       ...blog.data,
-      authorImage: author.data.image,
+      authorImage: author?.data.image,
     },
   };
 });
 const { post } = Astro.props;
 const singleAuthor = authors.find(
-  (item) => item.slug === slugify(post.data.author)
+  (item) => item.slug === slugify(post.data.author),
 );
 const similarPosts = similerItems(post, addAuthors, post.slug);
 const { Content } = await post.render();
-const { title, author, image, date, references, video } = post.data;
+const { title, author, description, image, date, references, video } =
+  post.data;
+
+const base = (config.site.base_url || "").replace(/\/$/, "");
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  headline: title,
+  description: description ? plainify(description) : undefined,
+  datePublished: date ? new Date(date).toISOString() : undefined,
+  url: `${base}/patient-resources/${post.slug}`,
+  author: {
+    "@type": "Physician",
+    name: author,
+    jobTitle: "Musculoskeletal GP (RACGP Fellow, FSEM(UK) Dip MSK Med)",
+  },
+  publisher: { "@type": "MedicalClinic", name: (config as any).business?.name },
+};
 ---
 
-<section class="section">
+<Breadcrumbs
+  items={[
+    { label: "Home", href: "/" },
+    { label: "Resources", href: "/patient-resources" },
+    { label: title },
+  ]}
+/>
+<section class="section pt-6">
   <div class="container">
     <div class="row justify-center">
-      <div class="col-12 mb-12 lg:col-10">
+      <div class="col-12 mb-8 lg:col-10 lg:mb-12">
         <Image
           alt={title}
           src={image}
           width={1126}
           height={661}
-          class="w-full max-w-full rounded-3xl"
+          class="aspect-[16/10] w-full max-w-full rounded-lg object-cover shadow-[0_22px_70px_rgba(12,42,66,0.1)]"
         />
       </div>
       <div class="lg:col-8">
         <div class="mb-12">
-          <h2 class="font-medium">
+          <h2
+            class="text-[1.95rem] font-medium leading-tight sm:text-h2-sm md:text-h2"
+          >
             {title}
           </h2>
-          <div class="mt-6 flex items-center">
-            <div class="user-image mr-4">
+          <div class="mt-6 flex items-center gap-4">
+            <div class="user-image shrink-0">
               <a href={`/authors/${slugify(author)}`} title={author}>
                 <Image
                   src={singleAuthor.data.image}
@@ -61,10 +90,13 @@ const { title, author, image, date, references, video } = post.data;
                 />
               </a>
             </div>
-            <div class="user-info">
-              <p class="mb-0 text-h5 font-medium">
+            <div class="user-info min-w-0">
+              <p class="mb-0 text-[1.05rem] font-medium sm:text-h5">
                 <a href={`/authors/${slugify(author)}`}>{author}</a>
               </p>
+              <span class="block text-[0.82rem] text-text">
+                Musculoskeletal GP · RACGP Fellow · FSEM(UK) Dip MSK Med
+              </span>
               <span>{dateFormat(date)} - {readingTime(post.body)}</span>
             </div>
           </div>
@@ -72,30 +104,37 @@ const { title, author, image, date, references, video } = post.data;
         <div class="content">
           <Content />
         </div>
-        {
-            video && (
-              <AboutShortVideo video={video} />
-            )
-          }
+        {video && <AboutShortVideo video={video} />}
         <!-- <Disqus client:load /> -->
 
         <!-- References -->
-        { references && (
-          <div class="py-8 mt-4 border-t border-black/30">
-            <h5 class="text-base">References</h5>
-            <ul class=" my-4 space-y-2 text-sm">
-            {
-              references.map((ref) => (
-                <li>{ref}</li>
-              ))
-            }
-            </ul>
-          </div>
-        ) }
+        {
+          references && (
+            <div class="py-8 mt-4 border-t border-black/30">
+              <h5 class="text-base">References</h5>
+              <ul class=" my-4 space-y-2 text-sm">
+                {references.map((ref) => (
+                  <li>{ref}</li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
+
+        <!-- Medical disclaimer -->
+        <div
+          class="mt-8 rounded-lg border border-border bg-theme-light/50 p-5 text-[0.8rem] text-text"
+        >
+          This article is general information only and is not a substitute for
+          individual medical advice. It does not establish a doctor–patient
+          relationship. Please consult your GP or a qualified health
+          practitioner about your specific circumstances.
+        </div>
       </div>
     </div>
   </div>
 </section>
+<JsonLd schema={articleSchema} />
 <section class="section">
   <div class="container">
     <div class="section-title">

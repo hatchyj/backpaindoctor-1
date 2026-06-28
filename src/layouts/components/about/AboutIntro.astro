@@ -1,7 +1,6 @@
 ---
 import { markdownify } from "@/lib/utils/textConverter";
 import { Image } from "astro:assets";
-import Circle from "../Circle.astro";
 const {
   data: { title, subtitle, image, description },
   order,
@@ -33,27 +32,15 @@ const {
           order === "right" ? "order-0" : "order-0 md:order-1"
         }`}
       >
-        <div class="relative">
-          <div class="relative z-10 p-14">
+        <div class="about-visual">
+          <div class="relative z-10">
             <Image
               src={image}
               height={436}
               width={381}
               alt={title}
-              class="w-full max-w-full rounded-2xl mix-blend-multiply"
+              class="w-full max-w-full object-cover"
             />
-            <div class="has-circle z-30 h-full w-full">
-              <Circle classes={"bottom-[50%] left-[2.5rem] ratio-20 fill"} />
-              <Circle
-                classes={"bottom-[4.93rem] left-[1.5rem] ratio-47 bg-primary/5 "}
-              />
-            </div>
-          </div>
-          <div class="has-circle h-full w-full">
-            <Circle classes={"top-[0.875rem] left-[0.75rem] ratio-85 fill"} />
-            <Circle classes={"top-[5rem] right-[41px] ratio-37"} />
-            <Circle classes={"bottom-[45%] right-[3.25rem] ratio-20 fill"} />
-            <Circle classes={"bottom-[1.5rem] right-[1.5rem] ratio-85 fill"} />
           </div>
         </div>
       </div>

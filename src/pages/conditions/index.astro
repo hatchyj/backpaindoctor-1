@@ -1,0 +1,51 @@
+---
+import IntroSection from "@/components/IntroSection.astro";
+import PageHeader from "@/components/PageHeader.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import Cta from "@/partials/Cta.astro";
+import { getEntry } from "astro:content";
+
+const index = await getEntry("conditions", "-index");
+const { title, description, intro } = index.data;
+
+const conditions = await getSinglePage("conditions");
+conditions.sort((a: any, b: any) => {
+  const orderDiff = (a.data.order ?? 99) - (b.data.order ?? 99);
+  if (orderDiff !== 0) return orderDiff;
+  return String(a.data.title).localeCompare(String(b.data.title));
+});
+---
+
+<Base title={title} description={description}>
+  <PageHeader title={title} />
+  <IntroSection intro={intro} />
+
+  <section class="section pt-0">
+    <div class="container">
+      <div class="row g-4">
+        {
+          conditions.map((c: any) => (
+            <div class="mb-6 md:col-6 lg:col-4">
+              <a
+                href={`/conditions/${c.slug}`}
+                class="group block h-full rounded-2xl border border-border bg-white p-6 transition hover:border-primary/40 hover:shadow-lg"
+                data-aos="fade-up"
+              >
+                <h2 class="mb-2 text-h5-sm font-semibold text-dark group-hover:text-primary md:text-h5">
+                  {c.data.title}
+                </h2>
+                <p class="mb-4 text-[0.9rem] text-text">{c.data.intro}</p>
+                <span class="text-[0.85rem] font-medium text-primary">
+                  Learn more &rarr;
+                </span>
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <Cta />
+</Base>
