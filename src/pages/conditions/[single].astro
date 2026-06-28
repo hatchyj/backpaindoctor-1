@@ -30,6 +30,111 @@ const pageSchema = {
   about: { "@type": "MedicalCondition", name: title },
   isPartOf: { "@type": "MedicalClinic", name: (config as any).business?.name },
 };
+
+const evidenceLibrary = [
+  {
+    keywords: ["shockwave", "eswt", "focused shockwave", "radial shockwave"],
+    icon: "wave",
+    tag: "Adjunct",
+    evidence: "Best supported in selected tendon and plantar heel pain presentations.",
+    summary:
+      "Shockwave is usually considered when symptoms are persistent and the diagnosis fits, particularly in selected tendinopathy or plantar heel pain patterns. It works best when paired with sensible load management and rehabilitation rather than used as a stand-alone treatment.",
+  },
+  {
+    keywords: ["platelet", "prp"],
+    icon: "platelet",
+    tag: "Selected cases",
+    evidence: "Evidence varies by condition and tissue type.",
+    summary:
+      "PRP may be discussed for selected tendon or joint presentations after diagnosis, education and rehabilitation options have been considered. Expected benefit, uncertainty, cost and alternatives should be discussed carefully before proceeding.",
+  },
+  {
+    keywords: ["cortisone", "corticosteroid", "steroid", "ultrasound-guided injection", "ultrasound guided injection", "injection"],
+    icon: "injection",
+    tag: "Symptom relief",
+    evidence: "Most useful for short-term relief in specific inflammatory or irritable presentations.",
+    summary:
+      "Image-guided injections may help reduce pain when a specific joint, bursa, tendon sheath or inflamed structure is driving symptoms. They are not a cure for most musculoskeletal conditions and are considered alongside rehabilitation, risks and recurrence prevention.",
+  },
+  {
+    keywords: ["emtt", "magnetotransduction"],
+    icon: "field",
+    tag: "Emerging adjunct",
+    evidence: "Evidence is developing and should be interpreted condition by condition.",
+    summary:
+      "EMTT may be discussed as an adjunct in selected presentations where the clinical pattern fits. It should be framed honestly, including the current limits of evidence, likely cost, alternatives and the role of active rehabilitation.",
+  },
+  {
+    keywords: ["prolotherapy"],
+    icon: "stability",
+    tag: "Selected cases",
+    evidence: "Condition-specific evidence; generally less established than exercise-based care.",
+    summary:
+      "Prolotherapy may be considered for carefully selected chronic ligament, tendon or joint-related pain presentations. It is not a first-line treatment and should only be discussed when the diagnosis and clinical reasoning are clear.",
+  },
+  {
+    keywords: ["trigger point", "myofascial"],
+    icon: "target",
+    tag: "Pain modulator",
+    evidence: "May help when focal myofascial pain is a clear contributor.",
+    summary:
+      "Trigger point treatment may reduce pain from focal muscle spasm or myofascial tenderness. It is most appropriate when paired with movement restoration, strength work, ergonomics and recurrence prevention.",
+  },
+  {
+    keywords: ["nerve", "hydrodissection"],
+    icon: "nerve",
+    tag: "Nerve-focused",
+    evidence: "Relevant only when symptoms and examination support nerve irritation or entrapment.",
+    summary:
+      "Nerve-focused treatment may be discussed when there is a plausible peripheral nerve pain generator. Progressive weakness, significant neurological deficit or concerning features may require imaging, specialist review or urgent escalation instead.",
+  },
+];
+
+const iconPaths: Record<string, string> = {
+  core: "M12 3.5 20 8v8l-8 4.5L4 16V8l8-4.5Zm0 2.3L6 9.2v5.6l6 3.4 6-3.4V9.2l-6-3.4Zm0 5.1 4.7-2.7L12 5.5 7.3 8.2 12 10.9Zm0 2.1L6.8 10v4.1l5.2 3 5.2-3V10L12 13Z",
+  wave: "M3 13c2.2-4.6 5.3-4.6 7.5 0s5.3 4.6 7.5 0c.6-1.3 1.5-2.2 2.7-2.7M3 17c2.2-4.6 5.3-4.6 7.5 0s5.3 4.6 7.5 0c.6-1.3 1.5-2.2 2.7-2.7M3 9c2.2-4.6 5.3-4.6 7.5 0s5.3 4.6 7.5 0c.6-1.3 1.5-2.2 2.7-2.7",
+  platelet: "M12 21a7 7 0 0 0 7-7c0-4.5-5.2-9.4-6.6-10.7a.6.6 0 0 0-.8 0C10.2 4.6 5 9.5 5 14a7 7 0 0 0 7 7Zm-2.2-6.8h4.4M12 12v4.4",
+  injection: "M14.5 4.5 19.5 9.5M12.3 6.7l5 5M5 19l5.5-5.5m0 0 5.6-5.6-2-2-5.6 5.6m2 2-2-2M4 20l1-1",
+  field: "M12 4a8 8 0 1 0 8 8M12 7a5 5 0 1 0 5 5M12 10a2 2 0 1 0 2 2M17 3v6h6M17 9l5.5-5.5",
+  stability: "M12 3 20 7v5c0 5-3.4 8.3-8 9-4.6-.7-8-4-8-9V7l8-4Zm-3 9 2 2 4-5",
+  target: "M12 21a9 9 0 1 0-9-9 9 9 0 0 0 9 9Zm0-4.5a4.5 4.5 0 1 0-4.5-4.5 4.5 4.5 0 0 0 4.5 4.5Zm0-2.2a2.3 2.3 0 1 0-2.3-2.3 2.3 2.3 0 0 0 2.3 2.3Z",
+  nerve: "M5 12c2.5 0 2.5-5 5-5s2.5 10 5 10 2.5-5 5-5M4 7h3M4 17h3M17 7h3M17 17h3",
+};
+
+const normalise = (value: string) => value.toLowerCase();
+
+const treatmentEvidenceCards = (treatmentLinks ?? []).map((t: any) => {
+  const text = normalise(`${t.name ?? ""} ${t.href ?? ""}`);
+  const match = evidenceLibrary.find((item) =>
+    item.keywords.some((keyword) => text.includes(keyword)),
+  );
+
+  return {
+    name: t.name,
+    href: t.href,
+    icon: match?.icon ?? "stability",
+    tag: match?.tag ?? "Discuss if suitable",
+    evidence:
+      match?.evidence ??
+      "Evidence and expected benefit depend on the diagnosis, tissue involved and symptom pattern.",
+    summary:
+      match?.summary ??
+      "This option may be discussed if it is clinically relevant to the diagnosis. Suitability depends on examination findings, imaging where appropriate, patient goals, risks, cost and alternatives.",
+  };
+});
+
+const treatmentSummaryCards = [
+  {
+    name: "Diagnosis, education and progressive rehabilitation",
+    href: null,
+    icon: "core",
+    tag: "Foundation",
+    evidence: "The starting point for most musculoskeletal conditions.",
+    summary:
+      "The priority is to identify the likely pain generator, explain the condition clearly, modify aggravating load and build a realistic plan to restore strength, movement and confidence. Procedures are considered only when they add value to this foundation.",
+  },
+  ...treatmentEvidenceCards,
+];
 ---
 
 <Base title={title} description={description}>
@@ -60,7 +165,7 @@ const pageSchema = {
 
           {
             symptoms && symptoms.length > 0 && (
-              <div class="mt-10 rounded-lg border border-border bg-theme-light/50 p-5 md:p-8">
+              <div class="mt-10 rounded-2xl border border-border bg-theme-light/50 p-5 md:p-8">
                 <h2 class="mb-4 text-h4-sm font-semibold md:text-h4">
                   Common symptoms
                 </h2>
@@ -73,39 +178,69 @@ const pageSchema = {
             )
           }
 
-          {
-            treatmentLinks && treatmentLinks.length > 0 && (
-              <div class="mt-8 rounded-lg border border-primary/10 bg-white p-5 md:p-7">
-                <h2 class="mb-4 text-h4-sm font-semibold md:text-h4">
-                  Treatment options that may be discussed
-                </h2>
-                <p class="mb-4 text-[0.92rem] leading-relaxed text-text">
-                  Most musculoskeletal conditions are managed first with a clear diagnosis,
-                  education, load modification and a progressive rehabilitation plan. Imaging,
-                  injections and device-based therapies are considered only when they fit the
-                  clinical picture, the person's goals and the available evidence.
-                </p>
-                <p class="mb-5 text-[0.9rem] leading-relaxed text-text">
-                  Depending on the assessment, options that may be relevant include:
-                </p>
-                <div class="flex flex-wrap gap-3">
-                  {treatmentLinks.map((t: any) => (
-                    <a
-                      href={t.href}
-                      class="rounded-full border border-primary/30 bg-white px-4 py-2 text-[0.88rem] font-medium text-dark transition hover:border-primary hover:text-primary"
-                    >
-                      {t.name}
-                    </a>
-                  ))}
-                </div>
-                <p class="mt-5 text-[0.8rem] leading-relaxed text-text">
-                  These links are educational, not a recommendation that a procedure is required.
-                  Suitability, expected benefit, limitations, risks, costs and alternatives are
-                  discussed at consultation.
-                </p>
+          <section class="mt-10 overflow-hidden rounded-[1.75rem] border border-primary/10 bg-white shadow-[0_24px_70px_rgba(5,83,203,0.08)]">
+            <div class="border-b border-border/70 bg-gradient-to-br from-[#F4F8FC] via-white to-[#EAF3FF] p-5 md:p-8">
+              <div class="mb-3 inline-flex items-center rounded-full border border-primary/20 bg-white/80 px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-primary">
+                Evidence-informed options
               </div>
-            )
-          }
+              <h2 class="mb-3 text-h4-sm font-semibold leading-tight text-dark md:text-h4">
+                How treatment may fit for {title}
+              </h2>
+              <p class="max-w-3xl text-[0.95rem] leading-relaxed text-text">
+                Most musculoskeletal care starts with a clear diagnosis, education, load modification and a progressive rehabilitation plan. The options below summarise treatments that may be discussed at consultation. They are not a recommendation that a procedure is required.
+              </p>
+            </div>
+
+            <div class="grid gap-4 p-5 md:grid-cols-2 md:p-8">
+              {treatmentSummaryCards.map((card: any) => (
+                <article class="group relative rounded-2xl border border-border/80 bg-white p-5 transition duration-200 hover:-translate-y-0.5 hover:border-primary/35 hover:shadow-[0_18px_45px_rgba(12,42,66,0.08)]">
+                  <div class="mb-4 flex items-start gap-4">
+                    <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary/8 text-primary ring-1 ring-primary/10">
+                      <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d={iconPaths[card.icon] ?? iconPaths.stability} />
+                      </svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div class="mb-2 flex flex-wrap items-center gap-2">
+                        <span class="rounded-full bg-theme-light px-2.5 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.08em] text-primary">
+                          {card.tag}
+                        </span>
+                      </div>
+                      <h3 class="text-[1.02rem] font-semibold leading-snug text-dark">
+                        {card.href ? (
+                          <a href={card.href} class="transition hover:text-primary">
+                            {card.name}
+                          </a>
+                        ) : (
+                          card.name
+                        )}
+                      </h3>
+                    </div>
+                  </div>
+
+                  <p class="mb-3 text-[0.88rem] font-medium leading-relaxed text-dark">
+                    {card.evidence}
+                  </p>
+                  <p class="text-[0.87rem] leading-relaxed text-text">
+                    {card.summary}
+                  </p>
+
+                  {card.href && (
+                    <a href={card.href} class="mt-4 inline-flex items-center gap-2 text-[0.84rem] font-semibold text-primary">
+                      Read more
+                      <span aria-hidden="true">→</span>
+                    </a>
+                  )}
+                </article>
+              ))}
+            </div>
+
+            <div class="border-t border-border/70 bg-theme-light/45 px-5 py-4 md:px-8">
+              <p class="text-[0.78rem] leading-relaxed text-text">
+                Suitability depends on the diagnosis, examination findings, imaging where appropriate, goals, risks, costs and alternatives. Red flags, progressive neurological symptoms or suspected serious pathology require a different pathway.
+              </p>
+            </div>
+          </section>
         </div>
       </div>
     </div>
