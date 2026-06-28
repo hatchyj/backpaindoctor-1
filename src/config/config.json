@@ -76,7 +76,7 @@
     ],
     "secondary_cta": {
       "label": "Not sure if we can help? Ask us first",
-      "link": "/book-appointment"
+      "link": "mailto:info@backpaindoctor.com.au?subject=Question%20about%20whether%20The%20Back%20Pain%20Doctor%20can%20help"
     }
   },
 
