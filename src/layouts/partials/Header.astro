@@ -16,72 +16,81 @@ export interface NavigationLink {
 const { pathname } = Astro.url;
 
 const {
-  button: { label, label_sml, link },
-  enable,
+  button: { label, label_sml },
 } = config.call_to_action;
 const { main }: { main: NavigationLink[] } = menu;
 ---
 
 <header class="header" id="header">
-  <nav class="navbar container">
-    <!-- logo -->
+  <nav class="navbar container" aria-label="Primary navigation">
     <div class="order-0">
       <Logo />
     </div>
-    <!-- navbar toggler -->
-    <input id="nav-toggle" type="checkbox" class="hidden" />
-    <label
-      id="show-button"
-      for="nav-toggle"
+
+    <button
+      id="nav-toggle-button"
+      type="button"
       aria-label="Open navigation"
+      aria-controls="nav-menu"
+      aria-expanded="false"
       class="nav-toggle-button order-2 flex cursor-pointer items-center justify-center lg:order-1 lg:hidden"
     >
-      <svg class="h-6 fill-current" viewBox="0 0 20 20">
-        <title>Menu Open</title>
-        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+      <svg class="h-6 fill-current" viewBox="0 0 20 20" aria-hidden="true">
+        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0v-2z"></path>
       </svg>
-    </label>
-    <label
-      id="hide-button"
-      for="nav-toggle"
+    </button>
+
+    <button
+      id="nav-close-button"
+      type="button"
       aria-label="Close navigation"
-      class="nav-toggle-button order-2 hidden cursor-pointer items-center justify-center lg:order-1"
+      aria-controls="nav-menu"
+      aria-expanded="true"
+      class="nav-toggle-button order-2 hidden cursor-pointer items-center justify-center lg:order-1 lg:hidden"
     >
-      <svg class="h-6 fill-current" viewBox="0 0 20 20">
-        <title>Menu Close</title>
+      <svg class="h-6 fill-current" viewBox="0 0 20 20" aria-hidden="true">
         <polygon
           points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
           transform="rotate(45 10 10)"></polygon>
       </svg>
-    </label>
-    <!-- /navbar toggler -->
+    </button>
 
     <ul
       id="nav-menu"
+      aria-hidden="true"
       class="navbar-nav order-3 hidden w-full flex-col text-left lg:order-1 lg:flex lg:w-auto lg:flex-row lg:space-x-2 lg:text-left"
     >
       {
-        main.map((menu) => (
+        main.map((menuItem) => (
           <>
-            {menu.hasChildren ? (
-              <li class="nav-item nav-dropdown group relative cursor-pointer">
-                <span
+            {menuItem.hasChildren ? (
+              <li class="nav-item nav-dropdown group relative">
+                <div
                   class={`nav-link nav-dropdown-toggle inline-flex items-center lg:px-[0.625rem] lg:py-[0.9rem] xl:px-[1.06rem] ${
-                    menu.children?.map(({ url }) => url).includes(pathname) ||
-                    menu.children
+                    menuItem.children?.map(({ url }) => url).includes(pathname) ||
+                    menuItem.children
                       ?.map(({ url }) => `${url}/`)
-                      .includes(pathname)
+                      .includes(pathname) ||
+                    pathname === menuItem.url ||
+                    pathname === `${menuItem.url}/`
                       ? "active"
                       : ""
                   }`}
                 >
-                  <a href={menu.url}>{menu.name}</a>
-                  <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
-                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                  </svg>
-                </span>
+                  <a class="nav-parent-link" href={menuItem.url}>{menuItem.name}</a>
+                  <button
+                    type="button"
+                    class="nav-dropdown-button"
+                    aria-label={`Toggle ${menuItem.name} submenu`}
+                    aria-expanded="false"
+                  >
+                    <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20" aria-hidden="true">
+                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                    </svg>
+                  </button>
+                </div>
                 <ul class="nav-dropdown-list hidden duration-300 lg:invisible lg:absolute lg:block lg:h-auto lg:w-[13.5rem] lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100">
-                  {menu.children?.map((child) => (
+                  {menuItem.children?.map((child) => (
                     <li
                       class={`nav-dropdown-item rounded-md hover:bg-primary/10`}
                     >
@@ -102,13 +111,13 @@ const { main }: { main: NavigationLink[] } = menu;
             ) : (
               <li class="nav-item">
                 <a
-                  href={menu.url}
+                  href={menuItem.url}
                   class={`nav-link block py-2 lg:px-[0.625rem] lg:py-[0.9rem] xl:px-[1.06rem] ${
-                    (pathname === `${menu.url}/` || pathname === menu.url) &&
+                    (pathname === `${menuItem.url}/` || pathname === menuItem.url) &&
                     "active"
                   }`}
                 >
-                  {menu.name}
+                  {menuItem.name}
                 </a>
               </li>
             )}
@@ -126,7 +135,6 @@ const { main }: { main: NavigationLink[] } = menu;
       </li>
     </ul>
     <div class="order-1 ml-auto hidden items-center lg:order-2 lg:flex">
-      <!-- Desktop version of button -->
       <a
         class="btn btn-primary inline-flex items-center gap-3"
         href="/book-appointment"
@@ -140,30 +148,74 @@ const { main }: { main: NavigationLink[] } = menu;
 </header>
 
 <script is:inline>
-  document.querySelectorAll(".nav-dropdown-toggle").forEach((button) => {
+  const header = document.getElementById("header");
+  const navMenu = document.getElementById("nav-menu");
+  const navOpenButton = document.getElementById("nav-toggle-button");
+  const navCloseButton = document.getElementById("nav-close-button");
+  let lastScroll = window.scrollY;
+
+  const isDesktop = () => window.matchMedia("(min-width: 992px)").matches;
+
+  const setMenuOpen = (open) => {
+    if (!navMenu || !navOpenButton || !navCloseButton) return;
+
+    navMenu.classList.toggle("hidden", !open);
+    navMenu.setAttribute("aria-hidden", String(!open));
+    navOpenButton.classList.toggle("hidden", open);
+    navOpenButton.classList.toggle("flex", !open);
+    navOpenButton.setAttribute("aria-expanded", String(open));
+    navCloseButton.classList.toggle("hidden", !open);
+    navCloseButton.classList.toggle("flex", open);
+    navCloseButton.setAttribute("aria-expanded", String(open));
+    document.documentElement.classList.toggle("nav-open", open);
+    document.body.classList.toggle("nav-open", open);
+
+    if (header && open) {
+      header.classList.remove("-translate-y-full");
+    }
+  };
+
+  navOpenButton?.addEventListener("click", () => setMenuOpen(true));
+  navCloseButton?.addEventListener("click", () => setMenuOpen(false));
+
+  document.querySelectorAll(".nav-dropdown-button").forEach((button) => {
     button.addEventListener("click", (event) => {
-      if (window.matchMedia("(min-width: 992px)").matches) return;
+      if (isDesktop()) return;
       event.preventDefault();
+      event.stopPropagation();
+
       const dropdown = button
         .closest(".nav-dropdown")
         ?.querySelector(".nav-dropdown-list");
-      dropdown?.classList.toggle("hidden");
-      button.classList.toggle(
-        "is-open",
-        !dropdown?.classList.contains("hidden"),
-      );
+      const isOpen = dropdown && !dropdown.classList.contains("hidden");
+
+      dropdown?.classList.toggle("hidden", Boolean(isOpen));
+      button.setAttribute("aria-expanded", String(!isOpen));
+      button.closest(".nav-dropdown-toggle")?.classList.toggle("is-open", !isOpen);
     });
   });
 
-  const header = document.getElementById("header");
-  let lastScroll = window.scrollY;
+  navMenu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (!isDesktop()) setMenuOpen(false);
+    });
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMenuOpen(false);
+  });
+
+  window.addEventListener("resize", () => {
+    if (isDesktop()) setMenuOpen(false);
+  });
+
   const updateHeader = () => {
     if (!header) return;
 
     const scrollY = window.scrollY;
     header.classList.toggle("header-sticky-top", scrollY > 12);
 
-    if (document.getElementById("nav-toggle")?.checked) {
+    if (navMenu && !navMenu.classList.contains("hidden")) {
       header.classList.remove("-translate-y-full");
       lastScroll = scrollY;
       return;
